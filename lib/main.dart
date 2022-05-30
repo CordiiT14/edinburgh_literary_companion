@@ -1,9 +1,14 @@
 import 'package:flutter/material.dart';
+import 'pages/home.dart';
+import 'pages/loading.dart';
+import 'pages/location_view.dart';
+import 'pages/browse.dart';
+
 
 void main() {
   runApp( MaterialApp(
     debugShowCheckedModeBanner: false,
-    initialRoute: '/',
+    initialRoute: '/home',
     routes: {
       // TODO create loading widget
       '/' : (context) => Loading(),
@@ -12,7 +17,7 @@ void main() {
       //TODO create Browse widget
       '/browse' : (context) => Browse(),
       //TODO create Browse widget
-      '/location' : (context) => Location(),
+      '/location' : (context) => LocationView(),
     },
   ));
 }
