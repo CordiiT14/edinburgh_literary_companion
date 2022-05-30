@@ -1,6 +1,7 @@
 import '../models/Location.dart';
 import '../models/Category.dart';
 import 'package:flutter/material.dart';
+import 'package:edin_lit_companion/components/navigationBar.dart';
 
 class Home extends StatefulWidget {
   const Home({Key? key}) : super(key: key);
@@ -30,6 +31,7 @@ class _HomeState extends State<Home> {
           'homepage!',
         ),
       ),
+      bottomNavigationBar: Navigation(),
     );
   }
 }

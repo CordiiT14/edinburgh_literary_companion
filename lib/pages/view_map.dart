@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:edin_lit_companion/components/navigationBar.dart';
 
 class ViewMap extends StatefulWidget {
   const ViewMap({Key? key}) : super(key: key);
@@ -10,6 +11,13 @@ class ViewMap extends StatefulWidget {
 class _ViewMapState extends State<ViewMap> {
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Scaffold(
+      body: Center(
+        child: Text(
+          'Map!',
+        ),
+      ),
+      bottomNavigationBar: Navigation(),
+    );
   }
 }
