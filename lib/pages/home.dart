@@ -25,10 +25,14 @@ class _HomeState extends State<Home> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return const Scaffold(
+      appBar: null,
       body: Center(
         child: Text(
           'homepage!',
+          style: TextStyle(
+            color: Colors.black,
+          ),
         ),
       ),
       bottomNavigationBar: Navigation(),

@@ -15,12 +15,25 @@ class Navigation extends StatefulWidget {
 class _Navigation extends State<Navigation> {
   //keeping track of selected item: bottomNavigationBar items is  a list of bottomNavigationBarItems
   int _selectedIndex = 0;
-  
+
+  // changes the current active/selected item in navbar
+  void _onItemTapped(int index){
+    setState((){
+      _selectedIndex = index;
+    });
+  }
+
+  //list of page widgets, same order as navigation for shared indices
+  List<Widget> _pages = <Widget>[
+    Home(),
+    Browse(),
+    ViewMap(),
+    Saved(),
+  ];
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      bottomNavigationBar: BottomNavigationBar(
+    return BottomNavigationBar(
         type: BottomNavigationBarType.fixed,
         backgroundColor: const Color.fromRGBO(87, 88, 187, 9.0),
         selectedLabelStyle: TextStyle(
@@ -60,14 +73,8 @@ class _Navigation extends State<Navigation> {
         ],
         currentIndex: _selectedIndex,
         onTap: _onItemTapped,
-      ),
-    );
-  }
+      );
 
-  void _onItemTapped(int index){
-    setState((){
-      _selectedIndex = index;
-    });
   }
 
 }
