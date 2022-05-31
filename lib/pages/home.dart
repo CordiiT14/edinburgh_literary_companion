@@ -3,6 +3,7 @@ import 'package:edin_lit_companion/models/Category.dart';
 import 'package:flutter/material.dart';
 import 'package:edin_lit_companion/components/navigationBar.dart';
 import 'package:carousel_slider/carousel_slider.dart';
+import 'package:edin_lit_companion/components/carousel.dart';
 
 class Home extends StatefulWidget {
   const Home({Key? key}) : super(key: key);
@@ -47,11 +48,11 @@ class _HomeState extends State<Home> {
     return Scaffold(
       appBar: null,
       body: SafeArea(
-        child: Padding(
+        child: Padding( // around whole page context
           padding: const EdgeInsets.all(12.0),
-          child: Column(
+          child: Column( //column wraps all content
             children: [
-              Row(
+              Row( // Row 1: Discover Literary Edinburgh Header
                 children: [
                   Padding(
                     padding: const EdgeInsets.all(12.0),
@@ -64,7 +65,7 @@ class _HomeState extends State<Home> {
                   ),
                 ],
               ),
-              Padding(
+              Padding( // Current placeholder wrapper for the search bar
                 padding: const EdgeInsets.all(8.0),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.center,
@@ -73,7 +74,9 @@ class _HomeState extends State<Home> {
                   ],
                 ),
               ),
-              Row(
+
+              // TOP ATTRACTIONS SECTION
+              Row( // Containing Attractions section heading and see more button
                 children: [
                   Text(
                     'Top Attractions',
@@ -93,38 +96,15 @@ class _HomeState extends State<Home> {
                   ),
                 ],
               ),
-              CarouselSlider(
-                options: CarouselOptions(
-                  height: 100.0,
-                  aspectRatio: 2.0,
-                  enlargeCenterPage: false,
-                  viewportFraction: 1,
-                ),
-                items: locations.map((location) {
-                  return Builder(
-                    builder: (BuildContext context) {
-                      return Container(
-                          width: MediaQuery.of(context).size.width,
-                          margin: EdgeInsets.symmetric(horizontal: 5.0),
-                          child: Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            children: [
-                              Expanded(
-                                child: Image.asset('assets/${location.image}',
-                                  fit: BoxFit.cover,
-                                ),
-                              )
-                            ],
-                          ),
-                      );
-                    },
-                  );
-                }).toList(),
-              ),
-              Row(
+
+              // ATTRACTION CAROUSEL
+              Carousel(),
+
+              // TOP LANDMARKS SECTION
+              Row( // Containing Landmarks section heading and see more button
                 children: [
                   Text(
-                    'Landmarks',
+                    'Top Landmarks',
                   style: TextStyle(
                   fontSize: 18,
                   ),
@@ -141,10 +121,15 @@ class _HomeState extends State<Home> {
                   ),
                 ],
               ),
-              Row(
+
+              //LANDMARKS CAROUSEL
+              Carousel(),
+
+              // TOP BOOKSHOPS SECTION
+              Row( // Containing Bookshops section heading and see more button
                 children: [
                   Text(
-                    'Bookshops',
+                    'Top Bookshops',
                   style: TextStyle(
                   fontSize: 18,
                   ),
@@ -161,6 +146,9 @@ class _HomeState extends State<Home> {
                   ),
                 ],
               ),
+
+              //BOOKSHOP CAROUSEL
+              Carousel(),
             ],
           ),
         ),
