@@ -16,7 +16,7 @@ class LocationListCard extends StatelessWidget {
           Navigator.push(
               context,
               MaterialPageRoute(
-              builder: (context) => LocationView()
+              builder: (context) => LocationView(location: location)
               // TODO: Use the line below
               // builder: (context) => LocationView(location: location,)
               ),
