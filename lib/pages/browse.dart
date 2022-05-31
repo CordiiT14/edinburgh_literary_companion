@@ -25,7 +25,7 @@ class _BrowseState extends State<Browse> {
     final locations = locationData.locations;
     return Scaffold(
       body: SafeArea(
-        child: Column(
+        child: ListView(
           children: locations
               .map((location) => LocationListCard(location: location)).toList(),
         ),

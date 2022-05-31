@@ -4,28 +4,38 @@ import 'package:edin_lit_companion/models/Location.dart';
 class LocationListCard extends StatelessWidget {
   // const LocationListCard({Key? key}) : super(key: key);
 
-  const LocationListCard({ required this.location});
+  const LocationListCard({required this.location});
   final Location location;
 
   @override
   Widget build(BuildContext context) {
     return Card(
-      child: Padding(
-        padding: const EdgeInsets.all(12.0),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.stretch,
-          children: [
-            Text(location.name,
+      child: ListTile(
+        onTap: () {
+          Navigator.pushNamed(context, '/location/$location');
+        },
+        leading: CircleAvatar(
+          backgroundImage: AssetImage('assets/monuments/${location.image}'),
+          radius: 20.0,
+        ),
+        title: Text(location.name,
             style: const TextStyle(
               fontSize: 18.0,
             )),
-            Text(location.address,
-            style: const TextStyle(
-              fontSize: 12.0,
-            )),
-          ],
-        )
-      )
+        // subtitle: Text(location.address,
+        //     style: const TextStyle(
+        //       fontSize: 12.0,
+        //     )),
+        trailing: TextButton.icon(
+          onPressed: () {},
+          label: const Text(''),
+          icon: Icon(
+              Icons.favorite_border_outlined,
+            color: Colors.grey[500],
+          ),
+        ),
+        // isThreeLine: true,
+      ),
     );
   }
 }
