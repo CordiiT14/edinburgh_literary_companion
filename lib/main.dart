@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'pages/home.dart';
-import 'pages/loading.dart';
-import 'pages/location_view.dart';
-import 'pages/browse.dart';
+import 'package:edin_lit_companion/pages/home.dart';
+import 'package:edin_lit_companion/pages/loading.dart';
+import 'package:edin_lit_companion/pages/location_view.dart';
+import 'package:edin_lit_companion/pages/browse.dart';
 
 
 void main() {

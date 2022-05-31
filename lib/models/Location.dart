@@ -1,4 +1,4 @@
-import 'Category.dart';
+import 'package:edin_lit_companion/models/Category.dart';
 
 class Location {
   String name;

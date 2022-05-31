@@ -54,7 +54,7 @@ class _Navigation extends State<Navigation> {
                 Icons.explore_outlined,
                 color: Color.fromRGBO(241, 135, 1, 1),
               ),
-            label: 'Browse',
+            label: 'Discover',
           ),
           BottomNavigationBarItem(
             icon: Icon(

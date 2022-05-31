@@ -1,5 +1,5 @@
-import '../models/Location.dart';
-import '../models/Category.dart';
+import 'package:edin_lit_companion/models/Location.dart';
+import 'package:edin_lit_companion/models/Category.dart';
 import 'package:flutter/material.dart';
 import 'package:edin_lit_companion/components/navigationBar.dart';
 
