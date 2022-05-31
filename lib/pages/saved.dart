@@ -59,7 +59,8 @@ class _SavedState extends State<Saved> {
             ),
           ),
           subtitle: Text(
-            '${location.category}',
+            //this is to extract 'landmark' from 'Category.landmark'
+            location.category.toString().split('.').last,
             style: TextStyle(
               fontSize: 12.0,
               color: Colors.blueGrey[150],
