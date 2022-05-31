@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:edin_lit_companion/components/navigationBar.dart';
 import 'package:edin_lit_companion/models/Location.dart';
 import 'package:edin_lit_companion/models/Category.dart';
+import 'package:edin_lit_companion/components/location_card.dart';
 
 class Saved extends StatefulWidget {
   const Saved({Key? key}) : super(key: key);
@@ -41,9 +42,9 @@ class _SavedState extends State<Saved> {
         website: 'https://hiddenscotland.co/listings/lady-stairs-close/')
   ];
 
-  void onDeleteTap(Location location) {
-    setState(() => savedLocations.remove(location));
-  }
+  // void onDeleteTap(Location location) {
+  //   setState(() => savedLocations.remove(location));
+  // }
 
   @override
   Widget build(BuildContext context) {
@@ -55,47 +56,15 @@ class _SavedState extends State<Saved> {
       ),
       body: ListView(
         children: savedLocations
-            .map((location) => LocationCard(location: location))
+            .map((location) => LocationCard(
+                  location: location,
+                  delete: () {
+                    setState(() => savedLocations.remove(location));
+                  },
+                ))
             .toList(),
       ),
       bottomNavigationBar: Navigation(),
     );
   }
 }
-
-class LocationCard extends StatelessWidget {
-
-  final Location location;
-  LocationCard({ required this.location });
-
-  @override
-  Widget build(BuildContext context){
-    return Card(
-      margin: EdgeInsetsDirectional.fromSTEB(16.0, 16.0, 16.0, 0),
-      child: ListTile(
-        title: Text(
-          location.name,
-          style: TextStyle(
-            fontSize: 20.0,
-            color: Colors.blueGrey[200],
-          ),
-        ),
-        subtitle: Text(
-          //this is to extract 'landmark' from 'Category.landmark'
-          location.category.toString().split('.').last,
-          style: TextStyle(
-            fontSize: 12.0,
-            color: Colors.blueGrey[150],
-          ),
-        ),
-        trailing: IconButton(
-          icon: Icon(
-            Icons.delete,
-            semanticLabel: 'remove from saved',
-          ),
-          tooltip: 'remove from saved',
-          onPressed: (){onDeleteTap(location);},
-        ),
-      ),
-    );
-  }
