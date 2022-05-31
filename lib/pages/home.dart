@@ -98,7 +98,7 @@ class _HomeState extends State<Home> {
               ),
 
               // ATTRACTION CAROUSEL
-              Carousel(),
+              Carousel(locations),
 
               // TOP LANDMARKS SECTION
               Row( // Containing Landmarks section heading and see more button
@@ -123,7 +123,7 @@ class _HomeState extends State<Home> {
               ),
 
               //LANDMARKS CAROUSEL
-              Carousel(),
+              Carousel(locations),
 
               // TOP BOOKSHOPS SECTION
               Row( // Containing Bookshops section heading and see more button
@@ -148,7 +148,7 @@ class _HomeState extends State<Home> {
               ),
 
               //BOOKSHOP CAROUSEL
-              Carousel(),
+              Carousel(locations),
             ],
           ),
         ),

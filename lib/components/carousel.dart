@@ -5,42 +5,45 @@ import 'package:carousel_slider/carousel_slider.dart';
 
 
 class Carousel extends StatelessWidget {
-  const Carousel({Key? key}) : super(key: key);
+  const Carousel(this.locationList);
+
+  final List locationList;
+
 
   @override
   Widget build(BuildContext context) {
 
     //Test Data
 
-    List<Location> locations = [
-      Location(
-          name: 'Lady Stair Close',
-          category: Category.landmark,
-          address: 'Lawnmarket, Edinburgh EH1 2PA Scotland',
-          description: "Site of Baxter's Close",
-          image: 'monuments/burnsMonument.jpg',
-          latitude: 55.94959278,
-          longitude: -3.19338131,
-          website: 'https://hiddenscotland.co/listings/lady-stairs-close/'),
-      Location(
-          name: 'Lady Stair Close',
-          category: Category.landmark,
-          address: 'Lawnmarket, Edinburgh EH1 2PA Scotland',
-          description: "Site of Baxter's Close",
-          image: 'monuments/burnsMonument.jpg',
-          latitude: 55.94959278,
-          longitude: -3.19338131,
-          website: 'https://hiddenscotland.co/listings/lady-stairs-close/'),
-      Location(
-          name: 'Lady Stair Close',
-          category: Category.landmark,
-          address: 'Lawnmarket, Edinburgh EH1 2PA Scotland',
-          description: "Site of Baxter's Close",
-          image: 'monuments/burnsMonument.jpg',
-          latitude: 55.94959278,
-          longitude: -3.19338131,
-          website: 'https://hiddenscotland.co/listings/lady-stairs-close/'),
-    ];
+    // List<Location> locations = [
+    //   Location(
+    //       name: 'Lady Stair Close',
+    //       category: Category.landmark,
+    //       address: 'Lawnmarket, Edinburgh EH1 2PA Scotland',
+    //       description: "Site of Baxter's Close",
+    //       image: 'monuments/burnsMonument.jpg',
+    //       latitude: 55.94959278,
+    //       longitude: -3.19338131,
+    //       website: 'https://hiddenscotland.co/listings/lady-stairs-close/'),
+    //   Location(
+    //       name: 'Lady Stair Close',
+    //       category: Category.landmark,
+    //       address: 'Lawnmarket, Edinburgh EH1 2PA Scotland',
+    //       description: "Site of Baxter's Close",
+    //       image: 'monuments/burnsMonument.jpg',
+    //       latitude: 55.94959278,
+    //       longitude: -3.19338131,
+    //       website: 'https://hiddenscotland.co/listings/lady-stairs-close/'),
+    //   Location(
+    //       name: 'Lady Stair Close',
+    //       category: Category.landmark,
+    //       address: 'Lawnmarket, Edinburgh EH1 2PA Scotland',
+    //       description: "Site of Baxter's Close",
+    //       image: 'monuments/burnsMonument.jpg',
+    //       latitude: 55.94959278,
+    //       longitude: -3.19338131,
+    //       website: 'https://hiddenscotland.co/listings/lady-stairs-close/'),
+    // ];
 
     return CarouselSlider(
       options: CarouselOptions( //mandatory attribute
@@ -52,7 +55,7 @@ class Carousel extends StatelessWidget {
         autoPlayInterval: Duration(seconds: 3),
       ),
       //items is also mandatory needs to be given a list to the .map returning the builder ends in .toList()
-      items: locations.map((location) {
+      items: locationList.map((location) {
         return Builder(
           builder: (BuildContext context) {
             return Container(
