@@ -22,7 +22,7 @@ class _SavedState extends State<Saved> {
         longitude: -3.19338131,
         website: 'https://hiddenscotland.co/listings/lady-stairs-close/'),
     Location(
-        name: 'Lady Stair Close',
+        name: 'Elephant Cafe',
         category: Category.landmark,
         address: 'Lawnmarket, Edinburgh EH1 2PA Scotland',
         description: "Site of Baxter's Close",
@@ -31,7 +31,7 @@ class _SavedState extends State<Saved> {
         longitude: -3.19338131,
         website: 'https://hiddenscotland.co/listings/lady-stairs-close/'),
     Location(
-        name: 'Lady Stair Close',
+        name: 'National Library of Scotland',
         category: Category.landmark,
         address: 'Lawnmarket, Edinburgh EH1 2PA Scotland',
         description: "Site of Baxter's Close",
@@ -63,7 +63,7 @@ class _SavedState extends State<Saved> {
                 fontSize: 12.0,
                 color: Colors.blueGrey[150],
               ),
-            )
+            ),
           ],
         ),
       ),
@@ -78,7 +78,7 @@ class _SavedState extends State<Saved> {
         centerTitle: true,
         backgroundColor: const Color.fromRGBO(87, 88, 187, 9.0),
       ),
-      body: Column(
+      body: ListView(
         children: savedLocations.map((location) => LocationTemplate(location)).toList(),
       ),
       bottomNavigationBar: Navigation(),
