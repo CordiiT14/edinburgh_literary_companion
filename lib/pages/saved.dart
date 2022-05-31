@@ -42,10 +42,6 @@ class _SavedState extends State<Saved> {
         website: 'https://hiddenscotland.co/listings/lady-stairs-close/')
   ];
 
-  // void onDeleteTap(Location location) {
-  //   setState(() => savedLocations.remove(location));
-  // }
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -55,6 +51,8 @@ class _SavedState extends State<Saved> {
         backgroundColor: const Color.fromRGBO(87, 88, 187, 9.0),
       ),
       body: ListView(
+        //for each location in savedLocations list, render a LocationCard widget
+        //LocationCard takes two parameters, location and delete
         children: savedLocations
             .map((location) => LocationCard(
                   location: location,
