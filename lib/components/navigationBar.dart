@@ -1,8 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:edin_lit_companion/pages/browse.dart';
-import 'package:edin_lit_companion/pages/home.dart';
-import 'package:edin_lit_companion/pages/saved.dart';
-import 'package:edin_lit_companion/pages/view_map.dart';
 
 class Navigation extends StatefulWidget {
   const Navigation({Key? key}) : super(key: key);
@@ -16,29 +12,35 @@ class _Navigation extends State<Navigation> {
   //keeping track of selected item: bottomNavigationBar items is  a list of bottomNavigationBarItems
   int _selectedIndex = 0;
 
+
   // changes the current active/selected item in navbar
   void _onItemTapped(int index){
     setState((){
       _selectedIndex = index;
+      print(_selectedIndex);
     });
+
+    Navigator.of(context).pushReplacementNamed(_pages[index]);
+
   }
 
   //list of page widgets, same order as navigation for shared indices
-  List<Widget> _pages = <Widget>[
-    Home(),
-    Browse(),
-    ViewMap(),
-    Saved(),
+  List<String> _pages = <String>[
+    '/home',
+    '/browse',
+    '/map',
+    '/saved',
   ];
 
+  //TODO change navbar to be constant 
   @override
   Widget build(BuildContext context) {
     return BottomNavigationBar(
         type: BottomNavigationBarType.fixed,
         backgroundColor: const Color.fromRGBO(87, 88, 187, 9.0),
-        selectedLabelStyle: TextStyle(
-          decoration: TextDecoration.underline,
-        ),
+        // selectedLabelStyle: TextStyle(
+        //   decoration: TextDecoration.underline,
+        // ),
         selectedItemColor: Colors.white,
         unselectedItemColor: Colors.white,
         items: const <BottomNavigationBarItem>[
