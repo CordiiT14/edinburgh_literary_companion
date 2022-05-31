@@ -75,10 +75,10 @@ flutter:
   fonts:
     - family: MavenPro
       fonts:
-        - asset: fonts/MavenPro-Regular.tff
-        - asset: fonts/MavenPro-Medium.tff
+        - asset: fonts/MavenPro-Regular.ttf
+        - asset: fonts/MavenPro-Medium.ttf
           weight: 500
-        - asset: fonts/MavenPro-Bold.tff
+        - asset: fonts/MavenPro-Bold.ttf
           weight: 700
 
   #   - family: Trajan Pro
