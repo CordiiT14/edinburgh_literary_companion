@@ -1,43 +1,47 @@
 import 'package:flutter/material.dart';
 import 'package:edin_lit_companion/models/Location.dart';
 import 'package:edin_lit_companion/data/location_data.dart';
+import 'package:edin_lit_companion/components/location_list_card.dart';
 
-class LocationView extends StatefulWidget {
+class LocationView extends StatelessWidget {
   // const LocationView({Key? key}) : super(key: key);
 
-
   // Need to Review: Current setup works with static object
-  final Location location;
-  LocationView(this.location);
+  // final Location? location;
+  // LocationView({ this.location });
 
-  @override
-  State<LocationView> createState() => _LocationViewState();
-}
-
-class _LocationViewState extends State<LocationView> {
   @override
   Widget build(BuildContext context) {
 
-    final locationData = LocationData(); // Get all locations from LocationData file
-    final firstLocation = locationData.locations[0]; // Grab the first location for testing
+    // Location? location = widget.location;
 
-    return Scaffold(
-      body: SafeArea(
-        child: ListView(
+    final locationData = LocationData(); // Get all locations from LocationData file
+    final location = locationData.locations[0]; // Grab the first location for testing
+    // if (location != null) {
+    //   location = firstLocation;
+    // }
+
+      return Scaffold(
+        appBar: AppBar(
+          title: Text(location.name),
+        ),
+        // body: Center(
+
+        body: ListView(
           children: [
             Image.asset(
-              'assets/monuments/burnsMonument.jpg'
-              ),
-            ListTile(
-            title: Text(
-              firstLocation.name,
-              style: const TextStyle(
-                fontSize: 40,
-              ),
+                'assets/monuments/burnsMonument.jpg'
             ),
+            ListTile(
+              title: Text(
+                location.name,
+                style: const TextStyle(
+                  fontSize: 40,
+                ),
+              ),
             ),
             Divider(
-              height:30.0,
+              height: 30.0,
               color: Colors.lightBlue[800],
               thickness: 3,
               indent: 20,
@@ -45,7 +49,7 @@ class _LocationViewState extends State<LocationView> {
             ),
             ListTile(
               title: Text(
-                'An Edinburgh ${firstLocation.category.name}',
+                'An Edinburgh ${location.category.name}',
                 style: const TextStyle(
                   fontSize: 25,
                   fontFamily: 'MavenPro-ExtraBold',
@@ -55,13 +59,14 @@ class _LocationViewState extends State<LocationView> {
             ),
             ListTile(
               title: Text(
-                firstLocation.address,
+                location.address,
                 style: const TextStyle(
                   fontSize: 20,
                 ),
               ),
               subtitle: Text(
-                'Co-ordinates: Latitude = ${firstLocation.latitude} | Longitude = ${firstLocation.longitude}',
+                'Co-ordinates: Latitude = ${location
+                    .latitude} | Longitude = ${location.longitude}',
                 style: const TextStyle(
                   fontSize: 15,
                 ),
@@ -69,15 +74,15 @@ class _LocationViewState extends State<LocationView> {
             ),
             ListTile(
               title: Text(
-                firstLocation.description,
+                location.description,
                 style: const TextStyle(
                   fontSize: 20,
                 ),
               ),
             ),
-              ],
-          ),
-          ),
-    );
+          ],
+        ),
+        // ),
+      );
   }
 }
