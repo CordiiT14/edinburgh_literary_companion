@@ -10,7 +10,7 @@ import 'package:edin_lit_companion/pages/saved.dart';
 void main() {
   runApp( MaterialApp(
     debugShowCheckedModeBanner: false,
-    initialRoute: '/home',
+    initialRoute: '/location',
     routes: {
       // TODO create loading widget
       '/' : (context) => Loading(),
