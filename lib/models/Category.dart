@@ -1,6 +1,6 @@
 
 enum Category {
-  attraction,
-  landmark,
-  bookshop
+  Attraction,
+  Landmark,
+  Bookshop
 }
