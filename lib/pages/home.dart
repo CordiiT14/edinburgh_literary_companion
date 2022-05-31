@@ -85,6 +85,7 @@ class _HomeState extends State<Home> {
                     ),
                   ),
                   TextButton(
+                    //TODO WRITE SEE MORE FILTER FUNCTIONS
                       onPressed: (){},
                       child: Text(
                         'see more',
@@ -110,6 +111,7 @@ class _HomeState extends State<Home> {
                   ),
                   ),
                   TextButton(
+                    //TODO WRITE SEE MORE FILTER FUNCTIONS
                     onPressed: (){},
                     child: Text(
                       'see more',
@@ -135,6 +137,7 @@ class _HomeState extends State<Home> {
                   ),
                   ),
                   TextButton(
+                    //TODO WRITE SEE MORE FILTER FUNCTIONS
                     onPressed: (){},
                     child: Text(
                       'see more',
