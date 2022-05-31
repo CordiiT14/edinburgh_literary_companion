@@ -41,6 +41,10 @@ class _SavedState extends State<Saved> {
         website: 'https://hiddenscotland.co/listings/lady-stairs-close/')
   ];
 
+  void onDeleteTap(Location location) {
+    setState(() => savedLocations.remove(location));
+  }
+
   Widget LocationTemplate(location) {
     return Card(
       margin: EdgeInsetsDirectional.fromSTEB(16.0, 16.0, 16.0, 0),
@@ -61,8 +65,13 @@ class _SavedState extends State<Saved> {
               color: Colors.blueGrey[150],
             ),
           ),
-          trailing: Icon(
-            Icons.delete,
+          trailing: IconButton(
+            icon: Icon(
+              Icons.delete,
+              semanticLabel: 'remove from saved',
+            ),
+            tooltip: 'remove from saved',
+            onPressed: (){onDeleteTap(location);},
           ),
         ),
       ),
