@@ -5,6 +5,7 @@ import 'package:edin_lit_companion/data/location_data.dart';
 class LocationView extends StatefulWidget {
   // const LocationView({Key? key}) : super(key: key);
 
+
   // Need to Review: Current setup works with static object
   final Location location;
   LocationView(this.location);
