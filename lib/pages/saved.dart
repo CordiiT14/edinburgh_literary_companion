@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:edin_lit_companion/components/navigationBar.dart';
 
 class Saved extends StatefulWidget {
   const Saved({Key? key}) : super(key: key);
@@ -10,6 +11,13 @@ class Saved extends StatefulWidget {
 class _SavedState extends State<Saved> {
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Scaffold(
+      body: Center(
+        child: Text(
+          'Saved!',
+        ),
+      ),
+      bottomNavigationBar: Navigation(),
+    );
   }
 }

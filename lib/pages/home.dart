@@ -1,6 +1,7 @@
 import '../models/Location.dart';
 import '../models/Category.dart';
 import 'package:flutter/material.dart';
+import 'package:edin_lit_companion/components/navigationBar.dart';
 
 class Home extends StatefulWidget {
   const Home({Key? key}) : super(key: key);
@@ -24,12 +25,17 @@ class _HomeState extends State<Home> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return const Scaffold(
+      appBar: null,
       body: Center(
         child: Text(
           'homepage!',
+          style: TextStyle(
+            color: Colors.black,
+          ),
         ),
       ),
+      bottomNavigationBar: Navigation(),
     );
   }
 }
