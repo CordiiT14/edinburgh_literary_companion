@@ -1,4 +1,5 @@
 import 'package:edin_lit_companion/models/Category.dart';
+import 'package:edin_lit_companion/data/location_data.dart';
 
 class Location {
   String name;
@@ -20,4 +21,7 @@ class Location {
       required this.longitude,
       required this.website
   });
+
+  List<Location> locations = LocationData() as List<Location>;
+
 }
