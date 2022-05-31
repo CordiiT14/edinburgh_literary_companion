@@ -22,6 +22,4 @@ class Location {
       required this.website
   });
 
-  List<Location> locations = LocationData() as List<Location>;
-
 }

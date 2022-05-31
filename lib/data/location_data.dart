@@ -1,10 +1,11 @@
 import 'package:edin_lit_companion/models/Location.dart';
-
 import 'package:edin_lit_companion/models/Category.dart';
 
 class LocationData {
 
-  List<Location> locations = [
+  static LocationData get shared => LocationData();
+
+  List<Location> get locations => [
     Location(
         name: "Lady Stair Close",
         category: Category.landmark,
@@ -68,7 +69,7 @@ class LocationData {
         name: "Greyfriars Bobby",
         category: Category.landmark,
         address: "Edinburgh, EH1 2QQ",
-        description: "This statue of the loyal dog that stayed by his master’s grave for 18 years is a must-see for lovers of Eleanor Atkinson’s popular story. #His master's grave can be seen in the nearby Greyfriars Kirkyard. #Bobby's monument reads:#"Greyfriars Bobby#Died 14th January 1872#Aged 16 Years#Let his loyalty and devotion#be a lesson to us all." Bobby’s statue is also the site of the Harrow Inn, the periodic residence of James Hogg, the Ettrick Shepherd (1770-1835). Hogg’s most famous work, The Private Memoirs and Confessions of a Justified Sinner, is largely set in Edinburgh with scenes on the nearby Royal Mile and Arthur’s Seat.",
+        description: "This statue of the loyal dog that stayed by his master’s grave for 18 years is a must-see for lovers of Eleanor Atkinson’s popular story. #His master's grave can be seen in the nearby Greyfriars Kirkyard. #Bobby's monument reads:'Greyfriars Bobby#Died 14th January 1872#Aged 16 Years Let his loyalty and devotion be a lesson to us all.' Bobby’s statue is also the site of the Harrow Inn, the periodic residence of James Hogg, the Ettrick Shepherd (1770-1835). Hogg’s most famous work, The Private Memoirs and Confessions of a Justified Sinner, is largely set in Edinburgh with scenes on the nearby Royal Mile and Arthur’s Seat.",
         // image: "greyfriars_bobby",
         image: "burnsMonument.jpg",
         latitude: 55.9469535,
