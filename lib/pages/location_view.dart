@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class LocationView extends StatefulWidget {
-  const LocationView({Key? key}) : super(key: key);
+  // const LocationView({Key? key}) : super(key: key);
 
   @override
   State<LocationView> createState() => _LocationViewState();

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:edin_lit_companion/models/Location.dart';
+import 'package:edin_lit_companion/pages/location_view.dart';
 
 class LocationListCard extends StatelessWidget {
   // const LocationListCard({Key? key}) : super(key: key);
@@ -9,10 +10,17 @@ class LocationListCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Card(
-      child: ListTile(
+    // return Card(
+      return ListTile(
         onTap: () {
-          Navigator.pushNamed(context, '/location/$location');
+          Navigator.push(
+              context,
+              MaterialPageRoute(
+              builder: (context) => LocationView()
+              // TODO: Use the line below
+              // builder: (context) => LocationView(location: location,)
+              ),
+          );
         },
         leading: CircleAvatar(
           backgroundImage: AssetImage('assets/monuments/${location.image}'),
@@ -35,7 +43,7 @@ class LocationListCard extends StatelessWidget {
           ),
         ),
         // isThreeLine: true,
-      ),
-    );
+      );
+    // );
   }
 }

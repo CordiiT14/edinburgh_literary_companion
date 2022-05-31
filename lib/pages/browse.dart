@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:edin_lit_companion/components/navigationBar.dart';
 import 'package:edin_lit_companion/components/location_list_card.dart';
 import 'package:edin_lit_companion/data/location_data.dart';
-import 'package:edin_lit_companion/models/Location.dart';
 
 class Browse extends StatefulWidget {
   const Browse({Key? key}) : super(key: key);
@@ -25,9 +24,20 @@ class _BrowseState extends State<Browse> {
     final locations = locationData.locations;
     return Scaffold(
       body: SafeArea(
-        child: ListView(
-          children: locations
-              .map((location) => LocationListCard(location: location)).toList(),
+        child: Column(
+          children: [
+            const Text('Search bar goes here'),
+            const Text('Filter checkboxes go here'),
+            Expanded(
+              child: ListView(
+              // child: ListView.builder(
+              //   itemCount: locations.length,
+              //   itemBuilder: (context, index) {
+                children: locations
+                    .map((location) => LocationListCard(location: location)).toList(),
+              ),
+            ),
+          ],
         ),
       ),
       bottomNavigationBar: Navigation(),
