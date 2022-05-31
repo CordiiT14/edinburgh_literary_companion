@@ -4,33 +4,24 @@ import 'package:edin_lit_companion/data/location_data.dart';
 import 'package:edin_lit_companion/components/location_list_card.dart';
 
 class LocationView extends StatelessWidget {
-  // const LocationView({Key? key}) : super(key: key);
-
-  // Need to Review: Current setup works with static object
-  // final Location? location;
-  // LocationView({ this.location });
+  final Location location;
+  const LocationView({ required this.location});
 
   @override
   Widget build(BuildContext context) {
 
-    // Location? location = widget.location;
-
-    final locationData = LocationData(); // Get all locations from LocationData file
-    final location = locationData.locations[0]; // Grab the first location for testing
-    // if (location != null) {
-    //   location = firstLocation;
-    // }
+    // final locationData = LocationData(); // Get all locations from LocationData file
+    // final location = locationData.locations[0]; // Grab the first location for testing
 
       return Scaffold(
         appBar: AppBar(
           title: Text(location.name),
         ),
-        // body: Center(
 
         body: ListView(
           children: [
             Image.asset(
-                'assets/monuments/burnsMonument.jpg'
+                'assets/monuments/${location.image}'
             ),
             ListTile(
               title: Text(
