@@ -19,7 +19,7 @@ void main() {
       //TODO create Browse widget
       '/browse' : (context) => Browse(),
       //TODO create Browse widget
-      '/location' : (context) => LocationView(),
+      // '/location' : (context) => LocationView(),
       '/map' : (context) => ViewMap(),
       '/saved' : (context) => Saved(),
     },
