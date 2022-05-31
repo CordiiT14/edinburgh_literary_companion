@@ -24,7 +24,7 @@ class LocationCard extends StatelessWidget {
         ),
         subtitle: Text(
           //this is to extract 'landmark' from 'Category.landmark'
-          location.category.toString().split('.').last,
+          location.category.name,
           style: TextStyle(
             fontSize: 12.0,
             color: Colors.blueGrey[150],

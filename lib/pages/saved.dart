@@ -15,7 +15,7 @@ class _SavedState extends State<Saved> {
   List<Location> savedLocations = [
     Location(
         name: 'Lady Stair Close',
-        category: Category.landmark,
+        category: Category.Landmark,
         address: 'Lawnmarket, Edinburgh EH1 2PA Scotland',
         description: "Site of Baxter's Close",
         image: 'lady stair close',
@@ -24,7 +24,7 @@ class _SavedState extends State<Saved> {
         website: 'https://hiddenscotland.co/listings/lady-stairs-close/'),
     Location(
         name: 'Elephant Cafe',
-        category: Category.landmark,
+        category: Category.Landmark,
         address: 'Lawnmarket, Edinburgh EH1 2PA Scotland',
         description: "Site of Baxter's Close",
         image: 'lady stair close',
@@ -33,7 +33,7 @@ class _SavedState extends State<Saved> {
         website: 'https://hiddenscotland.co/listings/lady-stairs-close/'),
     Location(
         name: 'National Library of Scotland',
-        category: Category.landmark,
+        category: Category.Landmark,
         address: 'Lawnmarket, Edinburgh EH1 2PA Scotland',
         description: "Site of Baxter's Close",
         image: 'lady stair close',

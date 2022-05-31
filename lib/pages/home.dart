@@ -14,7 +14,7 @@ class _HomeState extends State<Home> {
   List<Location> locations = [
     Location(
         name: 'Lady Stair Close',
-        category: Category.landmark,
+        category: Category.Landmark,
         address: 'Lawnmarket, Edinburgh EH1 2PA Scotland',
         description: "Site of Baxter's Close",
         image: 'lady stair close',
