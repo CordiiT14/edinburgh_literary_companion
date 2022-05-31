@@ -46,25 +46,24 @@ class _SavedState extends State<Saved> {
       margin: EdgeInsetsDirectional.fromSTEB(16.0, 16.0, 16.0, 0),
       child: Padding(
         padding: EdgeInsets.all(12.0),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.stretch,
-          children: <Widget>[
-            Text(
-              location.name,
-              style: TextStyle(
-                fontSize: 20.0,
-                color: Colors.blueGrey[200],
-              ),
+        child: ListTile(
+          title: Text(
+            location.name,
+            style: TextStyle(
+              fontSize: 20.0,
+              color: Colors.blueGrey[200],
             ),
-            SizedBox(height: 10.0),
-            Text(
-              '${location.category}',
-              style: TextStyle(
-                fontSize: 12.0,
-                color: Colors.blueGrey[150],
-              ),
+          ),
+          subtitle: Text(
+            '${location.category}',
+            style: TextStyle(
+              fontSize: 12.0,
+              color: Colors.blueGrey[150],
             ),
-          ],
+          ),
+          trailing: Icon(
+            Icons.delete,
+          ),
         ),
       ),
     );
@@ -79,7 +78,9 @@ class _SavedState extends State<Saved> {
         backgroundColor: const Color.fromRGBO(87, 88, 187, 9.0),
       ),
       body: ListView(
-        children: savedLocations.map((location) => LocationTemplate(location)).toList(),
+        children: savedLocations
+            .map((location) => LocationTemplate(location))
+            .toList(),
       ),
       bottomNavigationBar: Navigation(),
     );
