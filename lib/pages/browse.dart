@@ -1,27 +1,19 @@
 import 'package:flutter/material.dart';
 import 'package:edin_lit_companion/components/navigationBar.dart';
 import 'package:edin_lit_companion/components/location_list_card.dart';
-import 'package:edin_lit_companion/data/location_data.dart';
+import 'package:provider/provider.dart';
+import 'package:edin_lit_companion/providers/locations_provider.dart';
+import 'package:edin_lit_companion/models/Location.dart';
 
 // Browse widget for Discover screen taking in data from location_data.dart via LocationData()
 // Browse widget then maps data and passes to LocationListCard widget as a list
 
-//TODO: change this to a stateless widget
-class Browse extends StatefulWidget {
+class Browse extends StatelessWidget {
   const Browse({Key? key}) : super(key: key);
 
   @override
-  State<Browse> createState() => _BrowseState();
-}
-
-class _BrowseState extends State<Browse> {
-
-  @override
   Widget build(BuildContext context) {
-    // Grabbing LocationData() from location_data.dart
-    final locationData = LocationData();
-    final locations = locationData.locations;
-
+    final List<Location> locations = context.watch<Locations>().allLocations;
     return Scaffold(
       body: SafeArea(
         child: Column(

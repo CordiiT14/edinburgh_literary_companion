@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:edin_lit_companion/models/Location.dart';
 import 'package:edin_lit_companion/pages/location_view.dart';
+import 'package:provider/provider.dart';
+import 'package:edin_lit_companion/providers/locations_provider.dart';
+import 'package:edin_lit_companion/models/Location.dart';
 
 // Card widget for locations list on Discover (browse.dart) screen using data list mapped from browse.dart
 
@@ -46,20 +49,15 @@ class _LocationListCardState extends State<LocationListCard> {
 
       // Saved icon
       trailing: TextButton.icon(
-        onPressed: () {
-          setState(() {
-            //updating saved boolean in location
-            widget.location.saved = !widget.location.saved;
-          });
-        },
+        onPressed: () => context.read<Locations>().toggleSavedLocation(widget.location),
         label: const Text(''),
         icon: Icon(
           //changing icon display based on saved status
-          widget.location.saved
+          context.read<Locations>().locationIsSaved(widget.location)
               ? Icons.favorite
               : Icons.favorite_border_outlined,
-          color: widget.location.saved ? Colors.red : Colors.grey[500],
-          semanticLabel: widget.location.saved ? 'Remove from saved' : 'Save',
+          color: context.read<Locations>().locationIsSaved(widget.location) ? Colors.red : Colors.grey[500],
+          semanticLabel: context.read<Locations>().locationIsSaved(widget.location) ? 'Remove from saved' : 'Save',
         ),
       ),
 

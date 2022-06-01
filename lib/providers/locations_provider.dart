@@ -10,14 +10,13 @@ class Locations with ChangeNotifier {
   List<Location> get allLocations => _locations;
   List<Location> get savedLocations =>  _savedLocations;
 
-  void addSavedLocation(Location location){
-    _savedLocations.add(location);
+  void toggleSavedLocation(Location location){
+    locationIsSaved(location) ? _savedLocations.remove(location) : _savedLocations.add(location);
     notifyListeners();
   }
 
-  void removeSavedLocation(Location location){
-    _savedLocations.remove(location);
-    notifyListeners();
+  bool locationIsSaved(Location location){
+    return _savedLocations.contains(location);
   }
 
 }
