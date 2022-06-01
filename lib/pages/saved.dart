@@ -6,9 +6,10 @@ import 'package:edin_lit_companion/components/location_card.dart';
 
 class Saved extends StatefulWidget {
 
-  List<Location> locations;
+  List<Location> savedLocations;
+  Function remove;
 
-  Saved({Key? key, required this.locations}) : super(key: key);
+  Saved({Key? key, required this.savedLocations, required this.remove}) : super(key: key);
 
   @override
   State<Saved> createState() => _SavedState();
@@ -21,14 +22,14 @@ class _SavedState extends State<Saved> {
     // List<Location> savedLocations = widget.locations.retainWhere((location) => location.saved);
     // final locationData = LocationData();
     // final locations = locationData.locations;
-    List<Location> savedLocations = [];
-    //filtering locations with the saved boolean
-    for (var location in widget.locations) {
-      print(location.saved);
-      if(!location.saved){
-        savedLocations.add(location);
-      }
-    }
+    // List<Location> savedLocations = [];
+    // //filtering locations with the saved boolean
+    // for (var location in widget.locations) {
+    //   print(location.saved);
+    //   if(!location.saved){
+    //     savedLocations.add(location);
+    //   }
+    // }
 
     return Scaffold(
       appBar: AppBar(
@@ -39,11 +40,12 @@ class _SavedState extends State<Saved> {
       body: ListView(
         //for each location in savedLocations list, render a LocationCard widget
         //LocationCard takes two parameters, location and delete
-        children: savedLocations
+        children: widget.savedLocations
             .map((location) => LocationCard(
                   location: location,
                   delete: () {
-                    setState(() => savedLocations.remove(location));
+                    //add remove function to set state
+                    setState(() => widget.savedLocations.remove(location));
                   },
                 ))
             .toList(),
