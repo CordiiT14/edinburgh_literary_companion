@@ -20,6 +20,7 @@ class LocationView extends StatelessWidget {
         body: ListView(
           children: [
             Stack(
+                alignment: AlignmentDirectional.topEnd,
               children: <Widget>[
                 Image.asset(
                   'assets/${location.image}', // image path
