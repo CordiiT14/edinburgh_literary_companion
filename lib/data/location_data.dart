@@ -70,6 +70,166 @@ class LocationData {
         latitude: 55.9469535,
         longitude: -3.1912195,
         website: ""),
+    Location(
+      name: "St Giles' Cathedral",
+      category: Category.Attraction,
+      address: "High St, Edinburgh EH1 1RE",
+      description: "[Admission free] – A church has stood on this site since before AD 854 and today this majestic building contains memorials to a number of famous literary figures including Robert Louis Stevenson, the novelist Margaret Oliphant, the publisher William Chambers and the bard himself, Robert Burns. The stunning stained glass and awe-inspiring architecture are a treat, as are the regular concerts.",
+      image: "attractions/st-giles-cathedral.jpeg",
+      latitude: 55.9494837,
+      longitude: -3.1930805,
+      website: ""
+    ),
+    Location(
+        name: "David Hume Statue",
+        category: Category.Landmark,
+        address: "379-381 High St, Edinburgh EH1 1PW",
+        description: "Hume, the ‘Father of the Scottish Enlightenment’, studied law at Edinburgh University from the age of 12. Hume had no interest in learning from his professors, preferring the written word: #'There is nothing to be learned from a professor, which is not met with in books.' #However Hume did not confine himself to the library, he was very sociable and often held parties because, as he believed: ‘Truth springs from argument amongst friends’. In his work, Hume was intent on dispelling superstition and religion as no more than an aspect of human psychology. His religious beliefs, or lack of them, meant he was never given a university position. Nevertheless his philosophy went on to inspire the likes of Benjamin Franklin, Sigmund Freud and Albert Einstein. ",
+        image: "landmarks/David-Hume-Statue.jpeg",
+        latitude: 55.9495375,
+        longitude: -3.194603,
+        website: ""
+    ),
+    Location(
+        name: "Advocate's Close",
+        category: Category.Landmark,
+        address: "Edinburgh EH1 1ND",
+        description: "Site of the first appearance of Bob Skinner, Quintin Jardine's maverick detective, in his first novel Skinner’s Rules. Skinner is the Head of CID and when a lawyer is brutally murdered in this close, followed by a series of other inexplicable murders including the wife of a colleague, the pressure is on Skinner to find the culprit. ",
+        image: "landmarks/David-Hume-Statue.jpeg",
+        latitude: 55.9498438,
+        longitude: -3.1915204,
+        website:""
+    ),
+    Location(
+        name: "City Chambers",
+        category: ,
+        address: "253 High St, Edinburgh EH1 1YJ",
+        description: "See the handprints of Ian Rankin and JK Rowling in the courtyard (as you enter on the left). Rankin received the award in 2007 and Rowling was honoured the following year. Their contributions to the literary scene, from the gritty dealings of Detective Inspector Rebus to Harry Potter’s magic misadventures have cemented Edinburgh’s reputation as a writer’s city.",
+        image: "landmarks/Edinburgh_City_Chambers.jpeg",
+        latitude: 55.9501623,
+        longitude: -3.1901325,
+        website: ""
+    ),
+    Location(
+        name: "Anchor Close",
+        category: Category.Landmark,
+        address: "Anchor Close, Edinburgh EH1 1NY",
+        description: "Site of William Smellie's printing house which printed works by the poet Robert Fergusson, economist Adam Smith, philosopher Adam Fergusson, and work by Robert Burns. #Smellie was also involved in editing the first edition of the Encyclopaedia Britannica (1768-71). He was great friends with Burns, who wrote of him: #‘His uncomb’d, hoary locks, wild-staring, #thatch’d #A head for thought profound and clear #unmatch’d’.",
+        image: "landmarks/anchor-close.jpeg",
+        latitude: 55.950375,
+        longitude: -3.1900113,
+        website:""
+    ),
+    Location(
+        name: "Fleshmarket Close",
+        category: Category.Landmark,
+        address: "Fleshmarket Cl, Edinburgh EH1 1DY",
+        description: "Formerly the city abattoir, the close provides the setting for one of Ian Rankin's most famous Inspector Rebus novels of the same name. The skeletons of a woman and an infant are discovered in a cellar on the close and an illegal immigrant has been murdered in one of the city’s housing schemes. Rebus’ investigation takes him to an asylum seekers’ detention centre and deep into Edinburgh’s underworld to find the spider at the centre of this web of crime. ",
+        image: "landmarks/fleshmarket-cl.jpeg",
+        latitude: 55.9506239,
+        longitude: -3.1892168,
+        website:""
+    ),
+    Location(
+        name: "Scott Monument",
+        category: Category.Landmark,
+        address: "E. Princes St Gardens, Edinburgh EH2 2EJ",
+        description:"Get an outstanding view of the city as you climb the 287 steps that take you to the top of the world's largest monument to an author, Sir Walter Scott, also known as 'The Wizard of the North'. The monument is 200ft tall and 64 statuettes of characters from Scott’s novels are carved into its stone. Scott’s statue at the centre of the monument is accompanied by his beloved dog Maida. Scott initially wrote anonymously but his novels were so successful he was eventually forced into the limelight. Even if you have not read Scott, the legacy of his historical fiction is such that figures such as Rob Roy and Ivanhoe are well known. He also coined many common phrases such as ‘cold shoulder’ and ‘caught red-handed’.  ",
+        image: "landmarks/scott-monument.jpeg",
+        latitude: 55.952381,
+        longitude: -3.1954628,
+        website: ""
+    ),
+    Location(
+        name: "Waverley Station",
+        category: Category.Landmark,
+        address: "Princes St, Edinburgh EH1 1BE",
+        description: "Named after Waverley, Walter Scott’s first novel which was published in 1814 and became one of the most widely read books of the nineteenth-century. #Scott's novels were highly influential in developing Scottish identity, both at home and perceptions abroad. He even popularised tartan, by asking George IV to don a kilt on his visit to Edinburgh in 1822.",
+        image: "landmarks/waverley-station.jpeg",
+        latitude: 55.952381,
+        longitude: -3.1954628,
+        website: ""
+    ),
+    Location(
+        name: "Blackfriars Street",
+        category: Category.Landmark,
+        address: "Blackfriars Street, Edinburgh EH1 1NE",
+        description: "At the foot of Blackfriars Street is a plaque marking the spot where Walter Chepman and Androw Myllar set up Scotland’s first printing press. They were given exclusive permission by James IV on the condition that they focused on books developing Scottish culture and identity. However the first book they completed, on 4 April 1508, was The Complaint of the Black Knight, a courtly love poem by the English monk John Lydgate. This site also has rich theatrical significance as Shakespeare’s company toured to Edinburgh, performing in Blackfriars Street under James’ protection. Scottish events may colour both Hamlet and Macbeth.",
+        image: "landmarks/blackfriars.jpeg",
+        latitude: 55.949071,
+        longitude: -3.18552,
+        website: ""
+    ),
+    Location(
+        name: "Scottish Book Trust",
+        category: Category.Landmark,
+        address: "55 High St, Edinburgh EH1 1SR",
+        description: "[not open to the public] - Scotland's national agency for reading and writing, an organisation committed to the promotion of reading and books. The Book Trust also leads Book Week Scotland, encouraging people of all ages and interests to celebrate Scotland’s literary scene with hundreds of events across the country.",
+        image: "landmarks/Scottish-Book-Trust.jpeg",
+        latitude: 55.9508356,
+        longitude: -3.1854707,
+        website: ""
+    ),
+    Location(
+        name: "Scottish Storytelling Centre" ,
+        category: Category.Attraction,
+        address: "43-45 High St, Edinburgh EH1 1SR",
+        description: "The home of Scotland's stories and the best place to nurture your storytelling skills. There are regular events featuring storytellers from Scotland and around the world. The centre hosts the Scottish International Storytelling Festival and there are regular free exhibitions and a great café too.",
+        image: "attractions/ssc.jpeg",
+        latitude: 55.9506153,
+        longitude: -3.1854213,
+        website: "https://www.scottishstorytellingcentre.com/"
+    ),
+    Location(
+        name: "John Knox House",
+        category: Category.Attraction,
+        address: "43-45 High St, Edinburgh EH1 1SR",
+        description: "The Storytelling Centre was first opened in 2006 and is adjoined to the historic John Knox House, the home of the leader of the Reformation in Scotland. On the exterior of the builidng there is a quotation from the Glaswegian author of the landmark Scottish novel Lanark, Alasdair Gray, reading: ‘Work as if you live in the early days of a better nation.’",
+        image: "attractions/jkh.png",
+        latitude: 55.9506268,
+        longitude: -3.1849772,
+        website: "https://www.scottishstorytellingcentre.com/john-knox-house/"
+    ),
+    Location(
+        name: "Moubray House",
+        category: Category.Landmark,
+        address: "61 High St, Edinburgh EH1 1SR",
+        description: "Thought to be where Daniel Defoe, author of Robinson Crusoe, stayed and wrote when in Edinburgh. The character of Crusoe was inspired by a Scottish sailor, Alexander Selkirk, who was castaway on an island off the coast of Chile with no human contact until his rescue four years later. #It happen'd one day about noon going towards my boat, I was exceedingly surprised with the print of a man's naked foot on the shore.#from Robinson Crusoe .The Edinburgh Courant was one of the first newspapers in Britain, a forerunner of the Edinburgh Evening News, and the Capital’s main source of local information. It is believed that Daniel Defoe was its editor, working from this house, in the early 18th century. More than this though he lodged here as a spy for the English Government in 1705-06.",
+        image: "landmarks/moubray-house.jpeg",
+        latitude: 55.9505901,
+        longitude: -3.1852927,
+        website:""
+    ),
+    Location(
+        name: "Tweeddale Court",
+        category: Category.Landmark,
+        address: "Tweeddale Court 14 High Street, Edinburgh EH1 1TE Scotland",
+        description: "This area has been a haunt of writers and publishers for centuries; Sir Walter Scott and James Hogg came to be published here. Later the publishers Oliver and Boyd occupied the house at the far end, once the town residence of the Earl of Tweeddale. More recently, in 1984, the Scottish Poetry Library began its life here, led by poet Tessa Ransford, supported by a galaxy of literary talent. This included leading figures in Scotland’s literary renaissance, such as Sorley MacLean, Iain Crichton Smith, Norman MacCaig and Naomi Mitchison, all of whom read their work in this courtyard. The Library, which was housed in what is now the Evergreen Studios, moved in 1999 to a new building in the Canongate, but publishing continues with Canongate Books and The List based in Tweeddale House.",
+        image: "landmarks/Tweedale-Court.jpeg",
+        latitude: 55.9504052,
+        longitude: -3.1846636,
+        website:""
+    ),
+    Location(
+        name: "Scottish Poetry Library",
+        category: Category.Attraction,
+        address: "5 Crichton's Cl, Edinburgh EH8 8DT",
+        description: "This is the place for poetry in Scotland, for the regular reader, the serious student or the casual browser. There are around 30,000 items, from the oft-recited giants to the little known voices in English, Scots and Gaelic. There is also an expanding collection of European poetry, both in translation and the original language. Special collections include the archive of the first Scots Makar (poet laureate) Edwin Morgan and a substantial collection of work by Ian Hamilton Finlay. The library specialises in concrete poetry, small press and artists’ books. There are events, workshops and courses throughout the year.",
+        image: "attractions/spl.jpeg",
+        latitude: 55.9514237,
+        longitude: -3.1802714,
+        website:""
+    ),
+    Location(
+        name: ,
+        category: ,
+        address: ,
+        description: ,
+        image: ,
+        latitude: ,
+        longitude: ,
+        website:
+    ),
   ];
 }
 
