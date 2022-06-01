@@ -10,6 +10,7 @@ class Location {
   double latitude;
   double longitude;
   String website;
+  bool saved = false;
 
   Location({
       required this.name,

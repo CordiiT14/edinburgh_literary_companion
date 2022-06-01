@@ -6,6 +6,7 @@ import 'package:edin_lit_companion/data/location_data.dart';
 // Browse widget for Discover screen taking in data from location_data.dart via LocationData()
 // Browse widget then maps data and passes to LocationListCard widget as a list
 
+//TODO: change this to a stateless widget
 class Browse extends StatefulWidget {
   const Browse({Key? key}) : super(key: key);
 
