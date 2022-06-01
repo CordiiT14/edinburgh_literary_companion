@@ -12,6 +12,7 @@ class Saved extends StatefulWidget {
 }
 
 class _SavedState extends State<Saved> {
+  //to be extracted to a saved_location_data file
   List<Location> savedLocations = [
     Location(
         name: 'Lady Stair Close',
