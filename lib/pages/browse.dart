@@ -15,41 +15,63 @@ class Browse extends StatefulWidget {
 }
 
 class _BrowseState extends State<Browse> {
+  final locationData = LocationData();
+
+  List<Location> searchResults = [];
+
+  @override
+  initState() {
+    final locations = locationData.locations;
+    searchResults = locations;
+    super.initState();
+  }
+
+  void runSearch(String query) {
+    List<Location> results = [];
+    if (query.isEmpty) {
+      results = searchResults;
+    } else {
+      results = searchResults
+          .where((location) =>
+              location.name.toLowerCase().contains(query.toLowerCase()))
+          .toList();
+    }
+    setState(() {
+      searchResults = results;
+    });
+
+    // void filterSearchResults(String query) {
+    //   // List<Location> dummySearchList = [];
+    //   // dummySearchList.addAll(searchResults);
+    //   if (query.isNotEmpty) {
+    //     // print(query);
+    //     List<Location> dummySearchList = [];
+    //     searchResults.forEach((location) {
+    //       if (location.name.contains(query)) {
+    //         dummySearchList.add(location);
+    //       }
+    //     });
+    //     // for (Location location in dummySearchList) {
+    //     //   print(location.name);
+    //     // }
+    //     setState(() {
+    //       searchResults.clear();
+    //       print(searchResults);
+    //       searchResults.addAll(dummySearchList);
+    //       print(searchResults);
+    //     });
+    //     return;
+    //   } else {
+    //     setState(() {
+    //       searchResults.clear();
+    //       searchResults.addAll(locations);
+    //     });
+    //   }
+  }
+
   @override
   Widget build(BuildContext context) {
     // Grabbing LocationData() from location_data.dart
-    final locationData = LocationData();
-    final locations = locationData.locations;
-
-    List<Location> searchResults = locations;
-
-    void filterSearchResults(String query) {
-      // List<Location> dummySearchList = [];
-      // dummySearchList.addAll(searchResults);
-      if (query.isNotEmpty) {
-        // print(query);
-        List<Location> dummySearchList = [];
-        searchResults.forEach((location) {
-          if (location.name.contains(query)) {
-            dummySearchList.add(location);
-          }
-        });
-        // for (Location location in dummySearchList) {
-        //   print(location.name);
-        // }
-        setState(() {
-          searchResults.clear();
-          searchResults.addAll(dummySearchList);
-          print(searchResults);
-        });
-        return;
-      } else {
-      setState(() {
-      searchResults.clear();
-      searchResults.addAll(locations);
-      });
-      }
-    }
 
     return Scaffold(
       body: SafeArea(
@@ -62,7 +84,7 @@ class _BrowseState extends State<Browse> {
               child: Container(
                 child: TextField(
                   onChanged: (value) {
-                    filterSearchResults(value);
+                    runSearch(value);
                   },
                   // controller: editingController, // Not sure about this!
                   decoration: InputDecoration(
@@ -87,10 +109,19 @@ class _BrowseState extends State<Browse> {
             const Text('Filter checkboxes go here'),
             Expanded(
               // List of location cards, mapped to LocationListCard widget
-              child: ListView(
-                children: searchResults
-                    .map((location) => LocationListCard(location: location))
-                    .toList(),
+              // child: ListView(
+              //  BUILDER
+              child: ListView.builder(
+                itemCount: searchResults.length,
+                itemBuilder: (context, index) => Card(
+                  child: LocationListCard(location: searchResults[index]),
+                ),
+
+                // children: searchResults
+                // children:
+                // (searchResults.isNotEmpty ? searchResults : locations)
+                //     .map((location) => LocationListCard(location: location))
+                //     .toList(),
               ),
             ),
           ],
