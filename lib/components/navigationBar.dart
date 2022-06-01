@@ -1,3 +1,5 @@
+import 'dart:ffi';
+
 import 'package:flutter/material.dart';
 
 class Navigation extends StatefulWidget {
@@ -17,7 +19,6 @@ class _Navigation extends State<Navigation> {
   void _onItemTapped(int index){
     setState((){
       _selectedIndex = index;
-      print(_selectedIndex);
     });
 
     Navigator.of(context).pushReplacementNamed(_pages[index]);
@@ -25,7 +26,7 @@ class _Navigation extends State<Navigation> {
   }
 
   //list of page widgets, same order as navigation for shared indices
-  List<String> _pages = <String>[
+  final List<String> _pages = <String>[
     '/home',
     '/browse',
     '/map',
@@ -41,7 +42,7 @@ class _Navigation extends State<Navigation> {
         // selectedLabelStyle: TextStyle(
         //   decoration: TextDecoration.underline,
         // ),
-        selectedItemColor: Colors.white,
+        selectedItemColor: Colors.yellowAccent,
         unselectedItemColor: Colors.white,
         items: const <BottomNavigationBarItem>[
           BottomNavigationBarItem(
@@ -74,10 +75,11 @@ class _Navigation extends State<Navigation> {
           ),
         ],
         currentIndex: _selectedIndex,
-        onTap: _onItemTapped,
-      );
+        onTap: (index) {
+          _onItemTapped(index);
+        }
+    );
+    }
 
   }
-
-}
 

@@ -14,36 +14,6 @@ class Home extends StatefulWidget {
 
 class _HomeState extends State<Home> {
 
-  // List<Location> locations = [
-  //   Location(
-  //       name: 'Lady Stair Close',
-  //       category: Category.Landmark,
-  //       address: 'Lawnmarket, Edinburgh EH1 2PA Scotland',
-  //       description: "Site of Baxter's Close",
-  //       image: 'monuments/burnsMonument.jpg',
-  //       latitude: 55.94959278,
-  //       longitude: -3.19338131,
-  //       website: 'https://hiddenscotland.co/listings/lady-stairs-close/'),
-  //   Location(
-  //       name: 'Lady Stair Close',
-  //       category: Category.Landmark,
-  //       address: 'Lawnmarket, Edinburgh EH1 2PA Scotland',
-  //       description: "Site of Baxter's Close",
-  //       image: 'monuments/burnsMonument.jpg',
-  //       latitude: 55.94959278,
-  //       longitude: -3.19338131,
-  //       website: 'https://hiddenscotland.co/listings/lady-stairs-close/'),
-  //   Location(
-  //       name: 'Lady Stair Close',
-  //       category: Category.Landmark,
-  //       address: 'Lawnmarket, Edinburgh EH1 2PA Scotland',
-  //       description: "Site of Baxter's Close",
-  //       image: 'monuments/burnsMonument.jpg',
-  //       latitude: 55.94959278,
-  //       longitude: -3.19338131,
-  //       website: 'https://hiddenscotland.co/listings/lady-stairs-close/'),
-  // ];
-
   @override
   Widget build(BuildContext context) {
 

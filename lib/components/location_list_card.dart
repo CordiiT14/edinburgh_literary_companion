@@ -23,7 +23,7 @@ class LocationListCard extends StatelessWidget {
           );
         },
         leading: CircleAvatar(
-          backgroundImage: AssetImage('assets/monuments/${location.image}'),
+          backgroundImage: AssetImage('assets/landmarks/${location.image}'),
           radius: 20.0,
         ),
         title: Text(location.name,
