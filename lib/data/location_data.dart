@@ -102,7 +102,7 @@ class LocationData {
     ),
     Location(
         name: "City Chambers",
-        category: ,
+        category: Category.Landmark,
         address: "253 High St, Edinburgh EH1 1YJ",
         description: "See the handprints of Ian Rankin and JK Rowling in the courtyard (as you enter on the left). Rankin received the award in 2007 and Rowling was honoured the following year. Their contributions to the literary scene, from the gritty dealings of Detective Inspector Rebus to Harry Potter’s magic misadventures have cemented Edinburgh’s reputation as a writer’s city.",
         image: "landmarks/Edinburgh_City_Chambers.jpeg",
@@ -220,16 +220,16 @@ class LocationData {
         longitude: -3.1802714,
         website:""
     ),
-    Location(
-        name: ,
-        category: ,
-        address: ,
-        description: ,
-        image: ,
-        latitude: ,
-        longitude: ,
-        website:
-    ),
+    // Location(
+    //     name: ,
+    //     category: ,
+    //     address: ,
+    //     description: ,
+    //     image: ,
+    //     latitude: ,
+    //     longitude: ,
+    //     website:
+    // ),
   ];
 }
 
