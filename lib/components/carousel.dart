@@ -13,38 +13,6 @@ class Carousel extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
 
-    //Test Data
-
-    // List<Location> locations = [
-    //   Location(
-    //       name: 'Lady Stair Close',
-    //       category: Category.landmark,
-    //       address: 'Lawnmarket, Edinburgh EH1 2PA Scotland',
-    //       description: "Site of Baxter's Close",
-    //       image: 'landmarks/burnsMonument.jpg',
-    //       latitude: 55.94959278,
-    //       longitude: -3.19338131,
-    //       website: 'https://hiddenscotland.co/listings/lady-stairs-close/'),
-    //   Location(
-    //       name: 'Lady Stair Close',
-    //       category: Category.landmark,
-    //       address: 'Lawnmarket, Edinburgh EH1 2PA Scotland',
-    //       description: "Site of Baxter's Close",
-    //       image: 'landmarks/burnsMonument.jpg',
-    //       latitude: 55.94959278,
-    //       longitude: -3.19338131,
-    //       website: 'https://hiddenscotland.co/listings/lady-stairs-close/'),
-    //   Location(
-    //       name: 'Lady Stair Close',
-    //       category: Category.landmark,
-    //       address: 'Lawnmarket, Edinburgh EH1 2PA Scotland',
-    //       description: "Site of Baxter's Close",
-    //       image: 'landmarks/burnsMonument.jpg',
-    //       latitude: 55.94959278,
-    //       longitude: -3.19338131,
-    //       website: 'https://hiddenscotland.co/listings/lady-stairs-close/'),
-    // ];
-
     return CarouselSlider(
       options: CarouselOptions( //mandatory attribute
         height: 100.0,

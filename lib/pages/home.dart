@@ -20,17 +20,9 @@ class _HomeState extends State<Home> {
     final locationData = LocationData();
     final allLocations = locationData.locations;
 
-    final topAttractions = allLocations.map((location) => {
-      location.category == Category.Attraction
-    }).toList();
+    // TODO once full location data available create three lists for carousels
+    List <Location> topAttractions = [];
 
-    final topLandmarks = allLocations.map((location) => {
-      location.category == Category.Landmark
-    }).toList();
-
-    // final topBookshop = allLocations.map((location) => {
-    //   location.category == Category.Bookshop
-    // }).toList();
 
 
     return Scaffold(
@@ -87,7 +79,7 @@ class _HomeState extends State<Home> {
               ),
 
               // ATTRACTION CAROUSEL
-              Carousel(topAttractions),
+              Carousel(allLocations),
 
               // TOP LANDMARKS SECTION
               Row( // Containing Landmarks section heading and see more button
@@ -113,7 +105,7 @@ class _HomeState extends State<Home> {
               ),
 
               //LANDMARKS CAROUSEL
-              Carousel(topLandmarks),
+              Carousel(allLocations),
 
               // TOP BOOKSHOPS SECTION
               Row( // Containing Bookshops section heading and see more button
@@ -139,7 +131,7 @@ class _HomeState extends State<Home> {
               ),
 
               //BOOKSHOP CAROUSEL
-              Carousel(topAttractions),
+              Carousel(allLocations),
             ],
           ),
         ),
