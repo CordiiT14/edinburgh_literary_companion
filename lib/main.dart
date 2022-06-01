@@ -7,8 +7,6 @@ import 'package:edin_lit_companion/pages/view_map.dart';
 import 'package:edin_lit_companion/pages/saved.dart';
 import 'package:edin_lit_companion/data/location_data.dart';
 
-import 'models/Location.dart';
-
 
 void main() {
   final locationData = LocationData();

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:edin_lit_companion/components/navigationBar.dart';
 import 'package:edin_lit_companion/models/Location.dart';
-import 'package:edin_lit_companion/models/Category.dart';
+import 'package:edin_lit_companion/data/location_data.dart';
 import 'package:edin_lit_companion/components/location_card.dart';
 
 class Saved extends StatefulWidget {
@@ -19,14 +19,17 @@ class _SavedState extends State<Saved> {
   @override
   Widget build(BuildContext context) {
     // List<Location> savedLocations = widget.locations.retainWhere((location) => location.saved);
+    // final locationData = LocationData();
+    // final locations = locationData.locations;
     List<Location> savedLocations = [];
     //filtering locations with the saved boolean
     for (var location in widget.locations) {
       print(location.saved);
-      if(location.saved){
+      if(!location.saved){
         savedLocations.add(location);
       }
     }
+
     return Scaffold(
       appBar: AppBar(
         title: Text('Saved'),
