@@ -1,5 +1,4 @@
 import 'package:edin_lit_companion/models/Location.dart';
-import 'package:edin_lit_companion/models/Category.dart';
 import 'package:flutter/material.dart';
 import 'package:edin_lit_companion/components/navigationBar.dart';
 import 'package:edin_lit_companion/components/carousel.dart';
@@ -33,9 +32,9 @@ class _HomeState extends State<Home> {
           child: Column( //column wraps all content
             children: [
               Row( // Row 1: Discover Literary Edinburgh Header
-                children: [
+                children: const [
                   Padding(
-                    padding: const EdgeInsets.all(12.0),
+                    padding: EdgeInsets.all(12.0),
                     child: Text(
                         'Discover Literary \n   Edinburgh!',
                     style: TextStyle(
@@ -49,7 +48,7 @@ class _HomeState extends State<Home> {
                 padding: const EdgeInsets.all(8.0),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
+                  children: const [
                     Text('Search bar will go here'),
                   ],
                 ),
@@ -59,7 +58,7 @@ class _HomeState extends State<Home> {
               Expanded(
                 child: Row( // Containing Attractions section heading and see more button
                   children: [
-                    Text(
+                    const Text(
                       'Top Attractions',
                       style: TextStyle(
                         fontSize: 18,
@@ -68,7 +67,7 @@ class _HomeState extends State<Home> {
                     TextButton(
                       //TODO WRITE SEE MORE FILTER FUNCTIONS
                         onPressed: (){},
-                        child: Text(
+                        child: const Text(
                           'see more',
                           style: TextStyle(
                             color: Color.fromRGBO(241, 135, 1, 1),
@@ -86,7 +85,7 @@ class _HomeState extends State<Home> {
               // TOP LANDMARKS SECTION
               Row( // Containing Landmarks section heading and see more button
                 children: [
-                  Text(
+                  const Text(
                     'Top Landmarks',
                   style: TextStyle(
                   fontSize: 18,
@@ -95,7 +94,7 @@ class _HomeState extends State<Home> {
                   TextButton(
                     //TODO WRITE SEE MORE FILTER FUNCTIONS
                     onPressed: (){},
-                    child: Text(
+                    child: const Text(
                       'see more',
                       style: TextStyle(
                         color: Color.fromRGBO(241, 135, 1, 1),
@@ -112,7 +111,7 @@ class _HomeState extends State<Home> {
               // TOP BOOKSHOPS SECTION
               Row( // Containing Bookshops section heading and see more button
                 children: [
-                  Text(
+                  const Text(
                     'Top Bookshops',
                   style: TextStyle(
                   fontSize: 18,
@@ -121,7 +120,7 @@ class _HomeState extends State<Home> {
                   TextButton(
                     //TODO WRITE SEE MORE FILTER FUNCTIONS
                     onPressed: (){},
-                    child: Text(
+                    child: const Text(
                       'see more',
                       style: TextStyle(
                         color: Color.fromRGBO(241, 135, 1, 1),
@@ -138,7 +137,7 @@ class _HomeState extends State<Home> {
           ),
         ),
       ),
-      bottomNavigationBar: Navigation(),
+      bottomNavigationBar: const Navigation(),
     );
   }
 }

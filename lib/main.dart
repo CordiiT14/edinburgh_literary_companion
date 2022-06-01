@@ -13,7 +13,7 @@ void main(){
         providers: [
           ChangeNotifierProvider(create: (_) => Locations()),
         ],
-      child: EdinLit(),
+      child: const EdinLit(),
     )
   );
 }
@@ -28,12 +28,12 @@ class EdinLit extends StatelessWidget {
       initialRoute: '/home',
       routes: {
         // TODO create loading widget
-        '/': (context) => Loading(),
-        '/home': (context) => Home(),
-        '/browse': (context) => Browse(),
+        '/': (context) => const Loading(),
+        '/home': (context) => const Home(),
+        '/browse': (context) => const Browse(),
         // '/location' : (context) => LocationView(),
-        '/map': (context) => ViewMap(),
-        '/saved': (context) => Saved(),
+        '/map': (context) => const ViewMap(),
+        '/saved': (context) => const Saved(),
       },
     ));
   }

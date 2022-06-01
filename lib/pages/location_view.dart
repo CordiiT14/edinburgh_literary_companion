@@ -1,22 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:edin_lit_companion/models/Location.dart';
-import 'package:edin_lit_companion/data/location_data.dart';
-import 'package:edin_lit_companion/components/location_list_card.dart';
 import 'package:provider/provider.dart';
-import 'package:edin_lit_companion/providers/locations_provider.dart';
-import 'package:edin_lit_companion/models/Location.dart';
+import '../providers/locations_provider.dart';
 
 // This class takes in a location object from pages such as browser.dart(discover) and saved.dart.
 class LocationView extends StatelessWidget {
   final Location location;
-  const LocationView({ required this.location});
+  const LocationView({ Key? key, required this.location}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-
-    // Test data for grabbing the first location item (Delete if no longer required)
-    // final locationData = LocationData(); // Get all locations from LocationData file
-    // final location = locationData.locations[0]; // Grab the first location for testing
 
       return Scaffold(
         // appBar allows user to return to the screen they were on previously
@@ -26,9 +19,26 @@ class LocationView extends StatelessWidget {
 
         body: ListView(
           children: [
-            Image.asset(
-                'assets/${location.image}' // image path
+            Stack(
+              children: <Widget>[
+                Image.asset(
+                  'assets/${location.image}', // image path
+                ),
+                IconButton(
+                  iconSize: 50,
+                  onPressed: () => context.read<Locations>().toggleSavedLocation(location),
+                  icon: Icon(
+                    //changing icon display based on saved status
+                    context.read<Locations>().locationIsSaved(location)
+                        ? Icons.favorite
+                        : Icons.favorite_border_outlined,
+                    color: context.read<Locations>().locationIsSaved(location) ? Colors.red : Colors.grey[500],
+                    semanticLabel: context.read<Locations>().locationIsSaved(location) ? 'Remove from saved' : 'Save',
+                  ),
+                ),
+            ]
             ),
+
             ListTile(
               title: Text(
                 location.name,

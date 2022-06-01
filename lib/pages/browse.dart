@@ -3,7 +3,6 @@ import 'package:edin_lit_companion/components/navigationBar.dart';
 import 'package:edin_lit_companion/components/location_list_card.dart';
 import 'package:provider/provider.dart';
 import 'package:edin_lit_companion/providers/locations_provider.dart';
-import 'package:edin_lit_companion/data/location_data.dart';
 import 'package:edin_lit_companion/models/Location.dart';
 
 // Browse widget for Discover screen taking in data from location_data.dart via LocationData()
@@ -59,7 +58,7 @@ class _BrowseState extends State<Browse> {
               child: Container(
                 child: TextField(
                   onChanged: (value) => context.read<Locations>().runSearch(value),
-                  decoration: InputDecoration(
+                  decoration: const InputDecoration(
                     hintText: 'Search',
                     prefixIcon: Icon(
                       Icons.search,
@@ -103,7 +102,7 @@ class _BrowseState extends State<Browse> {
           ],
         ),
       ),
-      bottomNavigationBar: Navigation(),
+      bottomNavigationBar: const Navigation(),
     );
   }
 }
