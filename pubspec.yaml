@@ -63,7 +63,7 @@ flutter:
   assets:
     - assets/
     - assets/attractions/
-    - assets/bookshops/
+    - assets/bookshop/
     - assets/landmarks/
 
   # An image asset can refer to one or more resolution-specific "variants", see
