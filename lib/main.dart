@@ -5,8 +5,6 @@ import 'package:edin_lit_companion/pages/location_view.dart';
 import 'package:edin_lit_companion/pages/browse.dart';
 import 'package:edin_lit_companion/pages/view_map.dart';
 import 'package:edin_lit_companion/pages/saved.dart';
-import 'package:edin_lit_companion/data/location_data.dart';
-import 'package:edin_lit_companion/models/Location.dart';
 import 'package:provider/provider.dart';
 
 void main(){
