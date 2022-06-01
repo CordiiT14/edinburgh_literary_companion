@@ -29,6 +29,7 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  provider: ^5.0.0
 
   carousel_slider: ^4.1.1
 
@@ -63,7 +64,7 @@ flutter:
   assets:
     - assets/
     - assets/attractions/
-    - assets/bookshop/
+    - assets/bookshops/
     - assets/landmarks/
 
   # An image asset can refer to one or more resolution-specific "variants", see

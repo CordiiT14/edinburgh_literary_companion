@@ -1,50 +1,18 @@
 import 'package:flutter/material.dart';
 import 'package:edin_lit_companion/components/navigationBar.dart';
-import 'package:edin_lit_companion/models/Location.dart';
-import 'package:edin_lit_companion/models/Category.dart';
+import 'package:edin_lit_companion/data/location_data.dart';
 import 'package:edin_lit_companion/components/location_card.dart';
+import 'package:provider/provider.dart';
+import 'package:edin_lit_companion/providers/locations_provider.dart';
+import 'package:edin_lit_companion/models/Location.dart';
 
-class Saved extends StatefulWidget {
+class Saved extends StatelessWidget {
   const Saved({Key? key}) : super(key: key);
 
   @override
-  State<Saved> createState() => _SavedState();
-}
-
-class _SavedState extends State<Saved> {
-  //to be extracted to a saved_location_data file
-  List<Location> savedLocations = [
-    Location(
-        name: 'Lady Stair Close',
-        category: Category.Landmark,
-        address: 'Lawnmarket, Edinburgh EH1 2PA Scotland',
-        description: "Site of Baxter's Close",
-        image: 'lady stair close',
-        latitude: 55.94959278,
-        longitude: -3.19338131,
-        website: 'https://hiddenscotland.co/listings/lady-stairs-close/'),
-    Location(
-        name: 'Elephant Cafe',
-        category: Category.Landmark,
-        address: 'Lawnmarket, Edinburgh EH1 2PA Scotland',
-        description: "Site of Baxter's Close",
-        image: 'lady stair close',
-        latitude: 55.94959278,
-        longitude: -3.19338131,
-        website: 'https://hiddenscotland.co/listings/lady-stairs-close/'),
-    Location(
-        name: 'National Library of Scotland',
-        category: Category.Landmark,
-        address: 'Lawnmarket, Edinburgh EH1 2PA Scotland',
-        description: "Site of Baxter's Close",
-        image: 'lady stair close',
-        latitude: 55.94959278,
-        longitude: -3.19338131,
-        website: 'https://hiddenscotland.co/listings/lady-stairs-close/')
-  ];
-
-  @override
   Widget build(BuildContext context) {
+    final List<Location> savedLocations =
+        context.watch<Locations>().savedLocations;
     return Scaffold(
       appBar: AppBar(
         title: Text('Saved'),
@@ -55,12 +23,7 @@ class _SavedState extends State<Saved> {
         //for each location in savedLocations list, render a LocationCard widget
         //LocationCard takes two parameters, location and delete
         children: savedLocations
-            .map((location) => LocationCard(
-                  location: location,
-                  delete: () {
-                    setState(() => savedLocations.remove(location));
-                  },
-                ))
+            .map((location) => LocationCard(location: location))
             .toList(),
       ),
       bottomNavigationBar: Navigation(),
