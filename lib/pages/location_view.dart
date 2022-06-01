@@ -2,6 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:edin_lit_companion/models/Location.dart';
 import 'package:edin_lit_companion/data/location_data.dart';
 import 'package:edin_lit_companion/components/location_list_card.dart';
+import 'package:provider/provider.dart';
+import 'package:edin_lit_companion/providers/locations_provider.dart';
+import 'package:edin_lit_companion/models/Location.dart';
 
 // This class takes in a location object from pages such as browser.dart(discover) and saved.dart.
 class LocationView extends StatelessWidget {

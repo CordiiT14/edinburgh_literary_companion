@@ -33,7 +33,7 @@ class EdinLit extends StatelessWidget {
         '/browse': (context) => Browse(),
         // '/location' : (context) => LocationView(),
         '/map': (context) => ViewMap(),
-        // '/saved': (context) => Saved(),
+        '/saved': (context) => Saved(),
       },
     ));
   }

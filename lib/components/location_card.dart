@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:edin_lit_companion/models/Location.dart';
+import 'package:provider/provider.dart';
+import 'package:edin_lit_companion/providers/locations_provider.dart';
 
 class LocationCard extends StatelessWidget {
   final Location location;
-  final Function delete;
 
-  LocationCard({required this.location, required this.delete});
+  LocationCard({required this.location});
 
   @override
   Widget build(BuildContext context) {
@@ -39,7 +40,7 @@ class LocationCard extends StatelessWidget {
           //this comes up if you long tap on the icon
           tooltip: 'remove from saved',
           onPressed: () {
-            delete();
+            context.read<Locations>().toggleSavedLocation(location);
           },
         ),
       ),
