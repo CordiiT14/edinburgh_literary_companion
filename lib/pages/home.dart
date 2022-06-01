@@ -56,26 +56,28 @@ class _HomeState extends State<Home> {
               ),
 
               // TOP ATTRACTIONS SECTION
-              Row( // Containing Attractions section heading and see more button
-                children: [
-                  Text(
-                    'Top Attractions',
-                    style: TextStyle(
-                      fontSize: 18,
-                    ),
-                  ),
-                  TextButton(
-                    //TODO WRITE SEE MORE FILTER FUNCTIONS
-                      onPressed: (){},
-                      child: Text(
-                        'see more',
-                        style: TextStyle(
-                          color: Color.fromRGBO(241, 135, 1, 1),
-                          fontSize: 12,
-                        ),
+              Expanded(
+                child: Row( // Containing Attractions section heading and see more button
+                  children: [
+                    Text(
+                      'Top Attractions',
+                      style: TextStyle(
+                        fontSize: 18,
                       ),
-                  ),
-                ],
+                    ),
+                    TextButton(
+                      //TODO WRITE SEE MORE FILTER FUNCTIONS
+                        onPressed: (){},
+                        child: Text(
+                          'see more',
+                          style: TextStyle(
+                            color: Color.fromRGBO(241, 135, 1, 1),
+                            fontSize: 12,
+                          ),
+                        ),
+                    ),
+                  ],
+                ),
               ),
 
               // ATTRACTION CAROUSEL
