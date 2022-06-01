@@ -9,50 +9,47 @@ import 'package:edin_lit_companion/models/Location.dart';
 // Browse widget for Discover screen taking in data from location_data.dart via LocationData()
 // Browse widget then maps data and passes to LocationListCard widget as a list
 
-class Browse extends StatelessWidget {
+class Browse extends StatefulWidget {
   const Browse({Key? key}) : super(key: key);
-
-  @override
 //   following two lines are from dataflow branch
-  Widget build(BuildContext context) {
-    final List<Location> locations = context.watch<Locations>().allLocations;
+//     final List<Location> locations = context.watch<Locations>().allLocations;
 //     beginning of search branch
+  @override
   State<Browse> createState() => _BrowseState();
 }
 
 class _BrowseState extends State<Browse> {
   // Grabbing LocationData() from location_data.dart
-  final locationData = LocationData();
+  // final locationData = LocationData();
+  // List<Location> searchResults = [];
+  // List<Location> allLocations = [];
 
-  List<Location> searchResults = [];
-  List<Location> allLocations = [];
+  // @override
+  // initState() {
+  //   final locations = LocationData().locations;
+  //   searchResults = locations;
+  //   allLocations = locations;
+  //   super.initState();
+  // }
 
-  @override
-  initState() {
-    final locations = locationData.locations;
-    searchResults = locations;
-    allLocations = locations;
-    super.initState();
-  }
-
-  void runSearch(String query) {
-    List<Location> results = [];
-    if (query.isEmpty) {
-      results = allLocations;
-    } else {
-      results = searchResults
-          .where((location) =>
-              location.name.toLowerCase().contains(query.toLowerCase()))
-          .toList();
-    }
-    setState(() {
-      searchResults = results;
-    });
-  }
+  // void runSearch(String query) {
+  //   List<Location> results = [];
+  //   if (query.isEmpty) {
+  //     results = allLocations;
+  //   } else {
+  //     results = searchResults
+  //         .where((location) =>
+  //             location.name.toLowerCase().contains(query.toLowerCase()))
+  //         .toList();
+  //   }
+  //   setState(() {
+  //     searchResults = results;
+  //   });
+  // }
 
   @override
   Widget build(BuildContext context) {
-// end of conflict
+    List<Location> searchResults = context.watch<Locations>().searchLocations;
     return Scaffold(
       body: SafeArea(
         child: Column(
@@ -61,7 +58,7 @@ class _BrowseState extends State<Browse> {
               padding: const EdgeInsets.all(12.0),
               child: Container(
                 child: TextField(
-                  onChanged: (value) => runSearch(value),
+                  onChanged: (value) => context.read<Locations>().runSearch(value),
                   decoration: InputDecoration(
                     hintText: 'Search',
                     prefixIcon: Icon(
