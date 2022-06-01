@@ -15,21 +15,24 @@ class Browse extends StatefulWidget {
 }
 
 class _BrowseState extends State<Browse> {
+  // Grabbing LocationData() from location_data.dart
   final locationData = LocationData();
 
   List<Location> searchResults = [];
+  List<Location> allLocations = [];
 
   @override
   initState() {
     final locations = locationData.locations;
     searchResults = locations;
+    allLocations = locations;
     super.initState();
   }
 
   void runSearch(String query) {
     List<Location> results = [];
     if (query.isEmpty) {
-      results = searchResults;
+      results = allLocations;
     } else {
       results = searchResults
           .where((location) =>
@@ -39,65 +42,28 @@ class _BrowseState extends State<Browse> {
     setState(() {
       searchResults = results;
     });
-
-    // void filterSearchResults(String query) {
-    //   // List<Location> dummySearchList = [];
-    //   // dummySearchList.addAll(searchResults);
-    //   if (query.isNotEmpty) {
-    //     // print(query);
-    //     List<Location> dummySearchList = [];
-    //     searchResults.forEach((location) {
-    //       if (location.name.contains(query)) {
-    //         dummySearchList.add(location);
-    //       }
-    //     });
-    //     // for (Location location in dummySearchList) {
-    //     //   print(location.name);
-    //     // }
-    //     setState(() {
-    //       searchResults.clear();
-    //       print(searchResults);
-    //       searchResults.addAll(dummySearchList);
-    //       print(searchResults);
-    //     });
-    //     return;
-    //   } else {
-    //     setState(() {
-    //       searchResults.clear();
-    //       searchResults.addAll(locations);
-    //     });
-    //   }
   }
 
   @override
   Widget build(BuildContext context) {
-    // Grabbing LocationData() from location_data.dart
-
     return Scaffold(
       body: SafeArea(
         child: Column(
           children: [
-            // Search bar and filters will go here
-
             Padding(
               padding: const EdgeInsets.all(12.0),
               child: Container(
                 child: TextField(
-                  onChanged: (value) {
-                    runSearch(value);
-                  },
-                  // controller: editingController, // Not sure about this!
+                  onChanged: (value) => runSearch(value),
                   decoration: InputDecoration(
                     hintText: 'Search',
                     prefixIcon: Icon(
                       Icons.search,
                       // TODO Fix colour here
-                      // color: Color.fromARGB(241, 135, 1, 1),
                     ),
                     border: OutlineInputBorder(
                         borderSide: BorderSide(
                             // TODO And fix colour here
-                            // color: Colors.black,
                             ),
                         borderRadius: BorderRadius.all(Radius.circular(25.0))),
                   ),
@@ -105,24 +71,30 @@ class _BrowseState extends State<Browse> {
               ),
             ),
 
-            const Text('Search bar goes here'),
+            // Search filters will go here
             const Text('Filter checkboxes go here'),
             Expanded(
-              // List of location cards, mapped to LocationListCard widget
-              // child: ListView(
-              //  BUILDER
-              child: ListView.builder(
-                itemCount: searchResults.length,
-                itemBuilder: (context, index) => Card(
-                  child: LocationListCard(location: searchResults[index]),
-                ),
+              // List of location cards, passed to LocationListCard widget
+              child: searchResults.isNotEmpty
+                  ? ListView.builder(
+                      itemCount: searchResults.length,
+                      itemBuilder: (context, index) => Card(
+                            // key: ValueKey(searchResults[index]),
+                            child: LocationListCard(
+                                location: searchResults[index]),
+                          )
 
-                // children: searchResults
-                // children:
-                // (searchResults.isNotEmpty ? searchResults : locations)
-                //     .map((location) => LocationListCard(location: location))
-                //     .toList(),
-              ),
+                      // OLD CODE FROM ORIGINAL MAPPING TO LocationListCard
+                      // children: searchResults
+                      // children:
+                      // (searchResults.isNotEmpty ? searchResults : locations)
+                      //     .map((location) => LocationListCard(location: location))
+                      //     .toList(),
+
+                      )
+                  : const Text(
+                      'No results found',
+                    ),
             ),
           ],
         ),
