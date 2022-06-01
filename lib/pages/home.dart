@@ -2,8 +2,8 @@ import 'package:edin_lit_companion/models/Location.dart';
 import 'package:edin_lit_companion/models/Category.dart';
 import 'package:flutter/material.dart';
 import 'package:edin_lit_companion/components/navigationBar.dart';
-import 'package:carousel_slider/carousel_slider.dart';
 import 'package:edin_lit_companion/components/carousel.dart';
+import 'package:edin_lit_companion/data/location_data.dart';
 
 class Home extends StatefulWidget {
   const Home({Key? key}) : super(key: key);
@@ -13,38 +13,26 @@ class Home extends StatefulWidget {
 }
 
 class _HomeState extends State<Home> {
-  List<Location> locations = [
-    Location(
-        name: 'Lady Stair Close',
-        category: Category.Landmark,
-        address: 'Lawnmarket, Edinburgh EH1 2PA Scotland',
-        description: "Site of Baxter's Close",
-        image: 'monuments/burnsMonument.jpg',
-        latitude: 55.94959278,
-        longitude: -3.19338131,
-        website: 'https://hiddenscotland.co/listings/lady-stairs-close/'),
-    Location(
-        name: 'Lady Stair Close',
-        category: Category.Landmark,
-        address: 'Lawnmarket, Edinburgh EH1 2PA Scotland',
-        description: "Site of Baxter's Close",
-        image: 'monuments/burnsMonument.jpg',
-        latitude: 55.94959278,
-        longitude: -3.19338131,
-        website: 'https://hiddenscotland.co/listings/lady-stairs-close/'),
-    Location(
-        name: 'Lady Stair Close',
-        category: Category.Landmark,
-        address: 'Lawnmarket, Edinburgh EH1 2PA Scotland',
-        description: "Site of Baxter's Close",
-        image: 'monuments/burnsMonument.jpg',
-        latitude: 55.94959278,
-        longitude: -3.19338131,
-        website: 'https://hiddenscotland.co/listings/lady-stairs-close/'),
-  ];
 
   @override
   Widget build(BuildContext context) {
+
+    final locationData = LocationData();
+    final allLocations = locationData.locations;
+
+    final topAttractions = allLocations.map((location) => {
+      location.category == Category.Attraction
+    }).toList();
+
+    final topLandmarks = allLocations.map((location) => {
+      location.category == Category.Landmark
+    }).toList();
+
+    // final topBookshop = allLocations.map((location) => {
+    //   location.category == Category.Bookshop
+    // }).toList();
+
+
     return Scaffold(
       appBar: null,
       body: SafeArea(
@@ -99,7 +87,7 @@ class _HomeState extends State<Home> {
               ),
 
               // ATTRACTION CAROUSEL
-              Carousel(locations),
+              Carousel(topAttractions),
 
               // TOP LANDMARKS SECTION
               Row( // Containing Landmarks section heading and see more button
@@ -125,7 +113,7 @@ class _HomeState extends State<Home> {
               ),
 
               //LANDMARKS CAROUSEL
-              Carousel(locations),
+              Carousel(topLandmarks),
 
               // TOP BOOKSHOPS SECTION
               Row( // Containing Bookshops section heading and see more button
@@ -151,7 +139,7 @@ class _HomeState extends State<Home> {
               ),
 
               //BOOKSHOP CAROUSEL
-              Carousel(locations),
+              Carousel(topAttractions),
             ],
           ),
         ),

@@ -33,8 +33,10 @@ class LocationCard extends StatelessWidget {
         trailing: IconButton(
           icon: Icon(
             Icons.delete,
+            //this is useful for accessibility mode
             semanticLabel: 'remove from saved',
           ),
+          //this comes up if you long tap on the icon
           tooltip: 'remove from saved',
           onPressed: () {
             delete();
