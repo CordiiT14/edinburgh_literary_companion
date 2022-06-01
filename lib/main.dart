@@ -18,7 +18,6 @@ void main() {
       '/home' : (context) => Home(),
       //TODO create Browse widget
       '/browse' : (context) => Browse(),
-      //TODO create Browse widget
       // '/location' : (context) => LocationView(),
       '/map' : (context) => ViewMap(),
       '/saved' : (context) => Saved(),
