@@ -5,46 +5,28 @@ import 'package:edin_lit_companion/models/Category.dart';
 import 'package:edin_lit_companion/components/location_card.dart';
 
 class Saved extends StatefulWidget {
-  const Saved({Key? key}) : super(key: key);
+
+  List<Location> locations;
+
+  Saved({Key? key, required this.locations}) : super(key: key);
 
   @override
   State<Saved> createState() => _SavedState();
 }
 
 class _SavedState extends State<Saved> {
-  //to be extracted to a saved_location_data file
-  List<Location> savedLocations = [
-    Location(
-        name: 'Lady Stair Close',
-        category: Category.Landmark,
-        address: 'Lawnmarket, Edinburgh EH1 2PA Scotland',
-        description: "Site of Baxter's Close",
-        image: 'lady stair close',
-        latitude: 55.94959278,
-        longitude: -3.19338131,
-        website: 'https://hiddenscotland.co/listings/lady-stairs-close/'),
-    Location(
-        name: 'Elephant Cafe',
-        category: Category.Landmark,
-        address: 'Lawnmarket, Edinburgh EH1 2PA Scotland',
-        description: "Site of Baxter's Close",
-        image: 'lady stair close',
-        latitude: 55.94959278,
-        longitude: -3.19338131,
-        website: 'https://hiddenscotland.co/listings/lady-stairs-close/'),
-    Location(
-        name: 'National Library of Scotland',
-        category: Category.Landmark,
-        address: 'Lawnmarket, Edinburgh EH1 2PA Scotland',
-        description: "Site of Baxter's Close",
-        image: 'lady stair close',
-        latitude: 55.94959278,
-        longitude: -3.19338131,
-        website: 'https://hiddenscotland.co/listings/lady-stairs-close/')
-  ];
 
   @override
   Widget build(BuildContext context) {
+    // List<Location> savedLocations = widget.locations.retainWhere((location) => location.saved);
+    List<Location> savedLocations = [];
+    //filtering locations with the saved boolean
+    for (var location in widget.locations) {
+      print(location.saved);
+      if(location.saved){
+        savedLocations.add(location);
+      }
+    }
     return Scaffold(
       appBar: AppBar(
         title: Text('Saved'),
