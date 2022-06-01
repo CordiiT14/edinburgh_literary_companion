@@ -21,35 +21,35 @@ class Browse extends StatefulWidget {
 class _BrowseState extends State<Browse> {
   // Grabbing LocationData() from location_data.dart
   // final locationData = LocationData();
-  List<Location> searchResults = [];
-  List<Location> allLocations = [];
+  // List<Location> searchResults = [];
+  // List<Location> allLocations = [];
 
-  @override
-  initState() {
-    final locations = LocationData().locations;
-    searchResults = locations;
-    allLocations = locations;
-    super.initState();
-  }
+  // @override
+  // initState() {
+  //   final locations = LocationData().locations;
+  //   searchResults = locations;
+  //   allLocations = locations;
+  //   super.initState();
+  // }
 
-  void runSearch(String query) {
-    List<Location> results = [];
-    if (query.isEmpty) {
-      results = allLocations;
-    } else {
-      results = searchResults
-          .where((location) =>
-              location.name.toLowerCase().contains(query.toLowerCase()))
-          .toList();
-    }
-    setState(() {
-      searchResults = results;
-    });
-  }
+  // void runSearch(String query) {
+  //   List<Location> results = [];
+  //   if (query.isEmpty) {
+  //     results = allLocations;
+  //   } else {
+  //     results = searchResults
+  //         .where((location) =>
+  //             location.name.toLowerCase().contains(query.toLowerCase()))
+  //         .toList();
+  //   }
+  //   setState(() {
+  //     searchResults = results;
+  //   });
+  // }
 
   @override
   Widget build(BuildContext context) {
-// end of conflict
+    List<Location> searchResults = context.watch<Locations>().searchLocations;
     return Scaffold(
       body: SafeArea(
         child: Column(
@@ -58,7 +58,7 @@ class _BrowseState extends State<Browse> {
               padding: const EdgeInsets.all(12.0),
               child: Container(
                 child: TextField(
-                  onChanged: (value) => runSearch(value),
+                  onChanged: (value) => context.read<Locations>().runSearch(value),
                   decoration: InputDecoration(
                     hintText: 'Search',
                     prefixIcon: Icon(

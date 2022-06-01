@@ -6,9 +6,12 @@ class Locations with ChangeNotifier {
 
   final List<Location> _locations = LocationData().locations;
   final List<Location> _savedLocations = [];
+  List<Location> _searchLocations = LocationData().locations;
 
   List<Location> get allLocations => _locations;
   List<Location> get savedLocations =>  _savedLocations;
+  List<Location> get searchLocations => _searchLocations;
+
 
   void toggleSavedLocation(Location location){
     locationIsSaved(location) ? _savedLocations.remove(location) : _savedLocations.add(location);
@@ -17,6 +20,18 @@ class Locations with ChangeNotifier {
 
   bool locationIsSaved(Location location){
     return _savedLocations.contains(location);
+  }
+
+  void runSearch(String query) {
+    if (query.isEmpty) {
+      _searchLocations = _locations;
+    } else {
+      _searchLocations = _searchLocations
+          .where((location) =>
+          location.name.toLowerCase().contains(query.toLowerCase()))
+          .toList();
+    }
+    notifyListeners();
   }
 
 }
