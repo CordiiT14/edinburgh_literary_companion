@@ -6,6 +6,7 @@ import 'package:edin_lit_companion/pages/browse.dart';
 import 'package:edin_lit_companion/pages/view_map.dart';
 import 'package:edin_lit_companion/pages/saved.dart';
 import 'package:provider/provider.dart';
+import 'package:edin_lit_companion/providers/locations_provider.dart';
 
 void main(){
   runApp(
