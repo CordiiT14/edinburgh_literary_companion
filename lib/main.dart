@@ -7,33 +7,39 @@ import 'package:edin_lit_companion/pages/view_map.dart';
 import 'package:edin_lit_companion/pages/saved.dart';
 import 'package:edin_lit_companion/data/location_data.dart';
 import 'package:edin_lit_companion/models/Location.dart';
+import 'package:provider/provider.dart';
 
-void main() {
-  final locationData = LocationData();
-  final locations = locationData.locations;
-  List<Location> savedLocations = [];
-  //filtering locations with the saved boolean
-  for (var location in locations) {
-    if (location.saved) {
-      savedLocations.add(location);
-    }
-  }
-  runApp(MaterialApp(
-    debugShowCheckedModeBanner: false,
-    initialRoute: '/home',
-    routes: {
-      // TODO create loading widget
-      '/': (context) => Loading(),
-      '/home': (context) => Home(),
-      '/browse': (context) => Browse(),
-      // '/location' : (context) => LocationView(),
-      '/map': (context) => ViewMap(),
-      '/saved': (context) => Saved(
-            savedLocations: locations,
-            remove: () {
-              setState((location) => locations.remove(location));
-            },
-          )
-    },
-  ));
+void main(){
+  runApp(
+    MultiProvider(
+        providers: [
+          ChangeNotifierProvider(create: (_) => Locations()),
+        ],
+      child: EdinLit(),
+    )
+  );
 }
+
+class EdinLit extends StatelessWidget {
+  const EdinLit({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return (MaterialApp(
+      debugShowCheckedModeBanner: false,
+      initialRoute: '/home',
+      routes: {
+        // TODO create loading widget
+        '/': (context) => Loading(),
+        '/home': (context) => Home(),
+        '/browse': (context) => Browse(),
+        // '/location' : (context) => LocationView(),
+        '/map': (context) => ViewMap(),
+        '/saved': (context) => Saved(),
+      },
+    ));
+  }
+}
+
+
+
