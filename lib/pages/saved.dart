@@ -19,7 +19,14 @@ class Saved extends StatelessWidget {
         backgroundColor: const Color.fromRGBO(87, 88, 187, 9.0),
       ),
       body: savedLocations.isEmpty
-          ? Text('No saved locations')
+          ? const Center(
+              child: Text(
+                'No saved locations',
+                style: TextStyle(
+                  fontSize: 18,
+                ),
+              ),
+            )
           : ListView(
               //for each location in savedLocations list, render a LocationCard widget
               children: savedLocations
