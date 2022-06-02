@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:edin_lit_companion/components/navigationBar.dart';
-import 'package:edin_lit_companion/data/location_data.dart';
 import 'package:edin_lit_companion/components/location_card.dart';
 import 'package:provider/provider.dart';
 import 'package:edin_lit_companion/providers/locations_provider.dart';
@@ -15,7 +14,7 @@ class Saved extends StatelessWidget {
         context.watch<Locations>().savedLocations;
     return Scaffold(
       appBar: AppBar(
-        title: Text('Saved'),
+        title: const Text('Saved'),
         centerTitle: true,
         backgroundColor: const Color.fromRGBO(87, 88, 187, 9.0),
       ),
@@ -26,7 +25,7 @@ class Saved extends StatelessWidget {
             .map((location) => LocationCard(location: location))
             .toList(),
       ),
-      bottomNavigationBar: Navigation(),
+      bottomNavigationBar: const Navigation(),
     );
   }
 }

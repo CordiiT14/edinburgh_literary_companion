@@ -3,7 +3,6 @@ import 'package:edin_lit_companion/models/Location.dart';
 import 'package:edin_lit_companion/pages/location_view.dart';
 import 'package:provider/provider.dart';
 import 'package:edin_lit_companion/providers/locations_provider.dart';
-import 'package:edin_lit_companion/models/Location.dart';
 
 // Card widget for locations list on Discover (browse.dart) screen using data list mapped from browse.dart
 

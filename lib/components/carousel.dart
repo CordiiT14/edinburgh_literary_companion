@@ -1,5 +1,3 @@
-import 'package:edin_lit_companion/models/Location.dart';
-import 'package:edin_lit_companion/models/Category.dart';
 import 'package:flutter/material.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 
@@ -20,7 +18,7 @@ class Carousel extends StatelessWidget {
         enlargeCenterPage: false,
         viewportFraction: 1,
         autoPlay: true,
-        autoPlayInterval: Duration(seconds: 3), //autoplay turned off for now
+        autoPlayInterval: const Duration(seconds: 3), //autoplay turned off for now
       ),
 
       //items is also mandatory needs to be given a list to the .map returning the builder ends in .toList()
@@ -29,7 +27,7 @@ class Carousel extends StatelessWidget {
           builder: (BuildContext context) {
             return Container(
               width: MediaQuery.of(context).size.width,
-              margin: EdgeInsets.symmetric(horizontal: 5.0),
+              margin: const EdgeInsets.symmetric(horizontal: 5.0),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
@@ -46,12 +44,12 @@ class Carousel extends StatelessWidget {
                             right: 10,
                             child: Container(
                               width: 150,
-                              color: Color.fromRGBO(87, 88, 187, 0.85),
+                              color: const Color.fromRGBO(87, 88, 187, 0.85),
                                 padding: const EdgeInsets.all(10),
                               child: Text(
                                 '${location.name}',
                                 textAlign: TextAlign.end,
-                                style: TextStyle(
+                                style: const TextStyle(
                                   fontSize: 12,
                                   color: Colors.white,
                                 ),

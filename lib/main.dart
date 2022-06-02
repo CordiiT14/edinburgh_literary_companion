@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:edin_lit_companion/pages/home.dart';
 import 'package:edin_lit_companion/pages/loading.dart';
 import 'package:edin_lit_companion/pages/browse.dart';
+import 'package:edin_lit_companion/pages/location_view.dart';
 import 'package:edin_lit_companion/pages/view_map.dart';
 import 'package:edin_lit_companion/pages/saved.dart';
 import 'package:provider/provider.dart';
@@ -13,7 +14,7 @@ void main(){
         providers: [
           ChangeNotifierProvider(create: (_) => Locations()),
         ],
-      child: EdinLit(),
+      child: const EdinLit(),
     )
   );
 }
@@ -28,12 +29,12 @@ class EdinLit extends StatelessWidget {
       initialRoute: '/home',
       routes: {
         // TODO create loading widget
-        '/': (context) => Loading(),
-        '/home': (context) => Home(),
-        '/browse': (context) => Browse(),
+        '/': (context) => const Loading(),
+        '/home': (context) => const Home(),
+        '/browse': (context) => const Browse(),
         // '/location' : (context) => LocationView(),
-        '/map': (context) => ViewMap(),
-        '/saved': (context) => Saved(),
+        '/map': (context) => const ViewMap(),
+        '/saved': (context) => const Saved(),
       },
     ));
   }

@@ -2,18 +2,17 @@ import 'package:flutter/material.dart';
 import 'package:edin_lit_companion/models/Location.dart';
 import 'package:provider/provider.dart';
 import 'package:edin_lit_companion/providers/locations_provider.dart';
-
 import 'package:edin_lit_companion/pages/location_view.dart';
 
 class LocationCard extends StatelessWidget {
   final Location location;
 
-  LocationCard({required this.location});
+  const LocationCard({required this.location});
 
   @override
   Widget build(BuildContext context) {
     return Card(
-      margin: EdgeInsetsDirectional.fromSTEB(16.0, 16.0, 16.0, 0),
+      margin: const EdgeInsetsDirectional.fromSTEB(16.0, 16.0, 16.0, 0),
       child: ListTile(
         onTap: () {
           Navigator.push(
@@ -39,7 +38,7 @@ class LocationCard extends StatelessWidget {
           ),
         ),
         trailing: IconButton(
-          icon: Icon(
+          icon: const Icon(
             Icons.delete,
             //this is useful for accessibility mode
             semanticLabel: 'remove from saved',
