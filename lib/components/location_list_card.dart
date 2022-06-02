@@ -52,11 +52,11 @@ class _LocationListCardState extends State<LocationListCard> {
         label: const Text(''),
         icon: Icon(
           //changing icon display based on saved status
-          context.read<Locations>().locationIsSaved(widget.location)
+          context.watch<Locations>().locationIsSaved(widget.location)
               ? Icons.favorite
               : Icons.favorite_border_outlined,
-          color: context.read<Locations>().locationIsSaved(widget.location) ? Colors.red : Colors.grey[500],
-          semanticLabel: context.read<Locations>().locationIsSaved(widget.location) ? 'Remove from saved' : 'Save',
+          color: context.watch<Locations>().locationIsSaved(widget.location) ? Colors.red : Colors.grey[500],
+          semanticLabel: context.watch<Locations>().locationIsSaved(widget.location) ? 'Remove from saved' : 'Save',
         ),
       ),
 
