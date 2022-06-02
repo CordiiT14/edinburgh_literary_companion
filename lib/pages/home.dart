@@ -5,6 +5,7 @@ import 'package:edin_lit_companion/components/carousel.dart';
 import 'package:edin_lit_companion/data/location_data.dart';
 import 'package:provider/provider.dart';
 import 'package:edin_lit_companion/providers/locations_provider.dart';
+import 'package:edin_lit_companion/pages/browse.dart';
 
 class Home extends StatefulWidget {
   const Home({Key? key}) : super(key: key);
@@ -59,6 +60,14 @@ class _HomeState extends State<Home> {
                       context.read<Locations>().runSearch(value);
                     //  navigate to browse page with parameter of
                     //  context.read<Locations>().searchLocations;
+                    },
+                    onSubmitted: (value){
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => Browse()
+                        )
+                      );
                     },
                     decoration: const InputDecoration(
                       hintText: 'Search',
