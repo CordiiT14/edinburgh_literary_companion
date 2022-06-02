@@ -18,14 +18,24 @@ class Saved extends StatelessWidget {
         centerTitle: true,
         backgroundColor: const Color.fromRGBO(87, 88, 187, 9.0),
       ),
-      body: ListView(
-        //for each location in savedLocations list, render a LocationCard widget
-        //LocationCard takes two parameters, location and delete
-        children: savedLocations
-            .map((location) => LocationCard(location: location))
-            .toList(),
+      body: savedLocations.isEmpty
+          ? const Center(
+              child: Text(
+                'No saved locations',
+                style: TextStyle(
+                  fontSize: 18,
+                ),
+              ),
+            )
+          : ListView(
+              //for each location in savedLocations list, render a LocationCard widget
+              children: savedLocations
+                  .map((location) => LocationCard(location: location))
+                  .toList(),
+            ),
+      bottomNavigationBar: const Navigation(
+        selectedIndex: 3,
       ),
-      bottomNavigationBar: const Navigation(selectedIndex: 3,),
     );
   }
 }
