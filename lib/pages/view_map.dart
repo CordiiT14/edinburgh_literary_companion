@@ -3,6 +3,7 @@ import 'package:google_maps_flutter/google_maps_flutter.dart';
 import 'package:edin_lit_companion/components/navigationBar.dart';
 import 'package:edin_lit_companion/data/location_data.dart';
 import 'package:edin_lit_companion/models/Location.dart';
+import 'package:edin_lit_companion/pages/location_view.dart';
 
 class ViewMap extends StatefulWidget {
   const ViewMap({Key? key}) : super(key: key);
@@ -33,7 +34,14 @@ class _ViewMapState extends State<ViewMap> {
     infoWindow: InfoWindow(
     title: location.name,
     snippet: location.address,
-      onTap: (){},
+      onTap: (){
+        Navigator.push(
+          context,
+          MaterialPageRoute(
+              builder: (context) => LocationView(location: location)
+          ),
+        );
+      },
     ),
     );
     _markers[location.name] = marker;
