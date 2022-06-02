@@ -55,7 +55,7 @@ class _ViewMapState extends State<ViewMap> {
         ),
           markers: _markers.values.toSet()
       ),
-      bottomNavigationBar: Navigation(),
+      bottomNavigationBar: Navigation(selectedIndex: 2,),
     );
   }
 }

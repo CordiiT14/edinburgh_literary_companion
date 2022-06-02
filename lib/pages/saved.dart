@@ -25,7 +25,7 @@ class Saved extends StatelessWidget {
             .map((location) => LocationCard(location: location))
             .toList(),
       ),
-      bottomNavigationBar: const Navigation(),
+      bottomNavigationBar: const Navigation(selectedIndex: 3,),
     );
   }
 }
