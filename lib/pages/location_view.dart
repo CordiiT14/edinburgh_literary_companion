@@ -90,9 +90,25 @@ class LocationView extends StatelessWidget {
               ),
             ),
           ),
+
+          // only display website address if it exists
+          Column(
+          children: [
+            if (location.website.isNotEmpty) (
+            ListTile(
+            title: Text(
+              // location description
+              'Website:${location.website}',
+              style: const TextStyle(
+                fontSize: 20,
+              ),
+            ),
+          )
+            )
         ],
       ),
-      // ),
+    ],
+    ),
     );
   }
 }
