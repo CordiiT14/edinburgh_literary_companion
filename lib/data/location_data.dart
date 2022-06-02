@@ -230,6 +230,156 @@ class LocationData {
     //     longitude: ,
     //     website:
     // ),
+    Location(
+        name: "Armchair Books",
+        category: Category.Bookshop,
+        address: "72-74 West Port, EH1 2LE",
+        description: "A favourite stop for bibliophiles for two decades, Armchair Books is owned by the independently-minded David Govan. The shop has a good general stock of fiction, non-fiction and antiquarian, split over two narrow premises. No. 72 houses most of the fiction, including a decent sci-fi section, whilst no.74, next door, contains pretty much everything else.",
+        image: "bookshops/armchairBooks.jpg",
+        latitude: 55.946267,
+        longitude: -3.20009,
+        website: "http://www.armchairbooks.co.uk/"
+    ),
+    Location(
+        name: "Edinburgh Books",
+        category: Category.Bookshop,
+        address: "145-147 West Port, EH3 9DP",
+        description: "Edinburgh Books has been a landmark for book lovers for more than twenty years. Formerly known as West Port Books, this off-beat Edinburgh bookshop has a huge, wide ranging stock of second-hand and antiquarian books. For the reader, there is a large stock of fiction and non-fiction; for the collector, a sizeable number of intriguing titles; and for the musician, one basement room is rented by Alba Musick of Glasgow and is full of sheet music.",
+        image: "bookshops/edinburghBooks.jpg",
+        latitude: 55.946014,
+        longitude: -3.201753,
+        website: "http://edinburghbooks.net/"
+    ),
+    Location(
+        name: "The Edinburgh Bookshop",
+        category: Category.Bookshop,
+        address: "219 Bruntsfield Place, EH10 4DH",
+        description: "The Edinburgh Bookshop stocks a carefully chosen selection of titles, from the classics to the quirky and from beautifully illustrated non-fiction titles to the latest graphic novel. The children's section is to the back, and has everything from cloth books for young customers to challenging fiction for teenagers.",
+        image: "bookshops/edinburghBookshop.jpg",
+        latitude: 55.934548,
+        longitude: -3.209832,
+        website: "http://edinburghbookshop.com/"
+    ),
+    Location(
+        name: "Ginger and Pickles Chidren's Bookshop",
+        category: Category.Bookshop,
+        address: "51 St Stephen St, EH3 5AH",
+        description: "Ginger and Pickles is an independent bookshop for children. The shop is both cosy and quaint, designed especially with young readers in mind and is passionate about children’s literature. Their carefully curated beautiful books collections range from baby to young adult.",
+        image: "bookshops/gingerAndPickles.jpg",
+        latitude: 55.95807,
+        longitude: -3.20651,
+        website: "https://www.gingerandpicklesbookshop.com"
+    ),
+    Location(
+        name: "Golden Hare Books",
+        category: Category.Bookshop,
+        address: "68 St Stephen St, EH3 5AQ",
+        description: "The books at Golden Hare are handpicked with an emphasis on beautiful editions that will take pride of place on discerning bookshelves and nightstands. Golden Hare Books also run a regular bookgroup, as well as hosting a variety of author readings and discussions.",
+        image: "bookshops/goldenHareBooks.jpg",
+        latitude: 55.95792,
+        longitude: -3.20636,
+        website: "http://goldenharebooks.com/"
+    ),
+    Location(
+        name: "John Kay's",
+        category: Category.Bookshop,
+        address: "8 Victoria St, EH1 2HG",
+        description: "Formerly The Old Town Bookshop, John Kay’s sits on Victoria Street, one of Edinburgh’s most colourful and most iconic streets. Named after John Kay, an engraver and caricaturist famous for his humourous portraits of the great and good Edinburgh residents at the turn of the 19th Century. There is always a good selection of his original prints in the shop.",
+        image: "bookshops/johnKays.jpg",
+        latitude: 55.94884,
+        longitude: -3.19313,
+        website: "https://www.facebook.com/johnkayshop/"
+    ),
+    Location(
+        name: "Lighthouse Books",
+        category: Category.Bookshop,
+        address: "43-45 W Nicolson St, EH8 9DB",
+        description: "Lighthouse is a queer-owned and woman-led independent community bookshop - an unapologetically activist, intersectional, feminist, antiracist, lgbtq+ community space that celebrates diversity of thought and expression, championing voices from the margins.",
+        image: "bookshops/lighthouseBooks.jpg",
+        latitude: 55.94462,
+        longitude: -3.18546,
+        website: "https://www.lighthousebookshop.com"
+    ),
+    Location(
+        name: "Main Point Books",
+        category: Category.Bookshop,
+        address: "77 Bread Street, EH3 9AH",
+        description: "If the books on the shelves here reflect the interests of the customers, it would seem that they are an athletic, intelligent and somewhat dreamy lot. Founded 14 years ago on Lauriston Street, between a lap dancing club and a church, 'catering for saints and sinners alike', Main Point Books now sits between a lap dancing club and a tattoo parlour, hence the playful slogan: 'For a couple of quid, a book will sit on your lap all night long'.",
+        image: "bookshops/mainPointBooks.jpg",
+        latitude: 55.94592,
+        longitude: -3.202525,
+        website: "http://mainpointbooks.co.uk/"
+    ),
+    Location(
+        name: "McNaughtan's Bookshop",
+        category: Category.Bookshop,
+        address: "3a-4a Haddington Place, EH7 4AE",
+        description: "Established in 1957, McNaughtan's is a second-hand and antiquarian bookshop dealing in a wide variety of areas including literature, children's and illustrated books, history, travel and topography, and Scottish books. The craft, antiques, art & architecture sections flank the in-house art gallery.",
+        image: "bookshops/mcnaughtonsBookshop.jpg",
+        latitude: 55.959451,
+        longitude: -3.183632,
+        website: "https://mcnaughtans.co.uk/"
+    ),
+    Location(
+        name: "The Portobello Bookshop",
+        category: Category.Bookshop,
+        address: "46 Portobello High St, EH15 1DA",
+        description: "An independent bookshop based in Edinburgh's seaside community of Portobello. A warm, modern, open space that’s welcoming and a pleasure to spend time browsing books in, The Portobello Bookshop also hosts a great events programme.",
+        image: "bookshops/portobelloBookshop.jpg",
+        latitude: 55.95506,
+        longitude: -3.11766,
+        website: "https://theportobellobookshop.com"
+    ),
+    Location(
+        name: "Rare Birds Book Shop",
+        category: Category.Bookshop,
+        address: "13 Raeburn Pl, EH4 1HU",
+        description: "Rare Birds Book Shop is new on the map, having opened in 2021, and is Scotland's only bookshop dedicated entirely to women's writing. Their mission is to champion female authors and help you discover brilliant books you'd never have otherwise heard of. From literary heavyweights to breezy beach reads, the staff will help you make space on your bookshelf for women's writing across every genre.",
+        image: "bookshops/rareBirdsBookshop.jpg",
+        latitude: 55.95883,
+        longitude: -3.21072,
+        website: "https://rarebirdsbooks.com/pages/visit-us"
+    ),
+    Location(
+        name: "Till's Bookshop",
+        category: Category.Bookshop,
+        address: "1 Hope Park Crescent, EH8 9NA",
+        description: "Founded in 1986, Tills bookshop specialises in literature, genre fiction (including science fiction and mystery) and the humanities. Close to the university and popular with students and staff, Tills has become something of an institution. One review from the Students' Association reads: 'If all second-hand bookshops were like Tills, the world would be a better place.'",
+        image: "bookshops/tillsBookshop.jpg",
+        latitude: 55.941184,
+        longitude: -3.182784,
+        website: "https://www.tillsbookshop.co.uk/"
+    ),
+    Location(
+        name: "Transreal Fiction",
+        category: Category.Bookshop,
+        address: "7 Cowgatehead, EH1 1JY",
+        description: "Transreal Fiction is dedicated to selling science fiction, fantasy, related books, and a limited selection of other merchandise. Mike Calder opened the shop in 1996 and named the shop after the term coined by Rudy Rucker to describe his own fiction (yes, Rudy gave his permission).",
+        image: "bookshops/transrealFiction.jpg",
+        latitude: 55.947714,
+        longitude: -3.193974,
+        website: "http://transreal.wordpress.com/"
+    ),
+    Location(
+        name: "Topping and Company",
+        category: Category.Bookshop,
+        address: "2 Blenheim Pl, Edinburgh EH7 5JH",
+        description: "The Edinburgh branch of this family-owned bookstore is enormous and holds around 70,000 titles over two floors. In fact, the Topping family have boasted that this is the largest independent bookshop to open in the country for decades!",
+        image: "bookshops/toppingAndCo.jpg",
+        latitude: 55.95776,
+        longitude: -3.18428,
+        website: "https://www.toppingbooks.co.uk"
+    ),
+    Location(
+        name: "Typewronger Books",
+        category: Category.Bookshop,
+        address: "4a Haddington Pl, EH7 4AE",
+        description: "Attached to McNaughton’s Bookshop & Gallery is Typewronger Books, a bookshop with a very different vibe. They sell both books and typewriters, which make for the perfect combination. Isn’t it every writer’s dream to have a vintage typewriter? The books are all carefully selected by the owner so there’s a small but well-curated assortment of books in all genres.",
+        image: "bookshops/typewrongerBooks.jpg",
+        latitude: 55.95931,
+        longitude: -3.1837,
+        website: "https://www.typewronger.com"
+    ),
   ];
 }
 
