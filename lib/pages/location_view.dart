@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:edin_lit_companion/models/Location.dart';
+import 'package:edin_lit_companion/providers/locations_provider.dart';
 import 'package:provider/provider.dart';
-import '../providers/locations_provider.dart';
 
 // This class takes in a location object from pages such as browser.dart(discover) and saved.dart.
 class LocationView extends StatelessWidget {
@@ -20,7 +20,7 @@ class LocationView extends StatelessWidget {
         body: ListView(
           children: [
             Stack(
-                alignment: AlignmentDirectional.topEnd,
+              alignment: AlignmentDirectional.topEnd,
               children: <Widget>[
                 Image.asset(
                   'assets/${location.image}', // image path
@@ -33,7 +33,7 @@ class LocationView extends StatelessWidget {
                     context.read<Locations>().locationIsSaved(location)
                         ? Icons.favorite
                         : Icons.favorite_border_outlined,
-                    color: context.read<Locations>().locationIsSaved(location) ? Colors.red : Colors.grey[500],
+                    color: context.read<Locations>().locationIsSaved(location) ? Colors.red : Colors.white,
                     semanticLabel: context.read<Locations>().locationIsSaved(location) ? 'Remove from saved' : 'Save',
                   ),
                 ),
