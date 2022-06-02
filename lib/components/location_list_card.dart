@@ -24,8 +24,6 @@ class _LocationListCardState extends State<LocationListCard> {
           context,
           MaterialPageRoute(
               builder: (context) => LocationView(location: widget.location)
-              // TODO: Use the line below
-              // builder: (context) => LocationView(location: location,)
               ),
         );
       },
