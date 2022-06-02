@@ -2,7 +2,8 @@
 import 'package:flutter/material.dart';
 
 class Navigation extends StatefulWidget {
-  const Navigation({Key? key}) : super(key: key);
+  final int selectedIndex;
+  const Navigation({Key? key, required this.selectedIndex}) : super(key: key);
 
   @override
   State<Navigation> createState() => _Navigation();
@@ -11,14 +12,14 @@ class Navigation extends StatefulWidget {
 
 class _Navigation extends State<Navigation> {
   //keeping track of selected item: bottomNavigationBar items is  a list of bottomNavigationBarItems
-  int _selectedIndex = 0;
+  // int _selectedIndex = 0;
 
 
   // changes the current active/selected item in navbar
   void _onItemTapped(int index){
-    setState((){
-      _selectedIndex = index;
-    });
+    // setState((){
+    //   _selectedIndex = index;
+    // });
 
     Navigator.of(context).pushReplacementNamed(_pages[index]);
 
@@ -73,7 +74,7 @@ class _Navigation extends State<Navigation> {
             label: 'Saved',
           ),
         ],
-        currentIndex: _selectedIndex,
+        currentIndex: widget.selectedIndex,
         onTap: (index) {
           _onItemTapped(index);
         }

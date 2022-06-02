@@ -137,7 +137,7 @@ class _HomeState extends State<Home> {
           ),
         ),
       ),
-      bottomNavigationBar: const Navigation(),
+      bottomNavigationBar: const Navigation(selectedIndex: 0,),
     );
   }
 }

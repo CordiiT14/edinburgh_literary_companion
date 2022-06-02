@@ -17,7 +17,7 @@ class _ViewMapState extends State<ViewMap> {
           'Map!',
         ),
       ),
-      bottomNavigationBar: Navigation(),
+      bottomNavigationBar: Navigation(selectedIndex: 2,),
     );
   }
 }

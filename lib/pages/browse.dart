@@ -102,7 +102,7 @@ class _BrowseState extends State<Browse> {
           ],
         ),
       ),
-      bottomNavigationBar: const Navigation(),
+      bottomNavigationBar: const Navigation(selectedIndex: 1,),
     );
   }
 }
