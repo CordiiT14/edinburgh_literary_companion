@@ -95,7 +95,7 @@ class LocationData {
         category: Category.Landmark,
         address: "Edinburgh EH1 1ND",
         description: "Site of the first appearance of Bob Skinner, Quintin Jardine's maverick detective, in his first novel Skinner’s Rules. Skinner is the Head of CID and when a lawyer is brutally murdered in this close, followed by a series of other inexplicable murders including the wife of a colleague, the pressure is on Skinner to find the culprit. ",
-        image: "landmarks/David-Hume-Statue.jpeg",
+        image: "landmarks/Advocates_Close.jpeg",
         latitude: 55.9498438,
         longitude: -3.1915204,
         website:""
