@@ -35,9 +35,9 @@ class LocationView extends StatelessWidget {
                     ? Colors.red
                     : Colors.white,
                 semanticLabel:
-                    context.watch<Locations>().locationIsSaved(location)
-                        ? 'Remove from saved'
-                        : 'Save',
+                context.watch<Locations>().locationIsSaved(location)
+                    ? 'Remove from saved'
+                    : 'Save',
               ),
             ),
           ]),
@@ -49,13 +49,7 @@ class LocationView extends StatelessWidget {
               ),
             ),
           ),
-          Divider(
-            height: 30.0,
-            color: Colors.lightBlue[800],
-            thickness: 3,
-            indent: 20,
-            endIndent: 20,
-          ),
+
           ListTile(
             title: Text(
               'An Edinburgh ${location.category.name}', // Is it a landmark? Attraction? Bookshop?
@@ -64,6 +58,19 @@ class LocationView extends StatelessWidget {
                 fontFamily: 'MavenPro-ExtraBold',
                 color: Colors.purple,
               ),
+            ),
+          ),
+          Divider(
+            height: 30.0,
+            color: Colors.lightBlue[800],
+            thickness: 3,
+            indent: 20,
+            endIndent: 20,
+          ),
+          Center(
+            child: Image.asset(
+              'assets/google-maps-pin.png', // image path
+              height: 50, // define height of image
             ),
           ),
           ListTile(
@@ -93,22 +100,22 @@ class LocationView extends StatelessWidget {
 
           // only display website address if it exists
           Column(
-          children: [
-            if (location.website.isNotEmpty) (
-            ListTile(
-            title: Text(
-              // location description
-              'Website:${location.website}',
-              style: const TextStyle(
-                fontSize: 20,
-              ),
-            ),
-          )
-            )
+            children: [
+              if (location.website.isNotEmpty) (
+                  ListTile(
+                    title: Text(
+                      // location description
+                      'Website:${location.website}',
+                      style: const TextStyle(
+                        fontSize: 20,
+                      ),
+                    ),
+                  )
+              )
+            ],
+          ),
         ],
       ),
-    ],
-    ),
     );
   }
 }
