@@ -20,9 +20,11 @@ class _Navigation extends State<Navigation> {
     // setState((){
     //   _selectedIndex = index;
     // });
-
-    Navigator.of(context).pushReplacementNamed(_pages[index]);
-
+    if (index == 0){
+      Navigator.of(context).pushReplacementNamed(_pages[index]);
+    } else {
+      Navigator.of(context).pushNamed(_pages[index]);
+    }
   }
 
   //list of page widgets, same order as navigation for shared indices
@@ -39,10 +41,10 @@ class _Navigation extends State<Navigation> {
     return BottomNavigationBar(
         type: BottomNavigationBarType.fixed,
         backgroundColor: const Color.fromRGBO(87, 88, 187, 9.0),
-        // selectedLabelStyle: TextStyle(
-        //   decoration: TextDecoration.underline,
-        // ),
-        selectedItemColor: Colors.yellowAccent,
+        selectedLabelStyle: TextStyle(
+          decoration: TextDecoration.underline,
+        ),
+        // selectedItemColor: Colors.yellowAccent,
         unselectedItemColor: Colors.white,
         items: const <BottomNavigationBarItem>[
           BottomNavigationBarItem(
