@@ -5,8 +5,7 @@ import 'package:provider/provider.dart';
 import 'package:edin_lit_companion/providers/locations_provider.dart';
 import 'package:edin_lit_companion/models/Location.dart';
 
-// Browse widget for Discover screen taking in data from location_data.dart via LocationData()
-// Browse widget then maps data and passes to LocationListCard widget as a list
+// BROWSE WIDGET FOR DISCOVER PAGE - taking in data from location_data.dart via LocationData()
 
 class Browse extends StatefulWidget {
   const Browse({Key? key}) : super(key: key);
