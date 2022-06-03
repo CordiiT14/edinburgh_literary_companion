@@ -1,0 +1,39 @@
+import 'package:flutter/material.dart';
+import 'package:edin_lit_companion/data/location_data.dart';
+import 'package:edin_lit_companion/models/Location.dart';
+
+class Locations with ChangeNotifier {
+
+  final List<Location> _locations = LocationData().locations;
+  final List<Location> _savedLocations = [];
+  List<Location> _searchLocations = LocationData().locations;
+
+
+  List<Location> get allLocations => _locations;
+  List<Location> get savedLocations =>  _savedLocations;
+  List<Location> get searchLocations => _searchLocations;
+
+
+  void toggleSavedLocation(Location location){
+    locationIsSaved(location) ? _savedLocations.remove(location) : _savedLocations.add(location);
+    notifyListeners();
+  }
+
+  bool locationIsSaved(Location location){
+    return _savedLocations.contains(location);
+  }
+
+  void runSearch(String query) {
+    if (query.isEmpty) {
+      _searchLocations = _locations;
+    } else {
+      // change the list .where was filtering through to _locations from _searchResults
+      _searchLocations = _locations
+          .where((location) =>
+          location.name.toLowerCase().contains(query.toLowerCase()))
+          .toList();
+    }
+    notifyListeners();
+  }
+
+}

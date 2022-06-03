@@ -4,6 +4,15 @@
         android:label="edin_lit_companion"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
+
+<!--       added these two lines -->
+       <meta-data android:name="com.google.android.geo.API_KEY"
+           android:value="AIzaSyCdc5e0uj1VvbJB4QeHbjiahcT3Sjm5cTQ"/>
+
+       <uses-library
+           android:name="org.apache.http.legacy"
+           android:required="false" />
+
         <activity
             android:name=".MainActivity"
             android:exported="true"

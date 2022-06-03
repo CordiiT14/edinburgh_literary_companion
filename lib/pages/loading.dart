@@ -1,3 +1,4 @@
+import 'package:flutter/material.dart';
 
 class Loading extends StatefulWidget {
   const Loading({Key? key}) : super(key: key);
@@ -9,6 +10,8 @@ class Loading extends StatefulWidget {
 class _LoadingState extends State<Loading> {
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return const Text(
+      'hi there',
+    );
   }
 }
