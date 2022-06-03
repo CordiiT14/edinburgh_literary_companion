@@ -7,6 +7,7 @@ import 'package:edin_lit_companion/pages/view_map.dart';
 import 'package:edin_lit_companion/pages/saved.dart';
 import 'package:provider/provider.dart';
 import 'package:edin_lit_companion/providers/locations_provider.dart';
+import 'package:edin_lit_companion/providers/books_provider.dart';
 import 'package:edin_lit_companion/pages/books.dart';
 
 void main(){
@@ -14,6 +15,7 @@ void main(){
     MultiProvider(
         providers: [
           ChangeNotifierProvider(create: (_) => Locations()),
+          ChangeNotifierProvider(create: (_) => Books()),
         ],
       child: const EdinLit(),
     )
