@@ -48,12 +48,7 @@ class _HomeState extends State<Home> {
               Padding(
                 // Current placeholder wrapper for the search bar
                 padding: const EdgeInsets.all(8.0),
-                // child: Row(
-                //   mainAxisAlignment: MainAxisAlignment.center,
-                //   children: const [
-                //     Text('Search bar will go here'),
-                //   ],
-                // ),
+
                 child: Container(
                   child: TextField(
                     onChanged: (value) {
