@@ -7,6 +7,7 @@ import 'package:edin_lit_companion/pages/view_map.dart';
 import 'package:edin_lit_companion/pages/saved.dart';
 import 'package:provider/provider.dart';
 import 'package:edin_lit_companion/providers/locations_provider.dart';
+import 'package:edin_lit_companion/pages/books.dart';
 
 void main(){
   runApp(
@@ -26,7 +27,7 @@ class EdinLit extends StatelessWidget {
   Widget build(BuildContext context) {
     return (MaterialApp(
       debugShowCheckedModeBanner: false,
-      initialRoute: '/home',
+      initialRoute: '/books',
       routes: {
         // TODO create loading widget
         '/': (context) => const Loading(),
@@ -35,6 +36,7 @@ class EdinLit extends StatelessWidget {
         // '/location' : (context) => LocationView(),
         '/map': (context) => const ViewMap(),
         '/saved': (context) => const Saved(),
+        '/books' : (context) => const BooksList(),
       },
     ));
   }

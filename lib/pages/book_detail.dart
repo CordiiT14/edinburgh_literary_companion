@@ -1,0 +1,14 @@
+import 'package:flutter/material.dart';
+import 'package:edin_lit_companion/components/navigationBar.dart';
+
+
+class BookDetail extends StatelessWidget {
+  const BookDetail({Key? key}) : super(key: key);
+
+  final Book book;
+
+  @override
+  Widget build(BuildContext context) {
+    return Container();
+  }
+}
