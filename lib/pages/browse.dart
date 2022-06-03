@@ -46,6 +46,8 @@ class _BrowseState extends State<Browse> {
   //   });
   // }
 
+
+
   @override
   Widget build(BuildContext context) {
     List<Location> searchResults = context.watch<Locations>().searchLocations;
@@ -57,7 +59,9 @@ class _BrowseState extends State<Browse> {
               padding: const EdgeInsets.all(12.0),
               child: Container(
                 child: TextField(
-                  onChanged: (value) => context.read<Locations>().runSearch(value),
+                  onChanged: (value) {
+                    context.read<Locations>().runSearch(value);
+                  },
                   decoration: const InputDecoration(
                     hintText: 'Search',
                     prefixIcon: Icon(
@@ -78,21 +82,21 @@ class _BrowseState extends State<Browse> {
             const Text('Filter checkboxes go here'),
             Expanded(
               // List of location cards, passed to LocationListCard widget
-              child: searchResults.isNotEmpty
-                  ? ListView.builder(
-                      itemCount: searchResults.length,
-                      itemBuilder: (context, index) => Card(
+              child: searchResults.isNotEmpty?
+                          ListView.builder(
+                          itemCount: searchResults.length,
+                          itemBuilder: (context, index) => Card(
                             // key: ValueKey(searchResults[index]),
                             child: LocationListCard(
                                 location: searchResults[index]),
                           )
 
-                      // OLD CODE FROM ORIGINAL MAPPING TO LocationListCard
-                      // children: searchResults
-                      // children:
-                      // (searchResults.isNotEmpty ? searchResults : locations)
-                      //     .map((location) => LocationListCard(location: location))
-                      //     .toList(),
+                        // OLD CODE FROM ORIGINAL MAPPING TO LocationListCard
+                        // children: searchResults
+                        // children:
+                        // (searchResults.isNotEmpty ? searchResults : locations)
+                        //     .map((location) => LocationListCard(location: location))
+                        //     .toList(),
 
                       )
                   : const Text(
