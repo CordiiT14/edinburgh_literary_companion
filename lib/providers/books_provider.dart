@@ -11,4 +11,25 @@ class Books with ChangeNotifier {
   List<Book> get searchBooks => _searchBooks;
   // List<Book> get savedBooks => _savedBooks;
 
+  // void toggleSavedBook(Book book) {
+  //   bookIsSaved(book) ? _savedBooks.remove(book) : _savedBooks.add(book);
+  //   notifyListeners();
+  // }
+
+  // bool bookIsSaved(Book book) {
+  //   return _savedBooks.contains(book);
+  // }
+
+  void runBookSearch(String query) {
+    if (query.isEmpty) {
+      _searchBooks = _books;
+    } else {
+      _searchBooks = _searchBooks
+          .where((book) =>
+              book.title.toLowerCase().contains(query.toLowerCase()) ||
+              book.author.toLowerCase().contains(query.toLowerCase()))
+          .toList();
+    }
+    notifyListeners();
+  }
 }
