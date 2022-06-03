@@ -1,3 +1,4 @@
+import 'package:edin_lit_companion/pages/location_view.dart';
 import 'package:flutter/material.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 
@@ -36,8 +37,18 @@ class Carousel extends StatelessWidget {
                     child: Stack(
                       fit: StackFit.expand, // stack as wide as full column
                       children: [
-                        Image.asset('assets/${location.image}',
-                        fit: BoxFit.cover, //image covers expands to stack
+                        GestureDetector(
+                          onTap: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => LocationView(location: location)
+                              ),
+                            );
+                          },
+                           child: Image.asset('assets/${location.image}',
+                          fit: BoxFit.cover, //image covers expands to stack
+                          ),
                         ),
                         Positioned(
                             bottom: 10,
