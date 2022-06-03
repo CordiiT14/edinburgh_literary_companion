@@ -28,9 +28,25 @@ class _ViewMapState extends State<ViewMap> {
     setState(() {
     _markers.clear();
     for (var location in locations){
+
+      // Determine colour of icon based on location type
+      BitmapDescriptor iconColour () {
+        if (location.category.index == 0) { // Is location an attraction?
+          return BitmapDescriptor.defaultMarkerWithHue(
+              BitmapDescriptor.hueBlue);
+        }
+        if (location.category.index == 1) { // Is location a landmark?
+          return BitmapDescriptor.defaultMarkerWithHue(
+              BitmapDescriptor.hueGreen);
+        }
+        return BitmapDescriptor.defaultMarker; // Is location a bookshop?
+      } // end of iconColour
+
+
     final marker = Marker(
     markerId: MarkerId(location.name),
     position: LatLng(location.latitude, location.longitude),
+    icon: iconColour(),
     infoWindow: InfoWindow(
     title: location.name,
     snippet: location.address,
@@ -45,7 +61,8 @@ class _ViewMapState extends State<ViewMap> {
     ),
     );
     _markers[location.name] = marker;
-    }
+
+    } // end for loop
     });
   }
 
