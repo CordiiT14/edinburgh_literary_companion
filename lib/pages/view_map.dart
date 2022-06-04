@@ -71,6 +71,8 @@ class _ViewMapState extends State<ViewMap> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        title: const Text('Location Map'),
+        centerTitle: true,
         backgroundColor: Color.fromRGBO(87, 88, 187, 9.0),
       ),
       body: GoogleMap(
