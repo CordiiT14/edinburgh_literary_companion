@@ -10,43 +10,12 @@ import 'package:edin_lit_companion/models/Location.dart';
 
 class Browse extends StatefulWidget {
   const Browse({Key? key}) : super(key: key);
-//   following two lines are from dataflow branch
-//     final List<Location> locations = context.watch<Locations>().allLocations;
-//     beginning of search branch
+
   @override
   State<Browse> createState() => _BrowseState();
 }
 
 class _BrowseState extends State<Browse> {
-  // Grabbing LocationData() from location_data.dart
-  // final locationData = LocationData();
-  // List<Location> searchResults = [];
-  // List<Location> allLocations = [];
-
-  // @override
-  // initState() {
-  //   final locations = LocationData().locations;
-  //   searchResults = locations;
-  //   allLocations = locations;
-  //   super.initState();
-  // }
-
-  // void runSearch(String query) {
-  //   List<Location> results = [];
-  //   if (query.isEmpty) {
-  //     results = allLocations;
-  //   } else {
-  //     results = searchResults
-  //         .where((location) =>
-  //             location.name.toLowerCase().contains(query.toLowerCase()))
-  //         .toList();
-  //   }
-  //   setState(() {
-  //     searchResults = results;
-  //   });
-  // }
-
-
 
   @override
   Widget build(BuildContext context) {
