@@ -5,7 +5,10 @@ import 'package:edin_lit_companion/models/Location.dart';
 class Locations with ChangeNotifier {
   final List<Location> _locations = LocationData().locations;
   final List<Location> _savedLocations = [];
+
+  //this will track the filters - the keys correspond to the index of each attribute in the category enum
   final Map<int, bool> _filters = {0: true, 1: true, 2: true};
+
   List<Location> _searchLocations = LocationData().locations;
   List<Location> _filteredLocations = LocationData().locations;
 
@@ -14,9 +17,7 @@ class Locations with ChangeNotifier {
   Map<int, bool> get filters => _filters;
 
   List<Location> displayLocations(){
-    //why isn't this line working? it could replace the double for loop
-    //presumably an issue with recognising different versions of objects as equivalent
-    //return _filteredLocations.where((location) => _searchLocations.contains(location)).toList();
+    //returning all locations that are common to both _filteredlocations and _searchlocations
     final List<Location> output = [];
     for(var filteredLocation in _filteredLocations){
       for(var searchLocation in _searchLocations){
@@ -26,6 +27,8 @@ class Locations with ChangeNotifier {
       }
     }
     return output;
+    //the following line would be more efficient, but isn't working, presumably due to difficulty of recognising equivalent objects
+    //return _filteredLocations.where((location) => _searchLocations.contains(location)).toList();
   }
 
   void toggleSavedLocation(Location location) {
@@ -39,18 +42,23 @@ class Locations with ChangeNotifier {
     return _savedLocations.contains(location);
   }
 
+  //called when the user taps a filter checkbox
   void toggleFilter(int index){
     _filters[index] = _filters[index] == true ? false : true;
-    //should there be another notifylisteners here?
     updateFilters();
   }
 
+  //called when the user taps "see all" on the homepage
   void setFilters(int index){
+    //setting all filters to false
     final List<int> keys = [0, 1, 2];
     for(var key in keys){
       _filters[key] = false;
     }
+    //then setting the desired filter to true
     _filters[index] = true;
+    //resetting _searchLocations in case it still holds a previous query
+    _searchLocations = _locations;
     updateFilters();
   }
 
