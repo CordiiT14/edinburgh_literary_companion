@@ -10,8 +10,8 @@ class Books with ChangeNotifier {
   final List<Book> _savedBooks = [];
 
   List<Book> get allBooks => _books;
-  List<Book> get searchBooks => _searchBooks;
   List<Book> get savedBooks => _savedBooks;
+  List<Book> get searchBooks => _searchBooks;
 
   // BOOKS TBR LIST FUNCTIONALITY
   void toggleSavedBook(Book book) {

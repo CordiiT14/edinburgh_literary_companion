@@ -18,6 +18,8 @@ class _BooksListState extends State<BooksList> {
   @override
   Widget build(BuildContext context) {
     List<Book> bookSearchResults = context.watch<Books>().searchBooks;
+    String getTitle (Book book) => book.title;
+    bookSearchResults.sort((a, b) => getTitle(a).compareTo(getTitle(b)));
     return Scaffold(
       appBar: AppBar(
         title: Text('Books'),
