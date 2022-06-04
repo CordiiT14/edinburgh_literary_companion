@@ -80,13 +80,6 @@ class LocationView extends StatelessWidget {
                 fontSize: 20,
               ),
             ),
-            subtitle: Text(
-              // co-ordinates
-              'Co-ordinates: Latitude = ${location.latitude} | Longitude = ${location.longitude}',
-              style: const TextStyle(
-                fontSize: 15,
-              ),
-            ),
           ),
           ListTile(
             title: Text(
