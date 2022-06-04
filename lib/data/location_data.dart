@@ -6,6 +6,7 @@ class LocationData {
   // Sharing data with other files through LocationData()
   static LocationData get shared => LocationData();
 
+  
   List<Location> get locations => [
     Location(
         name: "Lady Stair Close",
