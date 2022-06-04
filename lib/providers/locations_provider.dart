@@ -5,12 +5,13 @@ import 'package:edin_lit_companion/models/Location.dart';
 class Locations with ChangeNotifier {
   final List<Location> _locations = LocationData().locations;
   final List<Location> _savedLocations = [];
-  Map<int, bool> _filters = {0: true, 1: true, 2: true};
+  final Map<int, bool> _filters = {0: true, 1: true, 2: true};
   List<Location> _searchLocations = LocationData().locations;
 
   List<Location> get allLocations => _locations;
   List<Location> get savedLocations => _savedLocations;
   List<Location> get searchLocations => _searchLocations;
+  Map<int, bool> get filters => _filters;
 
   void toggleSavedLocation(Location location) {
     locationIsSaved(location)
@@ -25,7 +26,8 @@ class Locations with ChangeNotifier {
 
   void toggleFilter(int index){
     _filters[index] = _filters[index] == true ? false : true;
-    notifyListeners();
+    //should there be another notifylisteners here?
+    updateFilters();
   }
 
   void updateFilters(){

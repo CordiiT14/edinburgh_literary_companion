@@ -16,7 +16,6 @@ class Browse extends StatefulWidget {
 }
 
 class _BrowseState extends State<Browse> {
-
   @override
   Widget build(BuildContext context) {
     List<Location> searchResults = context.watch<Locations>().searchLocations;
@@ -48,24 +47,45 @@ class _BrowseState extends State<Browse> {
             ),
 
             // Search filters will go here
-            const Text('Filter checkboxes go here'),
+            Row(
+              children: [
+                CheckboxListTile(
+                  value: context.watch<Locations>().filters[0],
+                  onChanged: (unnecessaryParameter) =>
+                      context.read<Locations>().toggleFilter(0),
+                  title: const Text('Attractions'),
+                ),
+                CheckboxListTile(
+                  value: context.watch<Locations>().filters[1],
+                  onChanged: (unnecessaryParameter) =>
+                      context.read<Locations>().toggleFilter(1),
+                  title: const Text('Landmarks'),
+                ),
+                CheckboxListTile(
+                  value: context.watch<Locations>().filters[2],
+                  onChanged: (unnecessaryParameter) =>
+                      context.read<Locations>().toggleFilter(2),
+                  title: const Text('Bookshops'),
+                ),
+              ],
+            ),
             Expanded(
               // List of location cards, passed to LocationListCard widget
-              child: searchResults.isNotEmpty?
-                          ListView.builder(
-                          itemCount: searchResults.length,
-                          itemBuilder: (context, index) => Card(
+              child: searchResults.isNotEmpty
+                  ? ListView.builder(
+                      itemCount: searchResults.length,
+                      itemBuilder: (context, index) => Card(
                             // key: ValueKey(searchResults[index]),
                             child: LocationListCard(
                                 location: searchResults[index]),
                           )
 
-                        // OLD CODE FROM ORIGINAL MAPPING TO LocationListCard
-                        // children: searchResults
-                        // children:
-                        // (searchResults.isNotEmpty ? searchResults : locations)
-                        //     .map((location) => LocationListCard(location: location))
-                        //     .toList(),
+                      // OLD CODE FROM ORIGINAL MAPPING TO LocationListCard
+                      // children: searchResults
+                      // children:
+                      // (searchResults.isNotEmpty ? searchResults : locations)
+                      //     .map((location) => LocationListCard(location: location))
+                      //     .toList(),
 
                       )
                   : const Text(
@@ -75,7 +95,9 @@ class _BrowseState extends State<Browse> {
           ],
         ),
       ),
-      bottomNavigationBar: const Navigation(selectedIndex: 1,),
+      bottomNavigationBar: const Navigation(
+        selectedIndex: 1,
+      ),
     );
   }
 }
