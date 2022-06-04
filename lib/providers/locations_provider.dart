@@ -7,11 +7,26 @@ class Locations with ChangeNotifier {
   final List<Location> _savedLocations = [];
   final Map<int, bool> _filters = {0: true, 1: true, 2: true};
   List<Location> _searchLocations = LocationData().locations;
+  List<Location> _filteredLocations = LocationData().locations;
 
   List<Location> get allLocations => _locations;
   List<Location> get savedLocations => _savedLocations;
-  List<Location> get searchLocations => _searchLocations;
   Map<int, bool> get filters => _filters;
+
+  List<Location> displayLocations(){
+    //why isn't this line working? it could replace the double for loop
+    //presumably an issue with recognising different versions of objects as equivalent
+    //return _filteredLocations.where((location) => _searchLocations.contains(location)).toList();
+    final List<Location> output = [];
+    for(var filteredLocation in _filteredLocations){
+      for(var searchLocation in _searchLocations){
+        if(filteredLocation.name == searchLocation.name){
+          output.add(filteredLocation);
+        }
+      }
+    }
+    return output;
+  }
 
   void toggleSavedLocation(Location location) {
     locationIsSaved(location)
@@ -31,7 +46,7 @@ class Locations with ChangeNotifier {
   }
 
   void updateFilters(){
-    _searchLocations = _searchLocations.where((location) => _filters[location.category.index] == true).toList();
+    _filteredLocations = _locations.where((location) => _filters[location.category.index] == true).toList();
     notifyListeners();
   }
 
@@ -45,6 +60,6 @@ class Locations with ChangeNotifier {
               location.name.toLowerCase().contains(query.toLowerCase()))
           .toList();
     }
-    updateFilters();
+    notifyListeners();
   }
 }

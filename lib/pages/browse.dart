@@ -18,7 +18,7 @@ class Browse extends StatefulWidget {
 class _BrowseState extends State<Browse> {
   @override
   Widget build(BuildContext context) {
-    List<Location> searchResults = context.watch<Locations>().searchLocations;
+    List<Location> searchResults = context.watch<Locations>().displayLocations();
     return Scaffold(
       body: SafeArea(
         child: Column(
@@ -47,8 +47,6 @@ class _BrowseState extends State<Browse> {
             ),
 
             // Search filters will go here
-            Row(
-              children: [
                 CheckboxListTile(
                   value: context.watch<Locations>().filters[0],
                   onChanged: (unnecessaryParameter) =>
@@ -67,8 +65,6 @@ class _BrowseState extends State<Browse> {
                       context.read<Locations>().toggleFilter(2),
                   title: const Text('Bookshops'),
                 ),
-              ],
-            ),
             Expanded(
               // List of location cards, passed to LocationListCard widget
               child: searchResults.isNotEmpty
