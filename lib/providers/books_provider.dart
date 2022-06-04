@@ -7,21 +7,21 @@ import 'package:edin_lit_companion/models/Book.dart';
 class Books with ChangeNotifier {
   final List<Book> _books = BookData().books;
   List<Book> _searchBooks = BookData().books;
-  // final List<Book> _savedBooks = [];
+  final List<Book> _savedBooks = [];
 
   List<Book> get allBooks => _books;
   List<Book> get searchBooks => _searchBooks;
-  // List<Book> get savedBooks => _savedBooks;
+  List<Book> get savedBooks => _savedBooks;
 
   // BOOKS TBR LIST FUNCTIONALITY
-  // void toggleSavedBook(Book book) {
-  //   bookIsSaved(book) ? _savedBooks.remove(book) : _savedBooks.add(book);
-  //   notifyListeners();
-  // }
+  void toggleSavedBook(Book book) {
+    bookIsSaved(book) ? _savedBooks.remove(book) : _savedBooks.add(book);
+    notifyListeners();
+  }
 
-  // bool bookIsSaved(Book book) {
-  //   return _savedBooks.contains(book);
-  // }
+  bool bookIsSaved(Book book) {
+    return _savedBooks.contains(book);
+  }
 
   void runBookSearch(String query) {
     if (query.isEmpty) {

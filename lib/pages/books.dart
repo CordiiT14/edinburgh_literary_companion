@@ -51,8 +51,8 @@ class _BooksListState extends State<BooksList> {
             child: bookSearchResults.isNotEmpty
                 ? ListView.builder(
                     itemCount: bookSearchResults.length,
-                    itemBuilder: (context, index) => const Card(
-                      child: BookDetail(),
+                    itemBuilder: (context, index) => Card(
+                      child: BookDetail(book: bookSearchResults[index]),
                     ),
                   )
                 : const Center(
