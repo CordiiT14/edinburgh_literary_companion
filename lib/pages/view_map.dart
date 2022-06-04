@@ -37,9 +37,10 @@ class _ViewMapState extends State<ViewMap> {
         }
         if (location.category.index == 1) { // Is location a landmark?
           return BitmapDescriptor.defaultMarkerWithHue(
-              BitmapDescriptor.hueGreen);
+              BitmapDescriptor.hueViolet);
         }
-        return BitmapDescriptor.defaultMarker; // Is location a bookshop?
+        return BitmapDescriptor.defaultMarkerWithHue(
+            BitmapDescriptor.hueRose); // Is location a bookshop?
       } // end of iconColour
 
 
