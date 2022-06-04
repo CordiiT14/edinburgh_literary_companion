@@ -45,6 +45,8 @@ class _BrowseState extends State<Browse> {
   //   });
   // }
 
+
+
   @override
   Widget build(BuildContext context) {
     List<Location> searchResults = context.watch<Locations>().searchLocations;
@@ -67,6 +69,7 @@ class _BrowseState extends State<Browse> {
                   prefixIcon: Icon(
                     Icons.search,
                     // TODO Fix colour here
+
                   ),
                   border: OutlineInputBorder(
                       borderSide: BorderSide(
@@ -97,6 +100,7 @@ class _BrowseState extends State<Browse> {
                     // (searchResults.isNotEmpty ? searchResults : locations)
                     //     .map((location) => LocationListCard(location: location))
                     //     .toList(),
+
 
                     )
                 : const Center(

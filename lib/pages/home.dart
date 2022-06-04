@@ -7,6 +7,7 @@ import 'package:provider/provider.dart';
 import 'package:edin_lit_companion/providers/locations_provider.dart';
 import 'package:edin_lit_companion/pages/browse.dart';
 
+
 class Home extends StatefulWidget {
   const Home({Key? key}) : super(key: key);
 
@@ -19,8 +20,25 @@ class _HomeState extends State<Home> {
   Widget build(BuildContext context) {
     final allLocations = LocationData().locations;
 
-    // TODO once full location data available create three lists for carousels
-    List<Location> topAttractions = [];
+    List<Location> topAttractions = [
+      allLocations[17],
+      allLocations[21],
+      allLocations[4]
+    ];
+
+    List<Location> topLandmarks = [
+      allLocations[20],
+      allLocations[2],
+      allLocations[12]
+    ];
+
+
+    List topBookshops = [
+      allLocations[28],
+      allLocations[31],
+      allLocations[32],
+    ];
+
 
     return Scaffold(
       appBar: null,
@@ -48,12 +66,7 @@ class _HomeState extends State<Home> {
               Padding(
                 // Current placeholder wrapper for the search bar
                 padding: const EdgeInsets.all(8.0),
-                // child: Row(
-                //   mainAxisAlignment: MainAxisAlignment.center,
-                //   children: const [
-                //     Text('Search bar will go here'),
-                //   ],
-                // ),
+
                 child: Container(
                   child: TextField(
                     onChanged: (value) {
@@ -113,7 +126,7 @@ class _HomeState extends State<Home> {
               ),
 
               // ATTRACTION CAROUSEL
-              Carousel(allLocations),
+              Carousel(topAttractions),
 
               // TOP LANDMARKS SECTION
               Row(
@@ -140,7 +153,7 @@ class _HomeState extends State<Home> {
               ),
 
               //LANDMARKS CAROUSEL
-              Carousel(allLocations),
+              Carousel(topLandmarks),
 
               // TOP BOOKSHOPS SECTION
               Row(
@@ -167,7 +180,7 @@ class _HomeState extends State<Home> {
               ),
 
               //BOOKSHOP CAROUSEL
-              Carousel(allLocations),
+              Carousel(topBookshops),
             ],
           ),
         ),

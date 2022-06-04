@@ -40,6 +40,17 @@ class EdinLit extends StatelessWidget {
         '/saved': (context) => const Saved(),
         '/books' : (context) => const BooksList(),
       },
+      //app theme
+      theme: ThemeData(
+          fontFamily: 'MavenPro',
+          primaryColor: const Color.fromRGBO(87, 88, 187, 9.0),
+        textTheme: const TextTheme(
+          headline1: TextStyle(fontSize: 35.0, fontWeight: FontWeight.bold),
+          headline2: TextStyle(fontSize: 18.0, fontWeight: FontWeight.bold),
+          bodyText2: TextStyle(fontSize: 14.0),
+        ),
+
+      ),
     ));
   }
 }

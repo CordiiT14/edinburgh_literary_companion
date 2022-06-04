@@ -8,6 +8,7 @@ class Locations with ChangeNotifier {
   final List<Location> _savedLocations = [];
   List<Location> _searchLocations = LocationData().locations;
 
+
   List<Location> get allLocations => _locations;
   List<Location> get savedLocations =>  _savedLocations;
   List<Location> get searchLocations => _searchLocations;
@@ -26,7 +27,8 @@ class Locations with ChangeNotifier {
     if (query.isEmpty) {
       _searchLocations = _locations;
     } else {
-      _searchLocations = _searchLocations
+      // change the list .where was filtering through to _locations from _searchResults
+      _searchLocations = _locations
           .where((location) =>
           location.name.toLowerCase().contains(query.toLowerCase()))
           .toList();
