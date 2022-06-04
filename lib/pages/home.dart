@@ -86,12 +86,9 @@ class _HomeState extends State<Home> {
                       hintText: 'Search',
                       prefixIcon: Icon(
                         Icons.search,
-                        // TODO Fix colour here
+                        color: Color.fromRGBO(241, 135, 1, 1),
                       ),
                       border: OutlineInputBorder(
-                          borderSide: BorderSide(
-                              // TODO And fix colour here
-                              ),
                           borderRadius:
                               BorderRadius.all(Radius.circular(25.0))),
                     ),
@@ -100,8 +97,7 @@ class _HomeState extends State<Home> {
               ),
 
               // TOP ATTRACTIONS SECTION
-              Expanded(
-                child: Row(
+                Row(
                   // Containing Attractions section heading and see more button
                   children: [
                     const Text(
@@ -130,10 +126,12 @@ class _HomeState extends State<Home> {
                     ),
                   ],
                 ),
-              ),
+
 
               // ATTRACTION CAROUSEL
+
               Carousel(topAttractions),
+
 
               // TOP LANDMARKS SECTION
               Row(
@@ -157,14 +155,15 @@ class _HomeState extends State<Home> {
                     },
                     child: const Text(
                       'see more',
-                      style: TextStyle(
-                        color: Color.fromRGBO(241, 135, 1, 1),
-                        fontSize: 12,
+                        style: TextStyle(
+                          color: Color.fromRGBO(241, 135, 1, 1),
+                          fontSize: 12,
+                        ),
                       ),
                     ),
-                  ),
-                ],
-              ),
+                  ],
+                ),
+
 
               //LANDMARKS CAROUSEL
               Carousel(topLandmarks),

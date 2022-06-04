@@ -5,8 +5,7 @@ import 'package:provider/provider.dart';
 import 'package:edin_lit_companion/providers/locations_provider.dart';
 import 'package:edin_lit_companion/models/Location.dart';
 
-// Browse widget for Discover screen taking in data from location_data.dart via LocationData()
-// Browse widget then maps data and passes to LocationListCard widget as a list
+// BROWSE WIDGET FOR DISCOVER PAGE - taking in data from location_data.dart via LocationData()
 
 class Browse extends StatefulWidget {
   const Browse({Key? key}) : super(key: key);
@@ -20,31 +19,31 @@ class _BrowseState extends State<Browse> {
   Widget build(BuildContext context) {
     List<Location> searchResults = context.watch<Locations>().displayLocations();
     return Scaffold(
-      body: SafeArea(
-        child: Column(
-          children: [
-            Padding(
-              padding: const EdgeInsets.all(12.0),
-              child: Container(
-                child: TextField(
-                  onChanged: (value) {
-                    context.read<Locations>().runSearch(value);
-                  },
-                  decoration: const InputDecoration(
-                    hintText: 'Search',
-                    prefixIcon: Icon(
-                      Icons.search,
-                      // TODO Fix colour here
-                    ),
-                    border: OutlineInputBorder(
-                        borderSide: BorderSide(
-                            // TODO And fix colour here
-                            ),
-                        borderRadius: BorderRadius.all(Radius.circular(25.0))),
+      appBar: AppBar(
+        title: Text('Locations'),
+        centerTitle: true,
+        backgroundColor: Color.fromRGBO(87, 88, 187, 9.0),
+      ),
+      body: Column(
+        children: [
+          Padding(
+            padding: const EdgeInsets.all(12.0),
+            child: Container(
+              child: TextField(
+                onChanged: (value) =>
+                    context.read<Locations>().runSearch(value),
+                decoration: const InputDecoration(
+                  hintText: 'Search',
+                  prefixIcon: Icon(
+                    Icons.search,
+                    color: Color.fromRGBO(241, 135, 1, 1),
                   ),
+                  border: OutlineInputBorder(
+                      borderRadius: BorderRadius.all(Radius.circular(25.0))),
                 ),
               ),
             ),
+          ),
 
             // Search filters will go here
             Row(
@@ -90,13 +89,15 @@ class _BrowseState extends State<Browse> {
                       //     .map((location) => LocationListCard(location: location))
                       //     .toList(),
 
-                      )
-                  : const Text(
+
+                    )
+                : const Center(
+                    child: Text(
                       'No results found',
                     ),
-            ),
-          ],
-        ),
+                  ),
+          ),
+        ],
       ),
       bottomNavigationBar: const Navigation(
         selectedIndex: 1,
