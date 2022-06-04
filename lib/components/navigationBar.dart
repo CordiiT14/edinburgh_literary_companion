@@ -27,7 +27,7 @@ class _Navigation extends State<Navigation> {
     '/home',
     '/browse',
     '/map',
-    '/books'
+    '/books',
     '/saved',
   ];
 
