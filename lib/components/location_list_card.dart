@@ -4,7 +4,7 @@ import 'package:edin_lit_companion/pages/location_view.dart';
 import 'package:provider/provider.dart';
 import 'package:edin_lit_companion/providers/locations_provider.dart';
 
-// Card widget for locations list on Discover (browse.dart) screen using data list mapped from browse.dart
+// CARD WIDGET FOR LOCATIONS list on Discover (browse.dart) screen using data list mapped from browse.dart
 
 class LocationListCard extends StatefulWidget {
   const LocationListCard({Key? key, required this.location}) : super(key: key);
