@@ -26,6 +26,8 @@ class Locations with ChangeNotifier {
         }
       }
     }
+    String getName (Location location) => location.name;
+    output.sort((a, b) => getName(a).compareTo(getName(b)));
     return output;
     //the following line would be more efficient, but isn't working, presumably due to difficulty of recognising equivalent objects
     //return _filteredLocations.where((location) => _searchLocations.contains(location)).toList();
