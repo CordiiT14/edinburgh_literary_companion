@@ -9,47 +9,15 @@ import 'package:edin_lit_companion/models/Location.dart';
 
 class Browse extends StatefulWidget {
   const Browse({Key? key}) : super(key: key);
-//   following two lines are from dataflow branch
-//     final List<Location> locations = context.watch<Locations>().allLocations;
-//     beginning of search branch
+
   @override
   State<Browse> createState() => _BrowseState();
 }
 
 class _BrowseState extends State<Browse> {
-  // Grabbing LocationData() from location_data.dart
-  // final locationData = LocationData();
-  // List<Location> searchResults = [];
-  // List<Location> allLocations = [];
-
-  // @override
-  // initState() {
-  //   final locations = LocationData().locations;
-  //   searchResults = locations;
-  //   allLocations = locations;
-  //   super.initState();
-  // }
-
-  // void runSearch(String query) {
-  //   List<Location> results = [];
-  //   if (query.isEmpty) {
-  //     results = allLocations;
-  //   } else {
-  //     results = searchResults
-  //         .where((location) =>
-  //             location.name.toLowerCase().contains(query.toLowerCase()))
-  //         .toList();
-  //   }
-  //   setState(() {
-  //     searchResults = results;
-  //   });
-  // }
-
-
-
   @override
   Widget build(BuildContext context) {
-    List<Location> searchResults = context.watch<Locations>().searchLocations;
+    List<Location> searchResults = context.watch<Locations>().displayLocations();
     return Scaffold(
       appBar: AppBar(
         title: Text('Locations'),
@@ -77,25 +45,49 @@ class _BrowseState extends State<Browse> {
             ),
           ),
 
-          // Search filters will go here
-          const Text('Filter checkboxes go here'),
-          Expanded(
-            // List of location cards, passed to LocationListCard widget
-            child: searchResults.isNotEmpty
-                ? ListView.builder(
-                    itemCount: searchResults.length,
-                    itemBuilder: (context, index) => Card(
-                          // key: ValueKey(searchResults[index]),
-                          child:
-                              LocationListCard(location: searchResults[index]),
-                        )
+            // Search filters will go here
+            Row(
+              children: [
+                Checkbox(
+                  value: context.watch<Locations>().filters[0],
+                  onChanged: (unnecessaryParameter) =>
+                      context.read<Locations>().toggleFilter(0),
+                  // title: const Text('Attractions'),
+                ),
+                const Text('Attractions'),
+                Checkbox(
+                  value: context.watch<Locations>().filters[1],
+                  onChanged: (unnecessaryParameter) =>
+                      context.read<Locations>().toggleFilter(1),
+                  // title: const Text('Landmarks'),
+                ),
+                const Text('Landmarks'),
+                Checkbox(
+                  value: context.watch<Locations>().filters[2],
+                  onChanged: (unnecessaryParameter) =>
+                      context.read<Locations>().toggleFilter(2),
+                  // title: const Text('Bookshops'),
+                ),
+                const Text('Bookshops'),
+              ],
+            ),
+            Expanded(
+              // List of location cards, passed to LocationListCard widget
+              child: searchResults.isNotEmpty
+                  ? ListView.builder(
+                      itemCount: searchResults.length,
+                      itemBuilder: (context, index) => Card(
+                            // key: ValueKey(searchResults[index]),
+                            child: LocationListCard(
+                                location: searchResults[index]),
+                          )
 
-                    // OLD CODE FROM ORIGINAL MAPPING TO LocationListCard
-                    // children: searchResults
-                    // children:
-                    // (searchResults.isNotEmpty ? searchResults : locations)
-                    //     .map((location) => LocationListCard(location: location))
-                    //     .toList(),
+                      // OLD CODE FROM ORIGINAL MAPPING TO LocationListCard
+                      // children: searchResults
+                      // children:
+                      // (searchResults.isNotEmpty ? searchResults : locations)
+                      //     .map((location) => LocationListCard(location: location))
+                      //     .toList(),
 
 
                     )

@@ -107,8 +107,15 @@ class _HomeState extends State<Home> {
                       ),
                     ),
                     TextButton(
-                      //TODO WRITE SEE MORE FILTER FUNCTIONS
-                      onPressed: () {},
+                      onPressed: () {
+                        context.read<Locations>().setFilters(0);
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => const Browse(),
+                          ),
+                        );
+                      },
                       child: const Text(
                         'see more',
                         style: TextStyle(
@@ -128,19 +135,26 @@ class _HomeState extends State<Home> {
 
               // TOP LANDMARKS SECTION
               Row(
-                  // Containing Landmarks section heading and see more button
-                  children: [
-                    const Text(
-                      'Top Landmarks',
-                      style: TextStyle(
-                        fontSize: 18,
-                      ),
+                // Containing Landmarks section heading and see more button
+                children: [
+                  const Text(
+                    'Top Landmarks',
+                    style: TextStyle(
+                      fontSize: 18,
                     ),
-                    TextButton(
-                      //TODO WRITE SEE MORE FILTER FUNCTIONS
-                      onPressed: () {},
-                      child: const Text(
-                        'see more',
+                  ),
+                  TextButton(
+                    onPressed: () {
+                      context.read<Locations>().setFilters(1);
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => const Browse(),
+                        ),
+                      );
+                    },
+                    child: const Text(
+                      'see more',
                         style: TextStyle(
                           color: Color.fromRGBO(241, 135, 1, 1),
                           fontSize: 12,
@@ -165,8 +179,15 @@ class _HomeState extends State<Home> {
                     ),
                   ),
                   TextButton(
-                    //TODO WRITE SEE MORE FILTER FUNCTIONS
-                    onPressed: () {},
+                    onPressed: () {
+                      context.read<Locations>().setFilters(2);
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => const Browse(),
+                        ),
+                      );
+                    },
                     child: const Text(
                       'see more',
                       style: TextStyle(
