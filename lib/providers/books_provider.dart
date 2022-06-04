@@ -27,7 +27,7 @@ class Books with ChangeNotifier {
     if (query.isEmpty) {
       _searchBooks = _books;
     } else {
-      _searchBooks = _searchBooks
+      _searchBooks = _books
           .where((book) =>
               book.title.toLowerCase().contains(query.toLowerCase()) ||
               book.author.toLowerCase().contains(query.toLowerCase()))
