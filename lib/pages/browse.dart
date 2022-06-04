@@ -66,12 +66,9 @@ class _BrowseState extends State<Browse> {
                     hintText: 'Search',
                     prefixIcon: Icon(
                       Icons.search,
-                      // TODO Fix colour here
+                      color: Color.fromRGBO(241, 135, 1, 1),
                     ),
                     border: OutlineInputBorder(
-                        borderSide: BorderSide(
-                            // TODO And fix colour here
-                            ),
                         borderRadius: BorderRadius.all(Radius.circular(25.0))),
                   ),
                 ),

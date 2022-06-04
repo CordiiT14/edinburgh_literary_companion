@@ -12,15 +12,9 @@ class Navigation extends StatefulWidget {
 
 
 class _Navigation extends State<Navigation> {
-  //keeping track of selected item: bottomNavigationBar items is  a list of bottomNavigationBarItems
-  // int _selectedIndex = 0;
-
 
   // changes the current active/selected item in navbar
   void _onItemTapped(int index){
-    // setState((){
-    //   _selectedIndex = index;
-    // });
     if (index == 0){
       Navigator.of(context).pushReplacementNamed(_pages[index]);
     } else {
@@ -33,6 +27,7 @@ class _Navigation extends State<Navigation> {
     '/home',
     '/browse',
     '/map',
+    '/book'
     '/saved',
   ];
 
@@ -41,11 +36,11 @@ class _Navigation extends State<Navigation> {
   Widget build(BuildContext context) {
     return BottomNavigationBar(
         type: BottomNavigationBarType.fixed,
-        backgroundColor: const Color.fromRGBO(87, 88, 187, 9.0),
-        selectedLabelStyle: TextStyle(
-          decoration: TextDecoration.underline,
-        ),
-        // selectedItemColor: Colors.yellowAccent,
+        backgroundColor: const Color.fromRGBO(87, 88, 187, 1),
+        // selectedLabelStyle: TextStyle(
+        //   decoration: TextDecoration.underline,
+        // ),
+        selectedItemColor: Color.fromRGBO(241, 135, 1, 1),
         unselectedItemColor: Colors.white,
         items: const <BottomNavigationBarItem>[
           BottomNavigationBarItem(
@@ -68,6 +63,13 @@ class _Navigation extends State<Navigation> {
               color: Color.fromRGBO(241, 135, 1, 1),
             ),
             label: 'Map',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(
+              Icons.menu_book_rounded,
+              color: Color.fromRGBO(241, 135, 1, 1),
+            ),
+            label: 'Books',
           ),
           BottomNavigationBarItem(
               icon: Icon(

@@ -46,23 +46,29 @@ class Carousel extends StatelessWidget {
                               ),
                             );
                           },
-                           child: Image.asset('assets/${location.image}',
+                           child: ClipRRect(
+                             borderRadius: BorderRadius.circular(8),
+                             child: Image.asset('assets/${location.image}',
                           fit: BoxFit.cover, //image covers expands to stack
                           ),
+                           ),
                         ),
                         Positioned(
                             bottom: 10,
                             right: 10,
-                            child: Container(
-                              width: 150,
-                              color: const Color.fromRGBO(87, 88, 187, 0.85),
-                                padding: const EdgeInsets.all(10),
-                              child: Text(
-                                '${location.name}',
-                                textAlign: TextAlign.end,
-                                style: const TextStyle(
-                                  fontSize: 12,
-                                  color: Colors.white,
+                            child: ClipRRect(
+                              borderRadius: BorderRadius.circular(8),
+                              child: Container(
+                                width: 150,
+                                color: const Color.fromRGBO(87, 88, 187, 0.85),
+                                  padding: const EdgeInsets.all(10),
+                                child: Text(
+                                  '${location.name}',
+                                  textAlign: TextAlign.end,
+                                  style: const TextStyle(
+                                    fontSize: 12,
+                                    color: Colors.white,
+                                  ),
                                 ),
                               ),
                             ),
