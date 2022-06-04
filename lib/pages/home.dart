@@ -51,15 +51,27 @@ class _HomeState extends State<Home> {
             children: [
               Row(
                 // Row 1: Discover Literary Edinburgh Header
-                children: const [
-                  Padding(
-                    padding: EdgeInsets.all(12.0),
-                    child: Text(
-                      'Discover Literary \n   Edinburgh!',
-                      style: TextStyle(
-                        fontSize: 35,
+                children: [
+                  Stack(
+                    children: [
+                      Padding(
+                        padding: EdgeInsets.all(12.0),
+                        child: Text(
+                          'Discover Literary \n  Edinburgh!',
+                          style: TextStyle(
+                            fontSize: 35,
+                          ),
+                        ),
                       ),
-                    ),
+                      Positioned(
+                        bottom: 5,
+                        right: 5,
+                        child: Image.asset(
+                          'assets/logoNoText.png',
+                          width: 60.0,
+                        ),
+                      ),
+                    ],
                   ),
                 ],
               ),

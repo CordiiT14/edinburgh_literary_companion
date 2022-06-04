@@ -29,7 +29,7 @@ class EdinLit extends StatelessWidget {
   Widget build(BuildContext context) {
     return (MaterialApp(
       debugShowCheckedModeBanner: false,
-      initialRoute: '/home',
+      initialRoute: '/',
       routes: {
         // TODO create loading widget
         '/': (context) => const Loading(),
