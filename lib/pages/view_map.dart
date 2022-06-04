@@ -1,10 +1,3 @@
-import 'package:flutter/material.dart';
-import 'package:google_maps_flutter/google_maps_flutter.dart';
-import 'package:edin_lit_companion/components/navigationBar.dart';
-import 'package:edin_lit_companion/data/location_data.dart';
-import 'package:edin_lit_companion/models/Location.dart';
-import 'package:edin_lit_companion/pages/location_view.dart';
-
 class ViewMap extends StatefulWidget {
   const ViewMap({Key? key}) : super(key: key);
 
@@ -13,6 +6,7 @@ class ViewMap extends StatefulWidget {
 }
 
 class _ViewMapState extends State<ViewMap> {
+<<<<<<< HEAD
 
   // late GoogleMapController mapController;
   //  mapController = controller;
@@ -85,5 +79,10 @@ class _ViewMapState extends State<ViewMap> {
       ),
       bottomNavigationBar: Navigation(selectedIndex: 2,),
     );
+=======
+  @override
+  Widget build(BuildContext context) {
+    return Container();
+>>>>>>> main
   }
 }

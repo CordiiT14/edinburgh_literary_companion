@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import 'package:flutter/material.dart';
 import 'package:edin_lit_companion/components/navigationBar.dart';
 import 'package:edin_lit_companion/components/location_list_card.dart';
@@ -7,6 +8,8 @@ import 'package:edin_lit_companion/models/Location.dart';
 
 // BROWSE WIDGET FOR DISCOVER PAGE - taking in data from location_data.dart via LocationData()
 
+=======
+>>>>>>> main
 class Browse extends StatefulWidget {
   const Browse({Key? key}) : super(key: key);
 
@@ -17,6 +20,7 @@ class Browse extends StatefulWidget {
 class _BrowseState extends State<Browse> {
   @override
   Widget build(BuildContext context) {
+<<<<<<< HEAD
     List<Location> searchResults = context.watch<Locations>().displayLocations();
     return Scaffold(
       appBar: AppBar(
@@ -103,5 +107,8 @@ class _BrowseState extends State<Browse> {
         selectedIndex: 1,
       ),
     );
+=======
+    return Container();
+>>>>>>> main
   }
 }

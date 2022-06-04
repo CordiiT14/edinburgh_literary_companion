@@ -1,5 +1,8 @@
+<<<<<<< HEAD
 import 'package:flutter/material.dart';
 import 'package:edin_lit_companion/pages/home.dart';
+=======
+>>>>>>> main
 
 class Loading extends StatefulWidget {
   const Loading({Key? key}) : super(key: key);
@@ -22,6 +25,7 @@ class _LoadingState extends State<Loading> {
 
   @override
   Widget build(BuildContext context) {
+<<<<<<< HEAD
     return Scaffold(
         body: Center(
             child: Image.asset(
@@ -30,5 +34,8 @@ class _LoadingState extends State<Loading> {
             ),
           ),
         );
+=======
+    return Container();
+>>>>>>> main
   }
 }

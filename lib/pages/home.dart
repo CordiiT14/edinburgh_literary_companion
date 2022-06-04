@@ -1,11 +1,3 @@
-import 'package:edin_lit_companion/models/Location.dart';
-import 'package:flutter/material.dart';
-import 'package:edin_lit_companion/components/navigationBar.dart';
-import 'package:edin_lit_companion/components/carousel.dart';
-import 'package:edin_lit_companion/data/location_data.dart';
-import 'package:provider/provider.dart';
-import 'package:edin_lit_companion/providers/locations_provider.dart';
-import 'package:edin_lit_companion/pages/browse.dart';
 
 
 class Home extends StatefulWidget {
@@ -18,6 +10,7 @@ class Home extends StatefulWidget {
 class _HomeState extends State<Home> {
   @override
   Widget build(BuildContext context) {
+<<<<<<< HEAD
     final allLocations = LocationData().locations;
 
     List<Location> topAttractions = [
@@ -221,5 +214,8 @@ class _HomeState extends State<Home> {
         selectedIndex: 0,
       ),
     );
+=======
+    return Container();
+>>>>>>> main
   }
 }

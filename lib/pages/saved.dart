@@ -1,15 +1,14 @@
-import 'package:flutter/material.dart';
-import 'package:edin_lit_companion/components/navigationBar.dart';
-import 'package:edin_lit_companion/components/location_card.dart';
-import 'package:provider/provider.dart';
-import 'package:edin_lit_companion/providers/locations_provider.dart';
-import 'package:edin_lit_companion/models/Location.dart';
-
-class Saved extends StatelessWidget {
+class Saved extends StatefulWidget {
   const Saved({Key? key}) : super(key: key);
 
   @override
+  State<Saved> createState() => _SavedState();
+}
+
+class _SavedState extends State<Saved> {
+  @override
   Widget build(BuildContext context) {
+<<<<<<< HEAD
     final List<Location> savedLocations =
         context.watch<Locations>().savedLocations;
     return Scaffold(
@@ -37,5 +36,8 @@ class Saved extends StatelessWidget {
         selectedIndex: 4,
       ),
     );
+=======
+    return Container();
+>>>>>>> main
   }
 }
