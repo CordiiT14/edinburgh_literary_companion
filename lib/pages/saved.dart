@@ -34,7 +34,7 @@ class Saved extends StatelessWidget {
                   .toList(),
             ),
       bottomNavigationBar: const Navigation(
-        selectedIndex: 3,
+        selectedIndex: 4,
       ),
     );
   }
