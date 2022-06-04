@@ -5,8 +5,7 @@ import 'package:provider/provider.dart';
 import 'package:edin_lit_companion/providers/locations_provider.dart';
 import 'package:edin_lit_companion/models/Location.dart';
 
-// Browse widget for Discover screen taking in data from location_data.dart via LocationData()
-// Browse widget then maps data and passes to LocationListCard widget as a list
+// BROWSE WIDGET FOR DISCOVER PAGE - taking in data from location_data.dart via LocationData()
 
 class Browse extends StatefulWidget {
   const Browse({Key? key}) : super(key: key);
@@ -52,61 +51,69 @@ class _BrowseState extends State<Browse> {
   Widget build(BuildContext context) {
     List<Location> searchResults = context.watch<Locations>().searchLocations;
     return Scaffold(
-      body: SafeArea(
-        child: Column(
-          children: [
-            Padding(
-              padding: const EdgeInsets.all(12.0),
-              child: Container(
-                child: TextField(
-                  onChanged: (value) {
-                    context.read<Locations>().runSearch(value);
-                  },
-                  decoration: const InputDecoration(
-                    hintText: 'Search',
-                    prefixIcon: Icon(
-                      Icons.search,
-                      // TODO Fix colour here
-                    ),
-                    border: OutlineInputBorder(
-                        borderSide: BorderSide(
-                            // TODO And fix colour here
-                            ),
-                        borderRadius: BorderRadius.all(Radius.circular(25.0))),
+      appBar: AppBar(
+        title: Text('Locations'),
+        centerTitle: true,
+        backgroundColor: Color.fromRGBO(87, 88, 187, 9.0),
+      ),
+      body: Column(
+        children: [
+          Padding(
+            padding: const EdgeInsets.all(12.0),
+            child: Container(
+              child: TextField(
+                onChanged: (value) =>
+                    context.read<Locations>().runSearch(value),
+                decoration: const InputDecoration(
+                  hintText: 'Search',
+                  prefixIcon: Icon(
+                    Icons.search,
+                    // TODO Fix colour here
+
                   ),
+                  border: OutlineInputBorder(
+                      borderSide: BorderSide(
+                          // TODO And fix colour here
+                          ),
+                      borderRadius: BorderRadius.all(Radius.circular(25.0))),
                 ),
               ),
             ),
+          ),
 
-            // Search filters will go here
-            const Text('Filter checkboxes go here'),
-            Expanded(
-              // List of location cards, passed to LocationListCard widget
-              child: searchResults.isNotEmpty?
-                          ListView.builder(
-                          itemCount: searchResults.length,
-                          itemBuilder: (context, index) => Card(
-                            // key: ValueKey(searchResults[index]),
-                            child: LocationListCard(
-                                location: searchResults[index]),
-                          )
+          // Search filters will go here
+          const Text('Filter checkboxes go here'),
+          Expanded(
+            // List of location cards, passed to LocationListCard widget
+            child: searchResults.isNotEmpty
+                ? ListView.builder(
+                    itemCount: searchResults.length,
+                    itemBuilder: (context, index) => Card(
+                          // key: ValueKey(searchResults[index]),
+                          child:
+                              LocationListCard(location: searchResults[index]),
+                        )
 
-                        // OLD CODE FROM ORIGINAL MAPPING TO LocationListCard
-                        // children: searchResults
-                        // children:
-                        // (searchResults.isNotEmpty ? searchResults : locations)
-                        //     .map((location) => LocationListCard(location: location))
-                        //     .toList(),
+                    // OLD CODE FROM ORIGINAL MAPPING TO LocationListCard
+                    // children: searchResults
+                    // children:
+                    // (searchResults.isNotEmpty ? searchResults : locations)
+                    //     .map((location) => LocationListCard(location: location))
+                    //     .toList(),
 
-                      )
-                  : const Text(
+
+                    )
+                : const Center(
+                    child: Text(
                       'No results found',
                     ),
-            ),
-          ],
-        ),
+                  ),
+          ),
+        ],
       ),
-      bottomNavigationBar: const Navigation(selectedIndex: 1,),
+      bottomNavigationBar: const Navigation(
+        selectedIndex: 1,
+      ),
     );
   }
 }
