@@ -47,7 +47,6 @@ class EdinLit extends StatelessWidget {
             primary: const Color.fromRGBO(87, 88, 187, 9.0),
             secondary: const Color.fromRGBO(241, 135, 1, 1),
         ),
-
       ),
     ));
   }
