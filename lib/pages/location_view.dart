@@ -1,3 +1,4 @@
+import 'package:edin_lit_companion/pages/view_map.dart';
 import 'package:flutter/material.dart';
 import 'package:edin_lit_companion/models/Location.dart';
 import 'package:edin_lit_companion/providers/locations_provider.dart';
@@ -68,9 +69,21 @@ class LocationView extends StatelessWidget {
             endIndent: 20,
           ),
           Center(
-            child: Image.asset(
-              'assets/google-maps-pin.png', // image path
-              height: 50, // define height of image
+            // Load map when user taps on map pin image
+            child: GestureDetector(
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                    builder: (context) => const ViewMap()
+                ),
+              );
+            },
+
+              child: Image.asset(
+                'assets/google-maps-pin.png', // image path
+                height: 50, // define height of image
+              ),
             ),
           ),
           ListTile(

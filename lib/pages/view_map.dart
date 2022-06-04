@@ -14,6 +14,9 @@ class ViewMap extends StatefulWidget {
 
 class _ViewMapState extends State<ViewMap> {
 
+  double initialLatitude = 55.94959278;
+  double initialLongitude = -3.19338131;
+
   // late GoogleMapController mapController;
   //  mapController = controller;
   // final LatLng _center = const LatLng(55.94936682425343, -3.1999283672172485);
@@ -26,44 +29,43 @@ class _ViewMapState extends State<ViewMap> {
     final List<Location> locations = LocationData().locations;
 
     setState(() {
-    _markers.clear();
-    for (var location in locations){
+      _markers.clear();
+      for (var location in locations){
 
-      // Determine colour of icon based on location type
-      BitmapDescriptor iconColour () {
-        if (location.category.index == 0) { // Is location an attraction?
+        // Determine colour of icon based on location type
+        BitmapDescriptor iconColour () {
+          if (location.category.index == 0) { // Is location an attraction?
+            return BitmapDescriptor.defaultMarkerWithHue(
+                BitmapDescriptor.hueBlue);
+          }
+          if (location.category.index == 1) { // Is location a landmark?
+            return BitmapDescriptor.defaultMarkerWithHue(
+                BitmapDescriptor.hueViolet);
+          }
           return BitmapDescriptor.defaultMarkerWithHue(
-              BitmapDescriptor.hueBlue);
-        }
-        if (location.category.index == 1) { // Is location a landmark?
-          return BitmapDescriptor.defaultMarkerWithHue(
-              BitmapDescriptor.hueViolet);
-        }
-        return BitmapDescriptor.defaultMarkerWithHue(
-            BitmapDescriptor.hueRose); // Is location a bookshop?
-      } // end of iconColour
+              BitmapDescriptor.hueRose); // Is location a bookshop?
+        } // end of iconColour
 
-
-    final marker = Marker(
-    markerId: MarkerId(location.name),
-    position: LatLng(location.latitude, location.longitude),
-    icon: iconColour(),
-    infoWindow: InfoWindow(
-    title: location.name,
-    snippet: location.address,
-      onTap: (){
-        Navigator.push(
-          context,
-          MaterialPageRoute(
-              builder: (context) => LocationView(location: location)
+        final marker = Marker(
+          markerId: MarkerId(location.name),
+          position: LatLng(location.latitude, location.longitude),
+          icon: iconColour(),
+          infoWindow: InfoWindow(
+            title: location.name,
+            snippet: location.address, // Breakdown of snippet is above
+            onTap: (){
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                    builder: (context) => LocationView(location: location)
+                ),
+              );
+            },
           ),
         );
-      },
-    ),
-    );
-    _markers[location.name] = marker;
+        _markers[location.name] = marker;
 
-    } // end for loop
+      } // end for loop
     });
   }
 
@@ -71,19 +73,17 @@ class _ViewMapState extends State<ViewMap> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Location Map'),
-        centerTitle: true,
-        backgroundColor: Color.fromRGBO(87, 88, 187, 9.0),
+        backgroundColor: const Color.fromRGBO(87, 88, 187, 9.0),
       ),
       body: GoogleMap(
-        onMapCreated: _onMapCreated,
-        initialCameraPosition: CameraPosition(
-          target: LatLng(55.94936682425343, -3.1999283672172485),
-          zoom: 11.0,
-        ),
+          onMapCreated: _onMapCreated,
+          initialCameraPosition: CameraPosition(
+            target: LatLng(initialLatitude, initialLongitude),
+            zoom: 11.0,
+          ),
           markers: _markers.values.toSet()
       ),
-      bottomNavigationBar: Navigation(selectedIndex: 2,),
+      bottomNavigationBar: const Navigation(selectedIndex: 2,),
     );
   }
 }
