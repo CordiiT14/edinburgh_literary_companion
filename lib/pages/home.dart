@@ -112,7 +112,15 @@ class _HomeState extends State<Home> {
                     ),
                     TextButton(
                       //TODO WRITE SEE MORE FILTER FUNCTIONS
-                      onPressed: () {},
+                      onPressed: () {
+                        context.read<Locations>().setFilters(0);
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => const Browse(),
+                          ),
+                        );
+                      },
                       child: const Text(
                         'see more',
                         style: TextStyle(
@@ -140,7 +148,15 @@ class _HomeState extends State<Home> {
                   ),
                   TextButton(
                     //TODO WRITE SEE MORE FILTER FUNCTIONS
-                    onPressed: () {},
+                    onPressed: () {
+                      context.read<Locations>().setFilters(1);
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => const Browse(),
+                        ),
+                      );
+                    },
                     child: const Text(
                       'see more',
                       style: TextStyle(
@@ -167,7 +183,15 @@ class _HomeState extends State<Home> {
                   ),
                   TextButton(
                     //TODO WRITE SEE MORE FILTER FUNCTIONS
-                    onPressed: () {},
+                    onPressed: () {
+                      context.read<Locations>().setFilters(2);
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => const Browse(),
+                        ),
+                      );
+                    },
                     child: const Text(
                       'see more',
                       style: TextStyle(

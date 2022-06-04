@@ -47,24 +47,31 @@ class _BrowseState extends State<Browse> {
             ),
 
             // Search filters will go here
-                CheckboxListTile(
+            Row(
+              children: [
+                Checkbox(
                   value: context.watch<Locations>().filters[0],
                   onChanged: (unnecessaryParameter) =>
                       context.read<Locations>().toggleFilter(0),
-                  title: const Text('Attractions'),
+                  // title: const Text('Attractions'),
                 ),
-                CheckboxListTile(
+                const Text('Attractions'),
+                Checkbox(
                   value: context.watch<Locations>().filters[1],
                   onChanged: (unnecessaryParameter) =>
                       context.read<Locations>().toggleFilter(1),
-                  title: const Text('Landmarks'),
+                  // title: const Text('Landmarks'),
                 ),
-                CheckboxListTile(
+                const Text('Landmarks'),
+                Checkbox(
                   value: context.watch<Locations>().filters[2],
                   onChanged: (unnecessaryParameter) =>
                       context.read<Locations>().toggleFilter(2),
-                  title: const Text('Bookshops'),
+                  // title: const Text('Bookshops'),
                 ),
+                const Text('Bookshops'),
+              ],
+            ),
             Expanded(
               // List of location cards, passed to LocationListCard widget
               child: searchResults.isNotEmpty

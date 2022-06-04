@@ -45,6 +45,15 @@ class Locations with ChangeNotifier {
     updateFilters();
   }
 
+  void setFilters(int index){
+    final List<int> keys = [0, 1, 2];
+    for(var key in keys){
+      _filters[key] = false;
+    }
+    _filters[index] = true;
+    updateFilters();
+  }
+
   void updateFilters(){
     _filteredLocations = _locations.where((location) => _filters[location.category.index] == true).toList();
     notifyListeners();
