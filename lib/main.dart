@@ -31,7 +31,6 @@ class EdinLit extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       initialRoute: '/',
       routes: {
-        // TODO create loading widget
         '/': (context) => const Loading(),
         '/home': (context) => const Home(),
         '/browse': (context) => const Browse(),
