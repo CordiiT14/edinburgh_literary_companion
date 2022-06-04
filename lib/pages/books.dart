@@ -62,7 +62,7 @@ class _BooksListState extends State<BooksList> {
         ],
       ),
       bottomNavigationBar: const Navigation(
-        selectedIndex: 1,
+        selectedIndex: 3,
       ),
     );
   }
