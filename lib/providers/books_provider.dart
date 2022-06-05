@@ -10,8 +10,8 @@ class Books with ChangeNotifier {
   final List<Book> _savedBooks = [];
 
   List<Book> get allBooks => _books;
-  List<Book> get searchBooks => _searchBooks;
   List<Book> get savedBooks => _savedBooks;
+  List<Book> get searchBooks => _searchBooks;
 
   // BOOKS TBR LIST FUNCTIONALITY
   void toggleSavedBook(Book book) {
@@ -27,7 +27,7 @@ class Books with ChangeNotifier {
     if (query.isEmpty) {
       _searchBooks = _books;
     } else {
-      _searchBooks = _searchBooks
+      _searchBooks = _books
           .where((book) =>
               book.title.toLowerCase().contains(query.toLowerCase()) ||
               book.author.toLowerCase().contains(query.toLowerCase()))
