@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 import 'package:edin_lit_companion/models/Book.dart';
 import 'package:provider/provider.dart';
 import 'package:edin_lit_companion/providers/books_provider.dart';
-import 'package:edin_lit_companion/pages/book_detail.dart';
 
 class SavedBookCard extends StatelessWidget {
   final Book book;
