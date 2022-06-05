@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:edin_lit_companion/models/Book.dart';
-import 'package:edin_lit_companion/pages/book_detail.dart';
 import 'package:edin_lit_companion/providers/books_provider.dart';
 import 'package:provider/provider.dart';
 
