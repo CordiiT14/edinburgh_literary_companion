@@ -34,12 +34,14 @@ class _LocationListCardState extends State<LocationListCard> {
       title: Text(widget.location.name,
           style: const TextStyle(
             fontSize: 18.0,
+            fontWeight: FontWeight.w500,
           )),
 
       // LOCATION ADDRESS
       // subtitle: Text(widget.location.address,
       //     style: const TextStyle(
       //       fontSize: 12.0,
+      //       color: Colors.black,
       //     )),
 
       // ICON BUTTON to add locations to Saved screen
