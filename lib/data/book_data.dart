@@ -13,7 +13,7 @@ class BookData {
         Book(
           title: "One Good Turn",
           author: "Kate Atkinson",
-          description: "It is summer, it is the Edinburgh Festival. People queuing for a lunchtime show witness a road-rage incident which changes the lives of everyone involved. Jackson Brodie, ex-army, ex-police, ex-private detective, is also an innocent bystander - until he becomes a suspect. As the body count mounts, each member of the teeming Dickensian cast’s story contains a kernel of the next, like a set of nesting Russian dolls...",
+          description: "It is summer, it is the Edinburgh Festival. People queuing for a lunchtime show witness a road-rage incident which changes the lives of everyone involved. Jackson Brodie, ex-army, ex-police, ex-private detective, is also an innocent bystander - until he becomes a suspect.\nAs the body count mounts, each member of the teeming Dickensian cast’s story contains a kernel of the next, like a set of nesting Russian dolls...",
           image: "books/oneGoodTurn.jpg",
         ),
         Book(

@@ -13,7 +13,7 @@ class Books with ChangeNotifier {
   List<Book> get savedBooks => _savedBooks;
   List<Book> get searchBooks => _searchBooks;
 
-  // BOOKS TBR LIST FUNCTIONALITY
+  // SAVED BOOKS LIST FUNCTIONALITY
   void toggleSavedBook(Book book) {
     bookIsSaved(book) ? _savedBooks.remove(book) : _savedBooks.add(book);
     notifyListeners();
@@ -23,6 +23,7 @@ class Books with ChangeNotifier {
     return _savedBooks.contains(book);
   }
 
+  // BOOKS SEARCH FUNCTION
   void runBookSearch(String query) {
     if (query.isEmpty) {
       _searchBooks = _books;

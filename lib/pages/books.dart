@@ -5,8 +5,7 @@ import 'package:edin_lit_companion/models/Book.dart';
 import 'package:provider/provider.dart';
 import 'package:edin_lit_companion/providers/books_provider.dart';
 
-// BOOKS PAGE - data from books_data.dart via books_provider
-
+// BOOKS PAGE - data from books_data.dart via books_provider.dart
 class BooksList extends StatefulWidget {
   const BooksList({Key? key}) : super(key: key);
 
@@ -28,6 +27,8 @@ class _BooksListState extends State<BooksList> {
       ),
       body: Column(
         children: [
+
+          // SEARCH BAR text input field
           Padding(
             padding: EdgeInsets.all(12.0),
             child: Container(
@@ -49,9 +50,13 @@ class _BooksListState extends State<BooksList> {
               ),
             ),
           ),
+
+          // BOOKS LIST / SEARCH RESULTS
           Expanded(
             child: bookSearchResults.isNotEmpty
                 ? ListView.builder(
+              controller: ScrollController(
+              ),
                     itemCount: bookSearchResults.length,
                     itemBuilder: (context, index) => Card(
                       child: BookDetail(book: bookSearchResults[index]),
@@ -63,6 +68,8 @@ class _BooksListState extends State<BooksList> {
           ),
         ],
       ),
+      
+      // NAVIGATION BAR
       bottomNavigationBar: const Navigation(
         selectedIndex: 3,
       ),
