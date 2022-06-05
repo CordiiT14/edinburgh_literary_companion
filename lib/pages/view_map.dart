@@ -76,27 +76,58 @@ class _ViewMapState extends State<ViewMap> {
         title: const Text('Location Map'),
         centerTitle: true,
         backgroundColor: const Color.fromRGBO(87, 88, 187, 9.0),
-        actions:[
-          IconButton(
-              onPressed: () {
-                Navigator.push(
-                context,
-                MaterialPageRoute(
-                  builder: (context) => const Info()
-              ),
-            );
-            },
-              icon: const Icon(Icons.info)
-          )
-        ]
+        // actions:[
+        //   IconButton(
+        //       onPressed: () {
+        //         Navigator.push(
+        //         context,
+        //         MaterialPageRoute(
+        //           builder: (context) => const Info()
+        //       ),
+        //     );
+        //     },
+        //       icon: const Icon(Icons.info)
+        //   )
+        // ]
       ),
-      body: GoogleMap(
-          onMapCreated: _onMapCreated,
-          initialCameraPosition: CameraPosition(
-            target: LatLng(initialLatitude, initialLongitude),
-            zoom: 11.0,
+      body: Stack(
+        children: [
+          GoogleMap(
+              onMapCreated: _onMapCreated,
+              initialCameraPosition: CameraPosition(
+                target: LatLng(initialLatitude, initialLongitude),
+                zoom: 11.0,
+              ),
+              markers: _markers.values.toSet()
           ),
-          markers: _markers.values.toSet()
+          Container(
+            color: Colors.white.withOpacity(0.7),
+            child: Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Icon(
+                    Icons.place,
+                    color: Colors.indigo[600],
+                  ),
+                  Text('Attraction'),
+                  const Icon(
+                    Icons.place,
+                    color: Colors.deepPurpleAccent,
+                  ),
+                  const Text('Landmark'),
+                  const Icon(
+                    Icons.place,
+                    color: Colors.pink,
+                  ),
+                  Text('Bookshop'),
+                ],
+              ),
+            ),
+          ),
+        ],
+
       ),
       bottomNavigationBar: const Navigation(selectedIndex: 2,),
     );
