@@ -12,13 +12,13 @@ import 'package:edin_lit_companion/pages/books.dart';
 
 void main(){
   runApp(
-    MultiProvider(
+      MultiProvider(
         providers: [
           ChangeNotifierProvider(create: (_) => Locations()),
           ChangeNotifierProvider(create: (_) => Books()),
         ],
-      child: const EdinLit(),
-    )
+        child: const EdinLit(),
+      )
   );
 }
 
@@ -31,6 +31,7 @@ class EdinLit extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       initialRoute: '/',
       routes: {
+        // TODO create loading widget
         '/': (context) => const Loading(),
         '/home': (context) => const Home(),
         '/browse': (context) => const Browse(),
@@ -41,16 +42,14 @@ class EdinLit extends StatelessWidget {
       },
       //app theme
       theme: ThemeData(
-          fontFamily: 'MavenPro',
+        fontFamily: 'MavenPro',
         colorScheme: ColorScheme.fromSwatch().copyWith(
-            primary: const Color.fromRGBO(87, 88, 187, 9.0),
-            secondary: const Color.fromRGBO(241, 135, 1, 1),
+          primary: const Color.fromRGBO(87, 88, 187, 9.0),
+          secondary: const Color.fromRGBO(241, 135, 1, 1),
         ),
-
       ),
     ));
   }
 }
-
 
 

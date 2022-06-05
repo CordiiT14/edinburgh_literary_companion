@@ -3,6 +3,39 @@ import 'package:flutter/material.dart';
 import 'package:edin_lit_companion/models/Location.dart';
 import 'package:edin_lit_companion/providers/locations_provider.dart';
 import 'package:provider/provider.dart';
+import 'package:google_maps_flutter/google_maps_flutter.dart';
+
+// class IndividualGoogleMap extends StatefulWidget {
+//   final Location location;
+//   const IndividualGoogleMap({Key? key, required this.location}) : super(key: key);
+//
+//   @override
+//   State<IndividualGoogleMap> createState() => _IndividualGoogleMapState();
+// }
+//
+// class _IndividualGoogleMapState extends State<IndividualGoogleMap> {
+//   late GoogleMapController mapController;
+//
+//   final LatLng _center = const LatLng(45.521563, -122.677433);
+//
+//   void _onMapCreated(GoogleMapController controller) {
+//     mapController = controller;
+//   }
+//
+//   @override
+//   Widget build(BuildContext context) {
+//     return SizedBox(
+//       width:500,
+//       child: GoogleMap(
+//         onMapCreated: _onMapCreated,
+//         initialCameraPosition: CameraPosition(
+//           target: _center,
+//           zoom: 11.0,
+//         ),
+//       ),
+//     );
+//   }
+// }
 
 // This class takes in a location object from pages such as browser.dart(discover) and saved.dart.
 class LocationView extends StatelessWidget {
