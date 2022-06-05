@@ -2,10 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:edin_lit_companion/models/Book.dart';
 import 'package:edin_lit_companion/providers/books_provider.dart';
 import 'package:provider/provider.dart';
-
 import 'package:expandable/expandable.dart';
 
-// CARD WIDGET FOR BOOKS list on Books screen using data passed from books.dart
+// CARD WIDGET FOR BOOKS list on Books page using data passed from books.dart
 
 class BookDetail extends StatelessWidget {
   const BookDetail({Key? key, required this.book}) : super(key: key);
@@ -16,11 +15,12 @@ class BookDetail extends StatelessWidget {
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.symmetric(vertical: 0, horizontal: 8.0),
+      // EXPANDABLE PANEL for viewing book details
       child: ExpandablePanel(
           header: Row(
             mainAxisAlignment: MainAxisAlignment.start,
-            // crossAxisAlignment: CrossAxisAlignment.start,
             children: [
+              // ICON BUTTON for adding books to Saved page
               IconButton(
                 onPressed: () => context.read<Books>().toggleSavedBook(book),
                 iconSize: 25.0,
@@ -40,6 +40,7 @@ class BookDetail extends StatelessWidget {
             ],
           ),
           collapsed: Text(''),
+          // BOOK DETAIL VIEW when panel expanded
           expanded: Padding(
             padding: const EdgeInsets.fromLTRB(0, 4, 0, 10),
             child: Row(
@@ -52,7 +53,6 @@ class BookDetail extends StatelessWidget {
                             book.description,
                             // softWrap: true,
                           textAlign: TextAlign.left,
-
                         ),
                       ),
                     ),
