@@ -76,19 +76,19 @@ class _ViewMapState extends State<ViewMap> {
         title: const Text('Location Map'),
         centerTitle: true,
         backgroundColor: const Color.fromRGBO(87, 88, 187, 9.0),
-        actions:[
-          IconButton(
-              onPressed: () {
-                Navigator.push(
-                context,
-                MaterialPageRoute(
-                  builder: (context) => const Info()
-              ),
-            );
-            },
-              icon: const Icon(Icons.info)
-          )
-        ]
+        // actions:[
+        //   IconButton(
+        //       onPressed: () {
+        //         Navigator.push(
+        //         context,
+        //         MaterialPageRoute(
+        //           builder: (context) => const Info()
+        //       ),
+        //     );
+        //     },
+        //       icon: const Icon(Icons.info)
+        //   )
+        // ]
       ),
       body: Stack(
         children: [
