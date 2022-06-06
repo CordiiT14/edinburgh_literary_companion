@@ -11,7 +11,7 @@ class LocationData {
     Location(
         name: "Lady Stair's Close",
         category: Category.Landmark,
-        address: "Lawnmarket, Edinburgh, EH1 2PA",
+        address: "Lawnmarket, Edinburgh EH1 2PA",
         description: "Site of Baxter's Close (now demolished) and the lodgings of Robert Burns on his first visit to Edinburgh during 1786-7. The ploughman poet journeyed to Edinburgh from Ayrshire to find a printer for a second edition of his Poems, Chiefly in the Scottish Dialect. William Creech became his publisher and Burns himself became a sensation in the polite circles of Edinburgh. He left a lasting impression on a young Sir Walter Scott who later wrote of him: ‘I never saw such another eye in a human head, though I have seen the most distinguished men in my time.",
         image: "landmarks/lady_stair_close.jpeg",
         latitude: 55.94959278,
@@ -20,7 +20,7 @@ class LocationData {
     Location(
         name: "Writers' Museum",
         category: Category.Attraction,
-        address: "Lady Stair's Close, Edinburgh, EH1 2PA",
+        address: "Lady Stair's Close, Edinburgh EH1 2PA",
         description: "[Admission free] – This museum is a fitting tribute to the writers who helped shape Edinburgh into the literary city it is today. There are collections dedicated to the life and works of Robert Burns, Sir Walter Scott and Robert Louis Stevenson. Treasures include Burns’ writing desk, Scott’s rocking horse and a pair of Stevenson’s riding boots. The museum is in the historic Lady Stair’s House which was built in1622 and is divided into three floors. The Burns collection is in the attic, Scott occupies the middle floor and Stevenson’s belongings, including a cabinet made by the infamous criminal Deacon Brodie, are in the basement.",
         image: "attractions/writers_museum.jpeg",
         latitude: 55.9495566,
@@ -29,7 +29,7 @@ class LocationData {
     Location(
         name: "Makars' Court",
         category: Category.Landmark,
-        address: "457/1 Lawnmarket, Edinburgh, EH1 2NT",
+        address: "Lawnmarket, Edinburgh EH1 2NT",
         description: "Here, Scottish writers and Makars [Poet Laureates] are celebrated with inscriptions carved into stones. #'Imagine my surprise when, one cold winter's morning last year, I was phoned up out of the blue and asked if I would accept the post of Edinburgh Makar. Would I! I was gobsmacked.'#Ron Butlin (Current Makar) The stones feature quotations from English, Scots and Gaelic writers, including this line from Sorley MacLean: #‘Nan robh againn Alba shaor, #Alba co-shìnte ri ar gaol...'  #‘If we had a Scotland free, Scotland equal to our love...’",
         image: "landmarks/makars_court.jpeg",
         latitude: 55.9495566,
@@ -38,7 +38,7 @@ class LocationData {
     Location(
         name: "Central Library",
         category: Category.Attraction,
-        address: "7-9 George IV Bridge, Edinburgh, EH1 1EG",
+        address: "George IV Bridge, Edinburgh EH1 1EG",
         description: "Our half a million people visit the library each year, from the regular borrower looking for a copy of Ian Rankin’s Knots and Crosses (the library has a starring role in the novel) to serious researchers who make use of the library’s vast archive of newspapers, census records and old photos of the city. The library is in fact made up of six separate libraries including art, music and reference. The Scottish Library is a fantastic resource and contains around 72,000 items with works from the sixteenth-century onwards. #The library also hosts regular exhibitions and events with Scottish authors.",
         image: "attractions/central_library.jpeg",
         latitude: 55.9483209,
@@ -47,7 +47,7 @@ class LocationData {
     Location(
         name: "National Library of Scotland",
         category: Category.Attraction,
-        address: "George IV Bridge, Edinburgh , EH1 1EW",
+        address: "George IV Bridge, Edinburgh EH1 1EW",
         description: "[Admission free] - Opposite the Central Library you'll find this information treasure trove of Scotland's knowledge, history and culture, with more than 14 million printed items - books, manuscripts and maps - covering every subject. There's also a café and regular free exhibitions. The National Library is the home to the archive of the John Murray publishing house. It contains letters and manuscripts from over 16,000 writers and thinkers including Jane Austen, Charles Darwin, Sir Walter Scott and Herman Melville.",
         image: "attractions/national_library_scotland.jpeg",
         latitude: 55.9485487,
@@ -56,7 +56,7 @@ class LocationData {
     Location(
         name: "Greyfriars Kirkyard",
         category: Category.Landmark,
-        address: "26A Candlemaker Row, Edinburgh, EH1 2QE",
+        address: "Candlemaker Row, Edinburgh EH1 2QE",
         description: "Not only was this one of the favourite haunts of a young Robert Louis Stevenson but it also has memorials to a clutch of famous writers, poets and publishers. Gaelic poet Duncan Ban MacIntyre, ‘Scotland’s worst poet’ William McGonagall, the editor of the first Encyclopaedia Britannica William Smellie and the poet Allan Ramsay can all be found if you take a walk around this peaceful place at the heart of the tourist hubbub.",
         image: "landmarks/greyfriars_kirkyard.jpeg",
         latitude: 55.947196,
@@ -84,7 +84,7 @@ class LocationData {
     Location(
         name: "David Hume Statue",
         category: Category.Landmark,
-        address: "379-381 High St, Edinburgh EH1 1PW",
+        address: "379 High St, Edinburgh EH1 1PW",
         description: "Hume, the ‘Father of the Scottish Enlightenment’, studied law at Edinburgh University from the age of 12. Hume had no interest in learning from his professors, preferring the written word: #'There is nothing to be learned from a professor, which is not met with in books.' #However Hume did not confine himself to the library, he was very sociable and often held parties because, as he believed: ‘Truth springs from argument amongst friends’. In his work, Hume was intent on dispelling superstition and religion as no more than an aspect of human psychology. His religious beliefs, or lack of them, meant he was never given a university position. Nevertheless his philosophy went on to inspire the likes of Benjamin Franklin, Sigmund Freud and Albert Einstein. ",
         image: "landmarks/David-Hume-Statue.jpeg",
         latitude: 55.9495375,
@@ -114,7 +114,7 @@ class LocationData {
     Location(
         name: "Anchor Close",
         category: Category.Landmark,
-        address: "Anchor Close, Edinburgh EH1 1NY",
+        address: "Royal Mile, Edinburgh EH1 1NY",
         description: "Site of William Smellie's printing house which printed works by the poet Robert Fergusson, economist Adam Smith, philosopher Adam Fergusson, and work by Robert Burns. #Smellie was also involved in editing the first edition of the Encyclopaedia Britannica (1768-71). He was great friends with Burns, who wrote of him: #‘His uncomb’d, hoary locks, wild-staring, #thatch’d #A head for thought profound and clear #unmatch’d’.",
         image: "landmarks/anchor-close.jpeg",
         latitude: 55.950375,
@@ -154,7 +154,7 @@ class LocationData {
     Location(
         name: "Blackfriars Street",
         category: Category.Landmark,
-        address: "Blackfriars Street, Edinburgh EH1 1NE",
+        address: "Royal Mile, Edinburgh EH1 1NE",
         description: "At the foot of Blackfriars Street is a plaque marking the spot where Walter Chepman and Androw Myllar set up Scotland’s first printing press. They were given exclusive permission by James IV on the condition that they focused on books developing Scottish culture and identity. However the first book they completed, on 4 April 1508, was The Complaint of the Black Knight, a courtly love poem by the English monk John Lydgate. This site also has rich theatrical significance as Shakespeare’s company toured to Edinburgh, performing in Blackfriars Street under James’ protection. Scottish events may colour both Hamlet and Macbeth.",
         image: "landmarks/blackfriars.jpeg",
         latitude: 55.949071,
@@ -214,7 +214,7 @@ class LocationData {
     Location(
         name: "Scottish Poetry Library",
         category: Category.Attraction,
-        address: "5 Crichton's Close, Edinburgh EH8 8DT",
+        address: "Crichton's Close, Edinburgh EH8 8DT",
         description: "This is the place for poetry in Scotland, for the regular reader, the serious student or the casual browser. There are around 30,000 items, from the oft-recited giants to the little known voices in English, Scots and Gaelic. There is also an expanding collection of European poetry, both in translation and the original language. Special collections include the archive of the first Scots Makar (poet laureate) Edwin Morgan and a substantial collection of work by Ian Hamilton Finlay. The library specialises in concrete poetry, small press and artists’ books. There are events, workshops and courses throughout the year.",
         image: "attractions/spl.jpeg",
         latitude: 55.9514237,
@@ -222,19 +222,19 @@ class LocationData {
         website:""
     ),
     // Location(
-    //     name: ,
-    //     category: ,
-    //     address: ,
-    //     description: ,
-    //     image: ,
+    //     name: "",
+    //     category: Category.,
+    //     address: "",
+    //     description: "",
+    //     image: "landmarks/",
     //     latitude: ,
     //     longitude: ,
-    //     website:
+    //     website: ""
     // ),
     Location(
         name: "Armchair Books",
         category: Category.Bookshop,
-        address: "72-74 West Port, Edinburgh EH1 2LE",
+        address: "72 West Port, Edinburgh EH1 2LE",
         description: "A favourite stop for bibliophiles for two decades, Armchair Books is owned by the independently-minded David Govan. The shop has a good general stock of fiction, non-fiction and antiquarian, split over two narrow premises. No. 72 houses most of the fiction, including a decent sci-fi section, whilst no.74, next door, contains pretty much everything else.",
         image: "bookshops/armchairBooks.jpg",
         latitude: 55.946267,
@@ -244,7 +244,7 @@ class LocationData {
     Location(
         name: "Edinburgh Books",
         category: Category.Bookshop,
-        address: "145-147 West Port, Edinburgh EH3 9DP",
+        address: "145 West Port, Edinburgh EH3 9DP",
         description: "Edinburgh Books has been a landmark for book lovers for more than twenty years. Formerly known as West Port Books, this off-beat Edinburgh bookshop has a huge, wide ranging stock of second-hand and antiquarian books. For the reader, there is a large stock of fiction and non-fiction; for the collector, a sizeable number of intriguing titles; and for the musician, one basement room is rented by Alba Musick of Glasgow and is full of sheet music.",
         image: "bookshops/edinburghBooks.jpg",
         latitude: 55.946014,
@@ -294,7 +294,7 @@ class LocationData {
     Location(
         name: "Lighthouse Books",
         category: Category.Bookshop,
-        address: "43-45 W Nicolson St, Edinburgh EH8 9DB",
+        address: "43 W Nicolson St, Edinburgh EH8 9DB",
         description: "Lighthouse is a queer-owned and woman-led independent community bookshop - an unapologetically activist, intersectional, feminist, antiracist, lgbtq+ community space that celebrates diversity of thought and expression, championing voices from the margins.",
         image: "bookshops/lighthouseBooks.jpg",
         latitude: 55.94462,
@@ -314,7 +314,7 @@ class LocationData {
     Location(
         name: "McNaughtan's Bookshop",
         category: Category.Bookshop,
-        address: "3a-4a Haddington Place, Edinburgh EH7 4AE",
+        address: "3a Haddington Place, Edinburgh EH7 4AE",
         description: "Established in 1957, McNaughtan's is a second-hand and antiquarian bookshop dealing in a wide variety of areas including literature, children's and illustrated books, history, travel and topography, and Scottish books. The craft, antiques, art & architecture sections flank the in-house art gallery.",
         image: "bookshops/mcnaughtonsBookshop.jpg",
         latitude: 55.959451,
@@ -380,6 +380,146 @@ class LocationData {
         latitude: 55.95931,
         longitude: -3.1837,
         website: "https://www.typewronger.com"
+    ),
+    Location(
+        name: "Burns Monument",
+        category: Category.Landmark,
+        address: "1759 Regent Rd, Edinburgh EH8 8JQ",
+        description: "Built to house a life size statue of  Burns in white marble by John Flaxman (statue has been on loan to Scottish National Portrait Gallery since 1861). Commemorates Scotland's iconic poet & lyricist, Robert Burns.",
+        image: "landmarks/burnsMonument.jpg",
+        latitude: 55.9534862,
+        longitude: -3.1805205,
+        website: ""
+    ),
+    Location(
+        name: "Catherine Sinclair Monument",
+        category: Category.Landmark,
+        address: "Charlotte Square, Edinburgh EH3 6DE",
+        description: "Catherine Sinclair was born at 9 Charlotte Square in Edinburgh on 17 April 1800. She was a Scottish novelist and children's writer, who departed from the moralising approach common in that period. She is credited with discovering that the author of the initially anonymous Waverley Novels was Sir Walter Scott. Miss Sinclair wrote brightly and wittily, and displayed much skill in characterisation and description, Several of her books were popular in America.",
+        image: "landmarks/catherineSinclair.jpg",
+        latitude: 55.9532067,
+        longitude: -3.2079983,
+        website: ""
+    ),
+    Location(
+        name: "Allan Ramsey Statue",
+        category: Category.Landmark,
+        address: "Princes St Gardens West, Edinburgh EH2 2EJ",
+        description: "Commemorates the poet and publisher Allan Ramsay, who was involved in the early 18th C. revival of Scots vernacular poetry and wrote 'The Good Shepherd'. In 1846 Ramsay was depicted as one of sixteen Scottish poets and writers on the lower section of the Scott Monument on Princes Street in Edinburgh.",
+        image: "landmarks/allanRamsey.jpg",
+        latitude: 55.951727,
+        longitude: -3.1994283,
+        website: ""
+    ),
+    Location(
+        name: "Robert Louis Stevenson Memorial",
+        category: Category.Landmark,
+        address: "Princes St Gardens West, Edinburgh EH2 2HG",
+        description: "Stone memorial in a grove of silver birches, commemorating Robert Louis Stevenson. A Scottish novelist, essayist, poet and travel writer. He is best known for works such as Treasure Island, Strange Case of Dr Jekyll and Mr Hyde, Kidnapped and A Child's Garden of Verses.",
+        image: "landmarks/rlsMemorial.jpg",
+        latitude: 55.950064,
+        longitude: -3.2046297,
+        website: ""
+    ),
+    Location(
+        name: "Robert Burns Statue",
+        category: Category.Landmark,
+        address: "Constitution St, Edinburgh EH6 7BG",
+        description: "The statue was erected by the Leith Burns Club in 1898. On each side of the pedestal is a panel based on Burns' poems, with The Cottar's Saturday Night, Hallowe'en, Death and Dr Hornbrook and The Smiddy all featured.",
+        image: "landmarks/robertBurnsStatue.jpg",
+        latitude: 55.9751018,
+        longitude: -3.1663291,
+        website: ""
+    ),
+    Location(
+        name: "William Chambers Monument",
+        category: Category.Landmark,
+        address: "45 Chambers St, Edinburgh EH1 1JF",
+        description: "During his childhood William Chambers was an avid reader of books from a circulating library in Peebles. He moved with his family to Edinburgh where he started an apprenticeship with John Sutherland, Bookseller. He set up on his own in 1818 and taught himself bookbinding and type-setting before venturing into publishing. He worked with his brother, Robert Chambers, to launch a successful weekly paper, ‘Edinburgh Journal‘, in 1832 and produce a gazetteer of Scotland the following year. They founded W and R Chambers, publishers of school text-books, People’s Editions of literary works and the famous Chamber’s encyclopaedia and Chamber’s English dictionary. William Chambers was elected Lord Provost of Edinburgh in 1865 and worked to improve sanitary conditions in the city as well as the restoration of St Giles Cathedral. Chambers Street is named after him. His statue stands outside the National Museum of Scotland there.",
+        image: "landmarks/williamChambers.jpg",
+        latitude: 55.9473645,
+        longitude: -3.1918173,
+        website: ""
+    ),
+    Location(
+        name: "Luath Press Limited",
+        category: Category.Landmark,
+        address: "543/2 Castlehill, Royal Mile, Edinburgh EH1 2ND",
+        description: "Luath Press takes its name from Robert Burns, whose little collie Luath (Gael., swift or nimble) tripped up Jean Armour at a wedding and gave him the chance to speak to the woman who was to be his wife and the abiding love of his life. Burns called one of The Twa Dogs Luath after Cuchullin’s hunting dog in Ossian’s Fingal. Luath Press was established in 1981 in the heart of Burns country, and is now based a few steps up the road from Burns’ first lodgings on Edinburgh's Royal Mile. Luath offers you distinctive writing with a hint of unexpected pleasures.",
+        image: "landmarks/luathPress.png",
+        latitude: 55.9490580138704,
+        longitude: -3.1953470015067653,
+        website: "https://www.luath.co.uk/"
+    ),
+    Location(
+        name: "Corstorphine Tower",
+        category: Category.Landmark,
+        address: "Corstorphine Hill, Edinburgh EH12 6UP",
+        description: "The Tower is a famous viewpoint on the summit of the Hill. It was built 150 years ago as a memorial to Sir Walter Scott. The top of the tower is at about 200m above sea level and commands magnificent views in all directions, to the Pentlands, the upper Forth, Fife and the Firth, and the City Centre and East Lothian.",
+        image: "landmarks/corstorphineTower.jpg",
+        latitude: 55.95111159,
+        longitude: -3.272367372,
+        website: ""
+    ),
+    Location(
+        name: "Arthur Conan Doyle Memorial",
+        category: Category.Landmark,
+        address: "Picardy Place, Edinburgh EH1 3JT",
+        description: "Monument commemorating the birthplace of Sir Arthur Conan Doyle, Scottish writer best know for the adventures of Sherlock Holmes.  Doyle was born May 22nd, 1859 at 11 Picardy Place, near the top of Leith Walk. The building where he was born is no longer there but in its place is an oversized statue of Sherlock Holmes – a statue which has a secret unknown to most Sherlockians, even those who have stood before it and admired their literary hero. Immediately across the road is the Conan Doyle pub for those in need of refreshment after a long literary walk.",
+        image: "landmarks/arthurConanDoyle.jpg",
+        latitude: 55.95688601,
+        longitude: -3.186946783,
+        website: ""
+    ),
+    Location(
+        name: "Colinton Tunnel",
+        category: Category.Attraction,
+        address: "Colinton railway path, Edinburgh EH13 0JU",
+        description: "Former railway tunnel by the Water of Leith that was recently revived and painted with a stunning full length street art mural to the lines of Robert Louis Stevenson's poem, 'From a Railway Carriage'.",
+        image: "attractions/colintonTunnel.jpg",
+        latitude: 55.90792845,
+        longitude: -3.260058425,
+        website: ""
+    ),
+    Location(
+        name: "Robert Louis Stevenson Statue",
+        category: Category.Landmark,
+        address: "Dell Rd, Edinburgh EH13 0JR",
+        description: "The Kidnapped and Treasure Island author wrote how he would spent much of his summer holidays in Colinton at his grandfather, Dr Lewis Balfour’s house. Inspired by the writer’s own memories of time spent in the manse garden - and the poems featured in his collection “A Child’s Garden of Verses” - it depicts a young Stevenson sitting on a tree-strump with his head in a book, watched over by his Skye Terrier dog.",
+        image: "landmarks/rlsStatue.jpg",
+        latitude: 55.90859748,
+        longitude: -3.256287266,
+        website: ""
+    ),
+    Location(
+        name: "Kidnapped Statue",
+        category: Category.Landmark,
+        address: "113 Corstorphine Rd, Edinburgh EH12 5PZ",
+        description: "The bronze statue depicts the two principal characters from Stevenson’s novel Kidnapped, Alan Breck Stewart and the 17-year-old David Balfour. Breck is based on the real Scottish soldier and Jacobite, Colin Roy Campbell of Glenure, who in 1752 was tried in absentia for the assassination of the Crown rent collector. David Balfour (Balfour was Stevenson’s mother’s maiden name) on the other hand is the naïve lad making his way in the world, outsmarted by his uncle, and simultaneously in awe and afraid of the Highlanders.",
+        image: "landmarks/kidnappedStatue.jpg",
+        latitude: 55.94534265,
+        longitude: -3.249880988,
+        website: ""
+    ),
+    Location(
+        name: "Miss Jean Brodie Steps",
+        category: Category.Landmark,
+        address: "The Vennel, Edinburgh EH1 2HU",
+        description: "In 2018, this staircase (that boasts one of the very best views of Edinburgh Castle) was rechristened The Jean Brodie Steps in honor of the title character from the novel, The Prime of Miss Jean Brodie on the author’s Muriel Spark’s 100th birthday. A scene from the Oscar-winning 1969 film was shot here.",
+        image: "landmarks/jeanBrodieSteps.jpg",
+        latitude: 55.94648359,
+        longitude: -3.197252952,
+        website: ""
+    ),
+    Location(
+        name: "Edinburgh International Book Festival",
+        category: Category.Attraction,
+        address: "74 Lauriston Pl, Edinburgh, EH3 9DF",
+        description: "Taking place in August every year, the Edinburgh International Book Festival is a distinctive international showcase celebrating the written word, literature and ideas. It brings leading and emerging international, British and Scottish authors and thinkers together to inspire each other and audiences in an extensive programme of public events. The Book Festival aims to inspire people of all backgrounds and ages to explore new ideas and expand their horizons. The first Book Festival took place during the summer of 1983 in Charlotte Square Gardens, where it was held for the next 37 years, moving to its new home at Edinburgh College of Art in 2021. During the festival there is an onsite independent bookshop, all proceeds from which are invested back into the running of the Book Festival.",
+        image: "attractions/bookFestival.jpeg",
+        latitude: 55.94523752,
+        longitude: -3.198215287,
+        website: "https://www.edbookfest.co.uk/"
     ),
   ];
 }
