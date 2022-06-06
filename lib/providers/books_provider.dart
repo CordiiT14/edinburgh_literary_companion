@@ -17,10 +17,17 @@ class Books with ChangeNotifier {
   void toggleSavedBook(Book book) {
     bookIsSaved(book) ? _savedBooks.remove(book) : _savedBooks.add(book);
     notifyListeners();
+
   }
 
   bool bookIsSaved(Book book) {
-    return _savedBooks.contains(book);
+    var output = false;
+    for (var savedBook in _savedBooks) {
+      if(savedBook.title == book.title){
+        output = true;
+      }
+    }
+    return output;
   }
 
   // BOOKS SEARCH FUNCTION

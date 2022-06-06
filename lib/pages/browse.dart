@@ -6,18 +6,14 @@ import 'package:edin_lit_companion/providers/locations_provider.dart';
 import 'package:edin_lit_companion/models/Location.dart';
 
 // BROWSE WIDGET FOR DISCOVER PAGE - taking in data from location_data.dart via LocationData()
-class Browse extends StatefulWidget {
+
+class Browse extends StatelessWidget {
   const Browse({Key? key}) : super(key: key);
 
   @override
-  State<Browse> createState() => _BrowseState();
-}
-
-class _BrowseState extends State<Browse> {
-  @override
   Widget build(BuildContext context) {
     List<Location> searchResults =
-        context.watch<Locations>().displayLocations();
+    context.watch<Locations>().displayLocations();
     return Scaffold(
       appBar: AppBar(
         title: Text('Locations'),
@@ -83,17 +79,17 @@ class _BrowseState extends State<Browse> {
             // List of location cards, passed to LocationListCard widget
             child: searchResults.isNotEmpty
                 ? ListView.builder(
-                    itemCount: searchResults.length,
-                    itemBuilder: (context, index) => Card(
-                          // key: ValueKey(searchResults[index]),
-                          child:
-                              LocationListCard(location: searchResults[index]),
-                        ))
+                itemCount: searchResults.length,
+                itemBuilder: (context, index) => Card(
+                  // key: ValueKey(searchResults[index]),
+                  child:
+                  LocationListCard(location: searchResults[index]),
+                ))
                 : const Center(
-                    child: Text(
-                      'No results found',
-                    ),
-                  ),
+              child: Text(
+                'No results found',
+              ),
+            ),
           ),
         ],
       ),
@@ -104,4 +100,5 @@ class _BrowseState extends State<Browse> {
       ),
     );
   }
+
 }

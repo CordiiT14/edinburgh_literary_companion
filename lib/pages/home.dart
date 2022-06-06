@@ -104,8 +104,6 @@ class _HomeState extends State<Home> {
                     child: TextField(
                       onChanged: (value) {
                         context.read<Locations>().runSearch(value);
-                      //  navigate to browse page with parameter of
-                      //  context.read<Locations>().searchLocations;
                       },
                       onSubmitted: (value){
                         Navigator.push(

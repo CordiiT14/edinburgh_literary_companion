@@ -1,4 +1,5 @@
 import 'package:edin_lit_companion/components/book_list_card.dart';
+import 'package:edin_lit_companion/pages/books.dart';
 import 'package:flutter/material.dart';
 import 'package:edin_lit_companion/models/Book.dart';
 import 'package:provider/provider.dart';
@@ -15,7 +16,13 @@ class SavedBookCard extends StatelessWidget {
       margin: const EdgeInsetsDirectional.fromSTEB(16.0, 16.0, 16.0, 0),
       child: ListTile(
         onTap: () {
-          Navigator.of(context).pushNamed('/books');
+          context.read<Books>().runBookSearch(book.title);
+          Navigator.push(
+              context,
+              MaterialPageRoute(
+                  builder: (context) => BooksList()
+              )
+          );
         },
         title: Text(
           book.title,
