@@ -112,7 +112,7 @@ class Info extends StatelessWidget {
                       child: Column(
                         children: const [
                           Text(
-                            "A detailed overview of all attractions, landmarks and book shops.",
+                            "A detailed overview of all attractions, landmarks and bookshops.",
                             style: TextStyle(
                               fontSize: 17,
                             ),
@@ -211,7 +211,7 @@ class Info extends StatelessWidget {
                       child: Column(
                         children: const [
                           Text(
-                            "A list of all locations you have saved.",
+                            "A list of all locations and books you have saved.",
                             style: TextStyle(
                               fontSize: 17,
                             ),

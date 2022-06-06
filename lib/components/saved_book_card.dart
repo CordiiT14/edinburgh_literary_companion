@@ -14,26 +14,21 @@ class SavedBookCard extends StatelessWidget {
     return Card(
       margin: const EdgeInsetsDirectional.fromSTEB(16.0, 16.0, 16.0, 0),
       child: ListTile(
-        // onTap: () {
-        //   Navigator.push(
-        //     context,
-        //     MaterialPageRoute(
-        //         builder: (context) => BookDetail(book: book)
-        //     ),
-        //   );
-        // },
+        onTap: () {
+          Navigator.of(context).pushNamed('/books');
+        },
         title: Text(
           book.title,
           style: TextStyle(
-            fontSize: 20.0,
-            color: Colors.blueGrey[200],
+            fontSize: 18.0,
+            color: Colors.black,
           ),
         ),
         subtitle: Text(
-          book.author,
+          'by ${book.author}',
           style: TextStyle(
             fontSize: 12.0,
-            color: Colors.blueGrey[150],
+            color: Colors.black,
           ),
         ),
         trailing: IconButton(

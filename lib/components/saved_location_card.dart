@@ -25,8 +25,8 @@ class LocationCard extends StatelessWidget {
         title: Text(
           location.name,
           style: TextStyle(
-            fontSize: 20.0,
-            color: Colors.blueGrey[200],
+            fontSize: 18.0,
+            color: Colors.black,
           ),
         ),
         subtitle: Text(
@@ -34,7 +34,7 @@ class LocationCard extends StatelessWidget {
           location.category.name,
           style: TextStyle(
             fontSize: 12.0,
-            color: Colors.blueGrey[150],
+            color: Colors.black,
           ),
         ),
         trailing: IconButton(

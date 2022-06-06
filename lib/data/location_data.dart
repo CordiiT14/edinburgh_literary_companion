@@ -9,7 +9,7 @@ class LocationData {
   
   List<Location> get locations => [
     Location(
-        name: "Lady Stair Close",
+        name: "Lady Stair's Close",
         category: Category.Landmark,
         address: "Lawnmarket, Edinburgh, EH1 2PA",
         description: "Site of Baxter's Close (now demolished) and the lodgings of Robert Burns on his first visit to Edinburgh during 1786-7. The ploughman poet journeyed to Edinburgh from Ayrshire to find a printer for a second edition of his Poems, Chiefly in the Scottish Dialect. William Creech became his publisher and Burns himself became a sensation in the polite circles of Edinburgh. He left a lasting impression on a young Sir Walter Scott who later wrote of him: ‘I never saw such another eye in a human head, though I have seen the most distinguished men in my time.",
@@ -18,9 +18,9 @@ class LocationData {
         longitude: -3.19338131,
         website: "https://hiddenscotland.co/listings/lady-stairs-close/"),
     Location(
-        name: "Writers' Museum (Lady Stair's House)",
+        name: "Writers' Museum",
         category: Category.Attraction,
-        address: "Lady Stairs House Lady Stair's Close Lawnmarket Royal Mile, Edinburgh, EH1 2PA",
+        address: "Lady Stair's Close, Edinburgh, EH1 2PA",
         description: "[Admission free] – This museum is a fitting tribute to the writers who helped shape Edinburgh into the literary city it is today. There are collections dedicated to the life and works of Robert Burns, Sir Walter Scott and Robert Louis Stevenson. Treasures include Burns’ writing desk, Scott’s rocking horse and a pair of Stevenson’s riding boots. The museum is in the historic Lady Stair’s House which was built in1622 and is divided into three floors. The Burns collection is in the attic, Scott occupies the middle floor and Stevenson’s belongings, including a cabinet made by the infamous criminal Deacon Brodie, are in the basement.",
         image: "attractions/writers_museum.jpeg",
         latitude: 55.9495566,
@@ -65,7 +65,7 @@ class LocationData {
     Location(
         name: "Greyfriars Bobby",
         category: Category.Landmark,
-        address: "Edinburgh, EH1 2QQ",
+        address: "Candlemaker Row, Edinburgh, EH1 2QQ",
         description: "This statue of the loyal dog that stayed by his master’s grave for 18 years is a must-see for lovers of Eleanor Atkinson’s popular story. #His master's grave can be seen in the nearby Greyfriars Kirkyard. #Bobby's monument reads:'Greyfriars Bobby#Died 14th January 1872#Aged 16 Years Let his loyalty and devotion be a lesson to us all.' Bobby’s statue is also the site of the Harrow Inn, the periodic residence of James Hogg, the Ettrick Shepherd (1770-1835). Hogg’s most famous work, The Private Memoirs and Confessions of a Justified Sinner, is largely set in Edinburgh with scenes on the nearby Royal Mile and Arthur’s Seat.",
         image: "landmarks/greyfriars_bobby.jpeg",
         latitude: 55.9469535,
@@ -94,7 +94,7 @@ class LocationData {
     Location(
         name: "Advocate's Close",
         category: Category.Landmark,
-        address: "Edinburgh EH1 1ND",
+        address: "Royal Mile, Edinburgh EH1 1ND",
         description: "Site of the first appearance of Bob Skinner, Quintin Jardine's maverick detective, in his first novel Skinner’s Rules. Skinner is the Head of CID and when a lawyer is brutally murdered in this close, followed by a series of other inexplicable murders including the wife of a colleague, the pressure is on Skinner to find the culprit. ",
         image: "landmarks/Advocates_Close.jpeg",
         latitude: 55.9498438,
@@ -124,7 +124,7 @@ class LocationData {
     Location(
         name: "Fleshmarket Close",
         category: Category.Landmark,
-        address: "Fleshmarket Cl, Edinburgh EH1 1DY",
+        address: "Royal Mile, Edinburgh EH1 1DY",
         description: "Formerly the city abattoir, the close provides the setting for one of Ian Rankin's most famous Inspector Rebus novels of the same name. The skeletons of a woman and an infant are discovered in a cellar on the close and an illegal immigrant has been murdered in one of the city’s housing schemes. Rebus’ investigation takes him to an asylum seekers’ detention centre and deep into Edinburgh’s underworld to find the spider at the centre of this web of crime. ",
         image: "landmarks/fleshmarket-cl.jpeg",
         latitude: 55.9506239,
@@ -144,7 +144,7 @@ class LocationData {
     Location(
         name: "Waverley Station",
         category: Category.Landmark,
-        address: "Princes St, Edinburgh EH1 1BE",
+        address: "Waverley Bridge, Edinburgh EH1 1BE",
         description: "Named after Waverley, Walter Scott’s first novel which was published in 1814 and became one of the most widely read books of the nineteenth-century. #Scott's novels were highly influential in developing Scottish identity, both at home and perceptions abroad. He even popularised tartan, by asking George IV to don a kilt on his visit to Edinburgh in 1822.",
         image: "landmarks/waverley-station.jpeg",
         latitude: 55.952381,
@@ -204,7 +204,7 @@ class LocationData {
     Location(
         name: "Tweeddale Court",
         category: Category.Landmark,
-        address: "Tweeddale Court 14 High Street, Edinburgh EH1 1TE Scotland",
+        address: "14 High Street, Edinburgh EH1 1TE",
         description: "This area has been a haunt of writers and publishers for centuries; Sir Walter Scott and James Hogg came to be published here. Later the publishers Oliver and Boyd occupied the house at the far end, once the town residence of the Earl of Tweeddale. More recently, in 1984, the Scottish Poetry Library began its life here, led by poet Tessa Ransford, supported by a galaxy of literary talent. This included leading figures in Scotland’s literary renaissance, such as Sorley MacLean, Iain Crichton Smith, Norman MacCaig and Naomi Mitchison, all of whom read their work in this courtyard. The Library, which was housed in what is now the Evergreen Studios, moved in 1999 to a new building in the Canongate, but publishing continues with Canongate Books and The List based in Tweeddale House.",
         image: "landmarks/Tweedale-Court.jpeg",
         latitude: 55.9504052,
@@ -214,7 +214,7 @@ class LocationData {
     Location(
         name: "Scottish Poetry Library",
         category: Category.Attraction,
-        address: "5 Crichton's Cl, Edinburgh EH8 8DT",
+        address: "5 Crichton's Close, Edinburgh EH8 8DT",
         description: "This is the place for poetry in Scotland, for the regular reader, the serious student or the casual browser. There are around 30,000 items, from the oft-recited giants to the little known voices in English, Scots and Gaelic. There is also an expanding collection of European poetry, both in translation and the original language. Special collections include the archive of the first Scots Makar (poet laureate) Edwin Morgan and a substantial collection of work by Ian Hamilton Finlay. The library specialises in concrete poetry, small press and artists’ books. There are events, workshops and courses throughout the year.",
         image: "attractions/spl.jpeg",
         latitude: 55.9514237,
@@ -234,7 +234,7 @@ class LocationData {
     Location(
         name: "Armchair Books",
         category: Category.Bookshop,
-        address: "72-74 West Port, EH1 2LE",
+        address: "72-74 West Port, Edinburgh EH1 2LE",
         description: "A favourite stop for bibliophiles for two decades, Armchair Books is owned by the independently-minded David Govan. The shop has a good general stock of fiction, non-fiction and antiquarian, split over two narrow premises. No. 72 houses most of the fiction, including a decent sci-fi section, whilst no.74, next door, contains pretty much everything else.",
         image: "bookshops/armchairBooks.jpg",
         latitude: 55.946267,
@@ -244,7 +244,7 @@ class LocationData {
     Location(
         name: "Edinburgh Books",
         category: Category.Bookshop,
-        address: "145-147 West Port, EH3 9DP",
+        address: "145-147 West Port, Edinburgh EH3 9DP",
         description: "Edinburgh Books has been a landmark for book lovers for more than twenty years. Formerly known as West Port Books, this off-beat Edinburgh bookshop has a huge, wide ranging stock of second-hand and antiquarian books. For the reader, there is a large stock of fiction and non-fiction; for the collector, a sizeable number of intriguing titles; and for the musician, one basement room is rented by Alba Musick of Glasgow and is full of sheet music.",
         image: "bookshops/edinburghBooks.jpg",
         latitude: 55.946014,
@@ -254,7 +254,7 @@ class LocationData {
     Location(
         name: "The Edinburgh Bookshop",
         category: Category.Bookshop,
-        address: "219 Bruntsfield Place, EH10 4DH",
+        address: "219 Bruntsfield Place, Edinburgh EH10 4DH",
         description: "The Edinburgh Bookshop stocks a carefully chosen selection of titles, from the classics to the quirky and from beautifully illustrated non-fiction titles to the latest graphic novel. The children's section is to the back, and has everything from cloth books for young customers to challenging fiction for teenagers.",
         image: "bookshops/edinburghBookshop.jpg",
         latitude: 55.934548,
@@ -264,7 +264,7 @@ class LocationData {
     Location(
         name: "Ginger and Pickles Chidren's Bookshop",
         category: Category.Bookshop,
-        address: "51 St Stephen St, EH3 5AH",
+        address: "51 St Stephen St, Edinburgh EH3 5AH",
         description: "Ginger and Pickles is an independent bookshop for children. The shop is both cosy and quaint, designed especially with young readers in mind and is passionate about children’s literature. Their carefully curated beautiful books collections range from baby to young adult.",
         image: "bookshops/gingerAndPickles.jpg",
         latitude: 55.95807,
@@ -274,7 +274,7 @@ class LocationData {
     Location(
         name: "Golden Hare Books",
         category: Category.Bookshop,
-        address: "68 St Stephen St, EH3 5AQ",
+        address: "68 St Stephen St, Edinburgh EH3 5AQ",
         description: "The books at Golden Hare are handpicked with an emphasis on beautiful editions that will take pride of place on discerning bookshelves and nightstands. Golden Hare Books also run a regular bookgroup, as well as hosting a variety of author readings and discussions.",
         image: "bookshops/goldenHareBooks.jpg",
         latitude: 55.95792,
@@ -284,7 +284,7 @@ class LocationData {
     Location(
         name: "John Kay's",
         category: Category.Bookshop,
-        address: "8 Victoria St, EH1 2HG",
+        address: "8 Victoria St, Edinburgh EH1 2HG",
         description: "Formerly The Old Town Bookshop, John Kay’s sits on Victoria Street, one of Edinburgh’s most colourful and most iconic streets. Named after John Kay, an engraver and caricaturist famous for his humourous portraits of the great and good Edinburgh residents at the turn of the 19th Century. There is always a good selection of his original prints in the shop.",
         image: "bookshops/johnKays.jpg",
         latitude: 55.94884,
@@ -294,7 +294,7 @@ class LocationData {
     Location(
         name: "Lighthouse Books",
         category: Category.Bookshop,
-        address: "43-45 W Nicolson St, EH8 9DB",
+        address: "43-45 W Nicolson St, Edinburgh EH8 9DB",
         description: "Lighthouse is a queer-owned and woman-led independent community bookshop - an unapologetically activist, intersectional, feminist, antiracist, lgbtq+ community space that celebrates diversity of thought and expression, championing voices from the margins.",
         image: "bookshops/lighthouseBooks.jpg",
         latitude: 55.94462,
@@ -304,7 +304,7 @@ class LocationData {
     Location(
         name: "Main Point Books",
         category: Category.Bookshop,
-        address: "77 Bread Street, EH3 9AH",
+        address: "77 Bread Street, Edinburgh EH3 9AH",
         description: "If the books on the shelves here reflect the interests of the customers, it would seem that they are an athletic, intelligent and somewhat dreamy lot. Founded 14 years ago on Lauriston Street, between a lap dancing club and a church, 'catering for saints and sinners alike', Main Point Books now sits between a lap dancing club and a tattoo parlour, hence the playful slogan: 'For a couple of quid, a book will sit on your lap all night long'.",
         image: "bookshops/mainPointBooks.jpg",
         latitude: 55.94592,
@@ -314,7 +314,7 @@ class LocationData {
     Location(
         name: "McNaughtan's Bookshop",
         category: Category.Bookshop,
-        address: "3a-4a Haddington Place, EH7 4AE",
+        address: "3a-4a Haddington Place, Edinburgh EH7 4AE",
         description: "Established in 1957, McNaughtan's is a second-hand and antiquarian bookshop dealing in a wide variety of areas including literature, children's and illustrated books, history, travel and topography, and Scottish books. The craft, antiques, art & architecture sections flank the in-house art gallery.",
         image: "bookshops/mcnaughtonsBookshop.jpg",
         latitude: 55.959451,
@@ -324,7 +324,7 @@ class LocationData {
     Location(
         name: "The Portobello Bookshop",
         category: Category.Bookshop,
-        address: "46 Portobello High St, EH15 1DA",
+        address: "46 Portobello High St, Edinburgh EH15 1DA",
         description: "An independent bookshop based in Edinburgh's seaside community of Portobello. A warm, modern, open space that’s welcoming and a pleasure to spend time browsing books in, The Portobello Bookshop also hosts a great events programme.",
         image: "bookshops/portobelloBookshop.jpg",
         latitude: 55.95506,
@@ -334,7 +334,7 @@ class LocationData {
     Location(
         name: "Rare Birds Book Shop",
         category: Category.Bookshop,
-        address: "13 Raeburn Pl, EH4 1HU",
+        address: "13 Raeburn Pl, Edinburgh EH4 1HU",
         description: "Rare Birds Book Shop is new on the map, having opened in 2021, and is Scotland's only bookshop dedicated entirely to women's writing. Their mission is to champion female authors and help you discover brilliant books you'd never have otherwise heard of. From literary heavyweights to breezy beach reads, the staff will help you make space on your bookshelf for women's writing across every genre.",
         image: "bookshops/rareBirdsBookshop.jpg",
         latitude: 55.95883,
@@ -344,7 +344,7 @@ class LocationData {
     Location(
         name: "Till's Bookshop",
         category: Category.Bookshop,
-        address: "1 Hope Park Crescent, EH8 9NA",
+        address: "1 Hope Park Crescent, Edinburgh EH8 9NA",
         description: "Founded in 1986, Tills bookshop specialises in literature, genre fiction (including science fiction and mystery) and the humanities. Close to the university and popular with students and staff, Tills has become something of an institution. One review from the Students' Association reads: 'If all second-hand bookshops were like Tills, the world would be a better place.'",
         image: "bookshops/tillsBookshop.jpg",
         latitude: 55.941184,
@@ -354,7 +354,7 @@ class LocationData {
     Location(
         name: "Transreal Fiction",
         category: Category.Bookshop,
-        address: "7 Cowgatehead, EH1 1JY",
+        address: "7 Cowgatehead, Edinburgh EH1 1JY",
         description: "Transreal Fiction is dedicated to selling science fiction, fantasy, related books, and a limited selection of other merchandise. Mike Calder opened the shop in 1996 and named the shop after the term coined by Rudy Rucker to describe his own fiction (yes, Rudy gave his permission).",
         image: "bookshops/transrealFiction.jpg",
         latitude: 55.947714,
@@ -374,7 +374,7 @@ class LocationData {
     Location(
         name: "Typewronger Books",
         category: Category.Bookshop,
-        address: "4a Haddington Pl, EH7 4AE",
+        address: "4a Haddington Pl, Edinburgh EH7 4AE",
         description: "Attached to McNaughton’s Bookshop & Gallery is Typewronger Books, a bookshop with a very different vibe. They sell both books and typewriters, which make for the perfect combination. Isn’t it every writer’s dream to have a vintage typewriter? The books are all carefully selected by the owner so there’s a small but well-curated assortment of books in all genres.",
         image: "bookshops/typewrongerBooks.jpg",
         latitude: 55.95931,

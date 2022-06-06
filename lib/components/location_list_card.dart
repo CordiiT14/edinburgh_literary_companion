@@ -38,11 +38,11 @@ class _LocationListCardState extends State<LocationListCard> {
           )),
 
       // LOCATION ADDRESS
-      // subtitle: Text(widget.location.address,
-      //     style: const TextStyle(
-      //       fontSize: 12.0,
-      //       color: Colors.black,
-      //     )),
+      subtitle: Text(widget.location.address,
+          style: const TextStyle(
+            fontSize: 12.0,
+            color: Colors.black,
+          )),
 
       // ICON BUTTON to add locations to Saved screen
       trailing: TextButton.icon(
