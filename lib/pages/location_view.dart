@@ -58,7 +58,7 @@ class LocationView extends StatelessWidget {
               'assets/${location.image}', // image path
             ),
             IconButton(
-              iconSize: 50,
+              iconSize: 40,
               onPressed: () =>
                   context.read<Locations>().toggleSavedLocation(location),
               icon: Icon(
@@ -84,75 +84,74 @@ class LocationView extends StatelessWidget {
               ),
             ),
           ),
-
           ListTile(
             title: Text(
               'An Edinburgh ${location.category.name}', // Is it a landmark? Attraction? Bookshop?
               style: const TextStyle(
-                fontSize: 25,
+                fontSize: 20,
                 fontFamily: 'MavenPro-ExtraBold',
-                color: Colors.purple,
-              ),
-            ),
-          ),
-          Divider(
-            height: 30.0,
-            color: Colors.lightBlue[800],
-            thickness: 3,
-            indent: 20,
-            endIndent: 20,
-          ),
-          Center(
-            // Load map when user taps on map pin image
-            child: GestureDetector(
-            onTap: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(
-                    builder: (context) => const ViewMap()
-                ),
-              );
-            },
-
-              child: Image.asset(
-                'assets/google-maps-pin.png', // image path
-                height: 50, // define height of image
+                color: Color.fromRGBO(87, 88, 187, 9.0),
               ),
             ),
           ),
           ListTile(
+            leading: GestureDetector(
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                      builder: (context) => const ViewMap()
+                  ),
+                );
+              },
+              child: Image.asset(
+                'assets/google-maps-pin.png', // image path
+                height: 45, // define height of image
+              ),
+            ),
             title: Text(
               location.address, // location address
               style: const TextStyle(
-                fontSize: 20,
+                fontSize: 18,
               ),
             ),
+          ),
+          const Divider(
+            height: 25.0,
+            // color: Colors.lightBlue[800],
+            color: Color.fromRGBO(87, 88, 187, 9.0),
+            thickness: 1,
+            indent: 25,
+            endIndent: 25,
           ),
           ListTile(
             title: Text(
               // location description
               location.description,
               style: const TextStyle(
-                fontSize: 20,
+                fontSize: 18,
               ),
             ),
           ),
 
           // only display website address if it exists
-          Column(
-            children: [
-              if (location.website.isNotEmpty) (
-                  ListTile(
-                    title: Text(
-                      // location description
-                      'Website:${location.website}',
-                      style: const TextStyle(
-                        fontSize: 20,
+          Padding(
+            padding: const EdgeInsets.fromLTRB(0, 0, 0, 20.0),
+            child: Column(
+              children: [
+                if (location.website.isNotEmpty) (
+                    ListTile(
+                      title: Text(
+                        // location description
+                        'Website:${location.website}',
+                        style: const TextStyle(
+                          fontSize: 18,
+                        ),
                       ),
-                    ),
-                  )
-              )
-            ],
+                    )
+                )
+              ],
+            ),
           ),
         ],
       ),
