@@ -44,7 +44,6 @@ class LocationView extends StatelessWidget {
   final Location location;
   const LocationView({Key? key, required this.location}) : super(key: key);
 
-
   @override
   Widget build(BuildContext context) {
     final Uri _url = Uri.parse(location.website);
@@ -79,9 +78,9 @@ class LocationView extends StatelessWidget {
                     ? Colors.red
                     : Colors.white,
                 semanticLabel:
-                context.watch<Locations>().locationIsSaved(location)
-                    ? 'Remove from saved'
-                    : 'Save',
+                    context.watch<Locations>().locationIsSaved(location)
+                        ? 'Remove from saved'
+                        : 'Save',
               ),
             ),
           ]),
@@ -108,9 +107,7 @@ class LocationView extends StatelessWidget {
               onTap: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(
-                      builder: (context) => const ViewMap()
-                  ),
+                  MaterialPageRoute(builder: (context) => const ViewMap()),
                 );
               },
               child: Image.asset(
@@ -148,22 +145,36 @@ class LocationView extends StatelessWidget {
             padding: const EdgeInsets.fromLTRB(0, 0, 0, 20.0),
             child: Column(
               children: [
-                if (location.website.isNotEmpty) (
-                    ListTile(
-                      title: Text(
-                        // location description
-                        'Website:${location.website}',
-                        style: const TextStyle(
-                          fontSize: 18,
-                          color: Color.fromRGBO(241, 135, 1, 1),
-
-                        ),
+                if (location.website.isNotEmpty)
+                  (ListTile(
+                    onTap: () {
+                      launchUrlString(location.website);
+                    },
+                    title: RichText(
+                      text: const TextSpan(
+                        children: [
+                          WidgetSpan(
+                            alignment: PlaceholderAlignment.middle,
+                            child: Padding(
+                              padding: EdgeInsets.fromLTRB(0, 0, 10, 0),
+                              child: Icon(
+                                Icons.public,
+                                color: Color.fromRGBO(241, 135, 1, 1),
+                              ),
+                            ),
+                          ),
+                          TextSpan(
+                            text: 'Visit website',
+                            style: TextStyle(
+                              fontSize: 18,
+                              fontWeight: FontWeight.w500,
+                              color: Color.fromRGBO(241, 135, 1, 1),
+                            ),
+                          ),
+                        ],
                       ),
-                      onTap: () {
-                        launchUrlString(location.website);
-                        },
-                    )
-                )
+                    ),
+                  )),
               ],
             ),
           ),
