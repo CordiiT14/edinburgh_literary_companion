@@ -7,6 +7,8 @@ import 'package:provider/provider.dart';
 import 'package:edin_lit_companion/providers/locations_provider.dart';
 import 'package:edin_lit_companion/pages/browse.dart';
 
+import 'info.dart';
+
 
 class Home extends StatefulWidget {
   const Home({Key? key}) : super(key: key);
@@ -52,6 +54,8 @@ class _HomeState extends State<Home> {
               //column wraps all content
               children: [
                 Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  crossAxisAlignment: CrossAxisAlignment.start,
                   // Row 1: Discover Literary Edinburgh Header
                   children: [
                     Stack(
@@ -75,6 +79,21 @@ class _HomeState extends State<Home> {
                         ),
                       ],
                     ),
+                    IconButton(
+                        onPressed: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => const Info()
+                            ),
+                          );
+                        },
+                        icon: const Icon(
+                            Icons.info,
+                          color: Color.fromRGBO(241, 135, 1, 1),
+                          size: 25,
+                        )
+                    )
                   ],
                 ),
                 Padding(
