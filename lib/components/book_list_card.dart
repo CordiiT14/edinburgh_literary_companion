@@ -68,20 +68,24 @@ class BookDetail extends StatelessWidget {
 
         // BOOK DETAIL VIEW when panel expanded
         expanded: Padding(
-          padding: const EdgeInsets.fromLTRB(6, 4, 0, 10),
+          padding: const EdgeInsets.fromLTRB(6, 10, 0, 10),
           child: Row(
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Expanded(
-                flex: 2,
+                flex: 3,
                 child: Text(
                   book.description,
                   softWrap: true,
                   textAlign: TextAlign.left,
+                  style: const TextStyle(
+                    fontSize: 16.0,
+                  ),
                 ),
               ),
               SizedBox(width: 10),
               Expanded(
-                flex: 1,
+                flex: 2,
                 child: Column(
                   children: [
                     Image.asset('assets/${book.image}'),

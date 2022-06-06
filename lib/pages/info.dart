@@ -364,7 +364,7 @@ class Info extends StatelessWidget {
           ],
         ),
         bottomNavigationBar: const Navigation(
-          selectedIndex: 2,
+          selectedIndex: 0,
         ),
       ),
     );

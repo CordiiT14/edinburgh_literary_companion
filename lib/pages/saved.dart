@@ -24,6 +24,7 @@ class Saved extends StatelessWidget {
           centerTitle: true,
           backgroundColor: const Color.fromRGBO(87, 88, 187, 9.0),
           bottom: const TabBar(
+            indicatorColor: Color.fromRGBO(241, 135, 1, 1),
             tabs: [
               Tab(
                 icon: Icon(Icons.location_on_outlined),
