@@ -14,16 +14,6 @@ class Info extends StatelessWidget {
           title: const Text('Information'),
           centerTitle: true,
           backgroundColor: const Color.fromRGBO(87, 88, 187, 9.0),
-          actions: [
-            IconButton(
-                onPressed: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(builder: (context) => const Info()),
-                  );
-                },
-                icon: const Icon(Icons.info)),
-          ],
           bottom: const TabBar(
             indicatorColor: Color.fromRGBO(241, 135, 1, 1),
             tabs: [
