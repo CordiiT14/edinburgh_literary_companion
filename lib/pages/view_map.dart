@@ -20,9 +20,6 @@ class ViewMap extends StatefulWidget {
 }
 
 class _ViewMapState extends State<ViewMap> {
-  // double initialLatitude = 55.94959278;
-  // double initialLongitude = -3.19338131;
-  // double zoomLevel = 11.0;
   final Map<String, Marker> _markers = {};
 
   // late GoogleMapController mapController;
