@@ -39,12 +39,10 @@ class _BooksListState extends State<BooksList> {
                   hintText: 'Search',
                   prefixIcon: Icon(
                     Icons.search,
-                    // TODO colour here
+                    color: Color.fromRGBO(241, 135, 1, 1),
                   ),
                   border: OutlineInputBorder(
-                      borderSide: BorderSide(
-                          // TODO colour here
-                          ),
+                      borderSide: BorderSide(),
                       borderRadius: BorderRadius.all(Radius.circular(25.0))),
                 ),
               ),

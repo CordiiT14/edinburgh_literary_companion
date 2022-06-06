@@ -37,10 +37,10 @@ class _Navigation extends State<Navigation> {
     return BottomNavigationBar(
         type: BottomNavigationBarType.fixed,
         backgroundColor: const Color.fromRGBO(87, 88, 187, 1),
-        // selectedLabelStyle: TextStyle(
-        //   decoration: TextDecoration.underline,
-        // ),
-        selectedItemColor: Color.fromRGBO(241, 135, 1, 1),
+        selectedLabelStyle: const TextStyle(
+          fontWeight: FontWeight.bold,
+        ),
+        selectedItemColor: Colors.white,
         unselectedItemColor: Colors.white,
         items: const <BottomNavigationBarItem>[
           BottomNavigationBarItem(

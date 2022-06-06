@@ -52,6 +52,7 @@ class _BrowseState extends State<Browse> {
           Row(
             children: [
               Checkbox(
+                activeColor: const Color.fromRGBO(241, 135, 1, 1),
                 value: context.watch<Locations>().filters[0],
                 onChanged: (unnecessaryParameter) =>
                     context.read<Locations>().toggleFilter(0),
@@ -59,6 +60,7 @@ class _BrowseState extends State<Browse> {
               ),
               const Text('Attractions'),
               Checkbox(
+                activeColor: const Color.fromRGBO(241, 135, 1, 1),
                 value: context.watch<Locations>().filters[1],
                 onChanged: (unnecessaryParameter) =>
                     context.read<Locations>().toggleFilter(1),
@@ -66,6 +68,7 @@ class _BrowseState extends State<Browse> {
               ),
               const Text('Landmarks'),
               Checkbox(
+                activeColor: const Color.fromRGBO(241, 135, 1, 1),
                 value: context.watch<Locations>().filters[2],
                 onChanged: (unnecessaryParameter) =>
                     context.read<Locations>().toggleFilter(2),
