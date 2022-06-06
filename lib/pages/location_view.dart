@@ -103,7 +103,6 @@ class LocationView extends StatelessWidget {
             ),
           ),
           ListTile(
-           
               onTap: () {
                 Navigator.push(
                   context,
@@ -112,7 +111,7 @@ class LocationView extends StatelessWidget {
                   ),
                 );
               },
-              child: Image.asset(
+              leading: Image.asset(
                 'assets/google-maps-pin.png', // image path
                 height: 45, // define height of image
               
