@@ -51,7 +51,7 @@ class BookDetail extends StatelessWidget {
 
             // ICON BUTTON for adding books to Saved page
             IconButton(
-              onPressed: () => context.read<Books>().toggleSavedBook(book),
+              onPressed: () => Provider.of<Books>(context, listen: false).toggleSavedBook(book),
               iconSize: 25.0,
               icon: Icon(
                 context.watch<Books>().bookIsSaved(book)

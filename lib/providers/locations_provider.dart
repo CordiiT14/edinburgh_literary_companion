@@ -41,7 +41,13 @@ class Locations with ChangeNotifier {
   }
 
   bool locationIsSaved(Location location) {
-    return _savedLocations.contains(location);
+    var output = false;
+    for (var savedLocation in _savedLocations) {
+      if(savedLocation.name == location.name){
+        output = true;
+      }
+    }
+    return output;
   }
 
   //called when the user taps a filter checkbox
