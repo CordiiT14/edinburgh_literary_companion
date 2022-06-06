@@ -7,7 +7,7 @@
 
 <!--       added these two lines -->
        <meta-data android:name="com.google.android.geo.API_KEY"
-           android:value="AlzaSyDa9J239Hh2u6NztzpWaE2ptKjKxRggRfo"/>
+           android:value="AIzaSyDa9J239Hh2u6NztzpWqE2ptKjKxRgqRfo"/>
 
        <uses-library
            android:name="org.apache.http.legacy"
