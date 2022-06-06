@@ -4,6 +4,8 @@ import 'package:edin_lit_companion/models/Location.dart';
 import 'package:edin_lit_companion/providers/locations_provider.dart';
 import 'package:provider/provider.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
+import 'package:url_launcher/url_launcher.dart';
+import 'package:url_launcher/url_launcher_string.dart';
 
 // class IndividualGoogleMap extends StatefulWidget {
 //   final Location location;
@@ -42,8 +44,15 @@ class LocationView extends StatelessWidget {
   final Location location;
   const LocationView({Key? key, required this.location}) : super(key: key);
 
+
   @override
   Widget build(BuildContext context) {
+    final Uri _url = Uri.parse(location.website);
+
+    void _launchUrl() async {
+      if (!await launchUrl(_url)) throw 'Could not launch website';
+    }
+
     return Scaffold(
       // appBar allows user to return to the screen they were on previously
       appBar: AppBar(
@@ -146,8 +155,13 @@ class LocationView extends StatelessWidget {
                         'Website:${location.website}',
                         style: const TextStyle(
                           fontSize: 18,
+                          color: Color.fromRGBO(241, 135, 1, 1),
+
                         ),
                       ),
+                      onTap: () {
+                        launchUrlString(location.website);
+                        },
                     )
                 )
               ],
