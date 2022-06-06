@@ -4,6 +4,8 @@ import 'package:edin_lit_companion/models/Location.dart';
 import 'package:edin_lit_companion/providers/locations_provider.dart';
 import 'package:provider/provider.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
+import 'package:url_launcher/url_launcher.dart';
+import 'package:url_launcher/url_launcher_string.dart';
 
 // class IndividualGoogleMap extends StatefulWidget {
 //   final Location location;
@@ -44,6 +46,12 @@ class LocationView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final Uri _url = Uri.parse(location.website);
+
+    void _launchUrl() async {
+      if (!await launchUrl(_url)) throw 'Could not launch website';
+    }
+
     return Scaffold(
       // appBar allows user to return to the screen they were on previously
       appBar: AppBar(
@@ -70,9 +78,9 @@ class LocationView extends StatelessWidget {
                     ? Colors.red
                     : Colors.white,
                 semanticLabel:
-                context.watch<Locations>().locationIsSaved(location)
-                    ? 'Remove from saved'
-                    : 'Save',
+                    context.watch<Locations>().locationIsSaved(location)
+                        ? 'Remove from saved'
+                        : 'Save',
               ),
             ),
           ]),
@@ -99,9 +107,7 @@ class LocationView extends StatelessWidget {
               onTap: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(
-                      builder: (context) => const ViewMap()
-                  ),
+                  MaterialPageRoute(builder: (context) => const ViewMap()),
                 );
               },
               child: Image.asset(
@@ -139,17 +145,36 @@ class LocationView extends StatelessWidget {
             padding: const EdgeInsets.fromLTRB(0, 0, 0, 20.0),
             child: Column(
               children: [
-                if (location.website.isNotEmpty) (
-                    ListTile(
-                      title: Text(
-                        // location description
-                        'Website:${location.website}',
-                        style: const TextStyle(
-                          fontSize: 18,
-                        ),
+                if (location.website.isNotEmpty)
+                  (ListTile(
+                    onTap: () {
+                      launchUrlString(location.website);
+                    },
+                    title: RichText(
+                      text: const TextSpan(
+                        children: [
+                          WidgetSpan(
+                            alignment: PlaceholderAlignment.middle,
+                            child: Padding(
+                              padding: EdgeInsets.fromLTRB(0, 0, 10, 0),
+                              child: Icon(
+                                Icons.public,
+                                color: Color.fromRGBO(241, 135, 1, 1),
+                              ),
+                            ),
+                          ),
+                          TextSpan(
+                            text: 'Visit website',
+                            style: TextStyle(
+                              fontSize: 18,
+                              fontWeight: FontWeight.w500,
+                              color: Color.fromRGBO(241, 135, 1, 1),
+                            ),
+                          ),
+                        ],
                       ),
-                    )
-                )
+                    ),
+                  )),
               ],
             ),
           ),

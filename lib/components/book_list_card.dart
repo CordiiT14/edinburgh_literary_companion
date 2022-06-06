@@ -89,27 +89,40 @@ class BookDetail extends StatelessWidget {
                 child: Column(
                   children: [
                     Image.asset('assets/${book.image}'),
-                    TextButton(
-                      onPressed: () {
-                        context.read<Locations>().setFilters(2);
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                            builder: (context) => const Browse(),
-                          ),
-                        );
-                      },
-                      child: const Padding(
-                        padding: EdgeInsets.only(top: 2),
-                        child: Text(
-                          'Find a local bookshop',
-                          textAlign: TextAlign.center,
-                          style: TextStyle(
-                            color: Color.fromRGBO(87, 88, 187, 9.0),
+                    SizedBox(height: 20),
+                    Container(
+                      width: 100,
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(10.0),
+                        color: Color.fromRGBO(87, 88, 187, 9.0),
+                      ),
+                      child: TextButton(
+                        onPressed: () {
+                          context.read<Locations>().setFilters(2);
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => const Browse(),
+                            ),
+                          );
+                        },
+                        child: const Padding(
+                          padding: EdgeInsets.fromLTRB(0, 0, 0, 3),
+                          child: Text(
+                            'Find a local bookshop',
+                            textAlign: TextAlign.center,
+                            style: TextStyle(
+                              color: Colors.white,
+                            ),
                           ),
                         ),
                       ),
                     ),
+
+                    //     ],
+                    //   ),
+                    //   //
+                    // ),
                   ],
                 ),
               ),
