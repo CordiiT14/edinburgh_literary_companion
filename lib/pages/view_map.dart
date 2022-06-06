@@ -8,25 +8,33 @@ import 'package:edin_lit_companion/pages/location_view.dart';
 import 'info.dart';
 
 class ViewMap extends StatefulWidget {
-  const ViewMap({Key? key}) : super(key: key);
+  final double latitude;
+  final double longitude;
+  final double zoom;
+
+  ViewMap({Key? key, this.latitude = 55.94959278, this.longitude = -3.19338131, this.zoom = 11 }) : super(key: key);
 
   @override
   State<ViewMap> createState() => _ViewMapState();
+
 }
 
 class _ViewMapState extends State<ViewMap> {
-  double initialLatitude = 55.94959278;
-  double initialLongitude = -3.19338131;
+  // double initialLatitude = 55.94959278;
+  // double initialLongitude = -3.19338131;
+  // double zoomLevel = 11.0;
   final Map<String, Marker> _markers = {};
 
   // late GoogleMapController mapController;
   //  mapController = controller;
   // final LatLng _center = const LatLng(55.94936682425343, -3.1999283672172485);
 
+
   void _onMapCreated(GoogleMapController controller) {
     //creating the pin locations
     List<Location> locations = LocationData().locations;
     // final List<Location> locations = context.watch<Locations>().allLocations;
+    
 
     setState(() {
       _markers.clear();
@@ -76,27 +84,14 @@ class _ViewMapState extends State<ViewMap> {
         title: const Text('Location Map'),
         centerTitle: true,
         backgroundColor: const Color.fromRGBO(87, 88, 187, 9.0),
-        // actions:[
-        //   IconButton(
-        //       onPressed: () {
-        //         Navigator.push(
-        //         context,
-        //         MaterialPageRoute(
-        //           builder: (context) => const Info()
-        //       ),
-        //     );
-        //     },
-        //       icon: const Icon(Icons.info)
-        //   )
-        // ]
       ),
       body: Stack(
         children: [
           GoogleMap(
               onMapCreated: _onMapCreated,
               initialCameraPosition: CameraPosition(
-                target: LatLng(initialLatitude, initialLongitude),
-                zoom: 11.0,
+                target: LatLng(widget.latitude , widget.longitude),
+                zoom: widget.zoom,
               ),
               markers: _markers.values.toSet()
           ),

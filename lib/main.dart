@@ -34,7 +34,7 @@ class EdinLit extends StatelessWidget {
         '/': (context) => const Loading(),
         '/home': (context) => const Home(),
         '/browse': (context) => const Browse(),
-        '/map': (context) => const ViewMap(),
+        '/map': (context) => ViewMap(latitude: 55.94959278, longitude: -3.19338131, zoom: 11.0),
         '/saved': (context) => const Saved(),
         '/books' : (context) => const BooksList(),
       },

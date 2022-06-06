@@ -103,15 +103,19 @@ class LocationView extends StatelessWidget {
             ),
           ),
           ListTile(
-            onTap: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(builder: (context) => const ViewMap()),
-              );
-            },
-            leading: Image.asset(
-              'assets/google-maps-pin.png', // image path
-              height: 45, // define height of image
+           
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                      builder: (context) => ViewMap(latitude: location.latitude, longitude: location.longitude, zoom: 19.0)
+                  ),
+                );
+              },
+              child: Image.asset(
+                'assets/google-maps-pin.png', // image path
+                height: 45, // define height of image
+              
             ),
             title: Text(
               location.address, // location address
