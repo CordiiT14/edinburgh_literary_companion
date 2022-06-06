@@ -16,7 +16,7 @@ class SavedBookCard extends StatelessWidget {
       margin: const EdgeInsetsDirectional.fromSTEB(16.0, 16.0, 16.0, 0),
       child: ListTile(
         onTap: () {
-          // context.read<Books>().runBookSearch(book.title);
+          context.read<Books>().runBookSearch(book.title);
           Navigator.push(
               context,
               MaterialPageRoute(
