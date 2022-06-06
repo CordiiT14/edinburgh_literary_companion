@@ -43,4 +43,10 @@ class Books with ChangeNotifier {
     }
     notifyListeners();
   }
+
+  //  resetting the search for when user navigates to books via navigation bar
+  void resetSearch(){
+    _searchBooks = _books;
+    notifyListeners();
+  }
 }
