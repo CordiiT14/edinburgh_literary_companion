@@ -87,4 +87,14 @@ class Locations with ChangeNotifier {
     }
     notifyListeners();
   }
+
+  //resetting both search and filters for when user navigates to discover via navbar
+  void resetParameters(){
+    _searchLocations = _locations;
+    final List<int> keys = [0, 1, 2];
+    for(var key in keys){
+      _filters[key] = true;
+    }
+    updateFilters();
+  }
 }
