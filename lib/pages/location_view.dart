@@ -100,7 +100,7 @@ class LocationView extends StatelessWidget {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
-                      builder: (context) => const ViewMap()
+                      builder: (context) => ViewMap(latitude: location.latitude, longitude: location.longitude, zoom: 19.0)
                   ),
                 );
               },
