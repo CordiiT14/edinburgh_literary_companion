@@ -8,7 +8,7 @@ class BookData {
           title: "All the Hidden Truths",
           author: "Claire Askew",
           description:
-              "A compelling novel about the aftermath of a major crime at an Edinburgh college, focusing on three women for whom the lack of answers is unbearable: DI Helen Birch, the detective charged with solving the case. Ishbel, the mother of the first victim, struggling to cope with her grief. And Moira, mother of the killer, who needs to understand what happened to her son. But as people search for someone to blame, the truth seems to vanish...",
+              "A compelling novel about the aftermath of a major crime at an Edinburgh college, focusing on three women for whom the lack of answers is unbearable: DI Helen Birch, the detective charged with solving the case. Ishbel, the mother of the first victim, struggling to cope with her grief. And Moira, mother of the killer, who needs to understand what happened to her son.\n\nBut as people search for someone to blame, the truth seems to vanish...",
           image: "books/allTheHiddenTruths.jpg",
         ),
         Book(
@@ -57,7 +57,7 @@ class BookData {
           title: "Breakers",
           author: "Doug Johnstone",
           description:
-              "There are two sides to every family... Seventeen-year-old Tyler lives in one of Edinburgh's most deprived areas. Coerced and bullied by his older siblings, trying to care for his drug-addict mum. When his brother stabs a homeowner during a burglary gone wrong, it's just the beginning of their nightmare. With his shattered family in devastating danger, will Tyler drag down everyone around him? A gripping psychological thriller from Edinburgh-based author, Doug Johnstone.",
+              "There are two sides to every family... Seventeen-year-old Tyler lives in one of Edinburgh's most deprived areas. Coerced and bullied by his older siblings, trying to care for his drug-addict mum.\n\nWhen his brother stabs a homeowner during a burglary gone wrong, it's just the beginning of their nightmare. With his shattered family in devastating danger, will Tyler drag down everyone around him? A gripping psychological thriller from Edinburgh-based author, Doug Johnstone.",
           image: "books/breakers.jpg",
         ),
         Book(
@@ -71,21 +71,21 @@ class BookData {
           title: "The Fanatic",
           author: "James Robertson",
           description:
-              "Spring, 1997. Hugh Hardie needs a ghost for his Tours of Old Edinburgh, and Andrew Carlin is the perfect candidate. So with cape, stick, and plastic rat, Carlin is paid to scare the tourists, pretending to be the spirit of Colonel Weir, a religious extremist burned at the stake in 1670. But who was Weir? Carlin's research draws him into the past and, in particular, to James Mitchel, imprisoned in 1674 for the attempted assassination of the Archbishop of St Andrews. Through the story of Carlin and Mitchel, The Fanatic reveals an extraordinary history of Scotland: a tale of betrayals, witch hunts, Puritan exiles, smuggled journeys, and disguised identities. A gripping, richly imagined novel.",
+              "Spring, 1997. Hugh Hardie needs a ghost for his Tours of Old Edinburgh, and Andrew Carlin is the perfect candidate. So with cape, stick, and plastic rat, Carlin is paid to scare the tourists, pretending to be the spirit of Colonel Weir, a religious extremist burned at the stake in 1670. But who was Weir?\n\nCarlin's research draws him into the past and, in particular, to James Mitchel, imprisoned in 1674 for the attempted assassination of the Archbishop of St Andrews. Through the story of Carlin and Mitchel, The Fanatic reveals an extraordinary history of Scotland: a tale of betrayals, witch hunts, Puritan exiles, smuggled journeys, and disguised identities. A gripping, richly imagined novel.",
           image: "books/fanatic.jpg",
         ),
         Book(
           title: "The Heart of Midlothian",
           author: "Sir Walter Scott",
           description:
-              "Edinburgh, 1736: an indignant crowd has gathered in the Grassmarket to watch the execution of a smuggler. Opening with the start of the Porteous Riots, The Heart of Midlothian is one of Walter Scott’s most famous historical novels, featuring murder, madness and seduction. Following his brutal suppression of the spectators, John Porteous, Captain of the Guard, is charged with murder and locked up in Edinburgh’s Tolbooth prison, also known as the Heart of Midlothian. When news comes that he has been pardoned, an angry mob breaks into the jail, liberating its inmates and bringing Porteous to its own form of justice. But one prisoner who fails to take this opportunity to flee is Effie Deans, who, wrongly convicted of infanticide, has been sentenced to death. Jeanie, her older sister, sets off to London on foot to beg for her pardon from the queen. A tale of religious piety, filial devotion and legal loopholes.",
+              "Edinburgh, 1736: an indignant crowd has gathered in the Grassmarket to watch the execution of a smuggler. Opening with the start of the Porteous Riots, The Heart of Midlothian is one of Walter Scott’s most famous historical novels, featuring murder, madness and seduction. Following his brutal suppression of the spectators, John Porteous, Captain of the Guard, is charged with murder and locked up in Edinburgh’s Tolbooth prison, also known as the Heart of Midlothian.\n\nWhen news comes that he has been pardoned, an angry mob breaks into the jail, liberating its inmates and bringing Porteous to its own form of justice. But one prisoner who fails to take this opportunity to flee is Effie Deans, who, wrongly convicted of infanticide, has been sentenced to death. Jeanie, her older sister, sets off to London on foot to beg for her pardon from the queen. A tale of religious piety, filial devotion and legal loopholes.",
           image: "books/heartOfMidlothian.jpg",
         ),
         Book(
           title: "44 Scotland Street",
           author: "Alexander McCall Smith",
           description:
-              "Just one of many Edinburgh-set novels from prolific author, Alexander McCall Smith. The story revolves around the comings and going at number 44 Scotland Street, a fictitious building in a real New Town street. Love triangles, a lost painting, intriguing new friends, and an encounter with a famous Scottish crime writer are just a few of the ingredients that add to this delightful and witty portrait of Edinburgh society, which was first published as a serial in The Scotsman newspaper.",
+              "Just one of many Edinburgh-set novels from prolific author, Alexander McCall Smith. The story revolves around the comings and going at number 44 Scotland Street, a fictitious building in a real New Town street.\n\nLove triangles, a lost painting, intriguing new friends, and an encounter with a famous Scottish crime writer are just a few of the ingredients that add to this delightful and witty portrait of Edinburgh society, which was first published as a serial in The Scotsman newspaper.",
           image: "books/scotlandStreet.jpg",
         ),
         Book(
@@ -125,25 +125,25 @@ class BookData {
         Book(
           title: "Rule 34",
           author: "Charles Stross",
-          description: "Meet Edinburgh Detective Inspector Liz Kavanaugh, head of the Innovative Crimes Investigation Unit, otherwise known as the Rule 34 Squad. They monitor the Internet for potential criminal activity, analyzing trends in the extreme fringes of explicit content. And occasionally, even more disturbing patterns arise…\nThree ex-cons have been murdered in Germany, Italy, and Scotland. The only things they had in common were arrests for spamming and a taste for unorthodox entertainment. As the first officer on the scene of the most recent death, Liz finds herself sucked into an international investigation that isn’t so much asking who the killer is, but what - and if she doesn’t find the answer soon, the homicides could go viral.",
+          description: "Meet Edinburgh Detective Inspector Liz Kavanaugh, head of the Innovative Crimes Investigation Unit, otherwise known as the Rule 34 Squad. They monitor the Internet for potential criminal activity, analyzing trends in the extreme fringes of explicit content. And occasionally, even more disturbing patterns arise…\n\nThree ex-cons have been murdered in Germany, Italy, and Scotland. The only things they had in common were arrests for spamming and a taste for unorthodox entertainment. As the first officer on the scene of the most recent death, Liz finds herself sucked into an international investigation that isn’t so much asking who the killer is, but what - and if she doesn’t find the answer soon, the homicides could go viral.",
           image: "books/rule34.jpg",
         ),
         Book(
           title: "The Sopranos",
           author: "Alan Warner",
-          description: "As the choir from Our Lady of Perpetual Succor for Girls is bussed from rural Scotland into the capital to participate in the national singing finals, five of the teenage schoolgirls let loose for a night of pub crawling, shoplifting, and body piercing. And, since a nuclear submarine has just anchored in the bay, the local nightclub will be full of sailors on leave. After a bout of preparatory drinking, the girls are ready for their big night...\nAn outrageous tale of adolescent debauchery, The Sopranos opens the lid on desire and excess in all its grim glory.",
+          description: "As the choir from Our Lady of Perpetual Succor for Girls is bussed from rural Scotland into the capital to participate in the national singing finals, five of the teenage schoolgirls let loose for a night of pub crawling, shoplifting, and body piercing. And, since a nuclear submarine has just anchored in the bay, the local nightclub will be full of sailors on leave. After a bout of preparatory drinking, the girls are ready for their big night...\n\nAn outrageous tale of adolescent debauchery, The Sopranos opens the lid on desire and excess in all its grim glory.",
           image: "books/sopranos.jpg",
         ),
         Book(
           title: "The Sewing Machine",
           author: "Natalie Fergie",
-          description: "It is 1911, and Jean is about to join the mass strike at the Singer factory. For her, nothing will be the same again. Decades later, in Edinburgh, Connie sews coded moments of her life into a notebook, as her mother did before her.\nMore than a hundred years after his grandmother’s sewing machine was made, Fred discovers a treasure trove of documents. His family history is laid out before him in a patchwork of unfamiliar handwriting and colourful seams. He starts to unpick the secrets of four generations, one stitch at a time.",
+          description: "It is 1911, and Jean is about to join the mass strike at the Singer factory. For her, nothing will be the same again. Decades later, in Edinburgh, Connie sews coded moments of her life into a notebook, as her mother did before her.\n\nMore than a hundred years after his grandmother’s sewing machine was made, Fred discovers a treasure trove of documents. His family history is laid out before him in a patchwork of unfamiliar handwriting and colourful seams. He starts to unpick the secrets of four generations, one stitch at a time.",
           image: "books/sewingMachine.jpg",
         ),
         Book(
           title: "The Other Mrs Walker",
           author: "Mary Paulson-Ellis",
-          description: "An old lady dies alone and unheeded in a cold Edinburgh flat on a snowy Christmas night. A faded emerald dress hangs in her wardrobe; a spilt glass of whisky pools on the floor.\nA few days later a middle-aged woman arrives back in the city she thought she’d left behind, her future uncertain, her past in tatters. She soon finds herself a job at the Office for Lost People, tracking down the families of those who have died neglected and alone. But what Margaret Penny cannot yet know, is just how entangled her own life will become in the death of one lonely stranger . . .",
+          description: "An old lady dies alone and unheeded in a cold Edinburgh flat on a snowy Christmas night. A faded emerald dress hangs in her wardrobe; a spilt glass of whisky pools on the floor.\n\nA few days later a middle-aged woman arrives back in the city she thought she’d left behind, her future uncertain, her past in tatters. She soon finds herself a job at the Office for Lost People, tracking down the families of those who have died neglected and alone. But what Margaret Penny cannot yet know, is just how entangled her own life will become in the death of one lonely stranger . . .",
           image: "books/otherMrsWalker.jpg",
         ),
         Book(
@@ -179,7 +179,7 @@ class BookData {
         Book(
           title: "Women Talking Dirty",
           author: "Isla Dewar",
-          description: "Ellen Quinn kept her sanity in the suffocating Edinburgh suburb where she grew up by imagining it was a hotbed of intrigue. A neglected child, she’s still looking for love as an adult; and so she finds herself married to Daniel. How could she know that he would misbehave?\nCora O’Brien is the total opposite; outrageous and outspoken, she inspires the children she teaches with her enthusiasm. The city can’t soften her Highland lilt but her lifestyle would raise a few eyebrows back home. But her vividness is a façade: most of her secrets she’s still keeping to herself.\nFast friends from the start, Ellen and Cora may have plenty to learn about life, but they always have vodka and each other to talk to when the unexpected happens…",
+          description: "Ellen Quinn kept her sanity in the suffocating Edinburgh suburb where she grew up by imagining it was a hotbed of intrigue. A neglected child, she’s still looking for love as an adult; and so she finds herself married to Daniel. How could she know that he would misbehave?\n\nCora O’Brien is the total opposite; outrageous and outspoken, she inspires the children she teaches with her enthusiasm. The city can’t soften her Highland lilt but her lifestyle would raise a few eyebrows back home. But her vividness is a façade: most of her secrets she’s still keeping to herself.\n\nFast friends from the start, Ellen and Cora may have plenty to learn about life, but they always have vodka and each other to talk to when the unexpected happens…",
           image: "books/womenTalkingDirty.jpg",
         ),
         Book(
@@ -209,31 +209,31 @@ class BookData {
         Book(
           title: "Edinburgh Twilight",
           author: "Carole Lawrence",
-          description: "As a new century approaches, Edinburgh is a city divided. The wealthy residents of New Town live in comfort, while Old Town’s cobblestone streets are clotted with criminals, prostitution, and poverty. Detective Inspector Ian Hamilton is no stranger to Edinburgh’s darkest crimes. Scarred by the mysterious fire that killed his parents, he faces his toughest case yet when a young man is found strangled in Holyrood Park. With little evidence aside from a strange playing card found on the body, Hamilton engages the help of a gifted photographer and a librarian with a shared interest in the criminal mind. But the body count is rising and, as newspapers spin tales of the “Holyrood Strangler,” panic sets in across the city.",
+          description: "As a new century approaches, Edinburgh is a city divided. The wealthy residents of New Town live in comfort, while Old Town’s cobblestone streets are clotted with criminals, prostitution, and poverty. Detective Inspector Ian Hamilton is no stranger to Edinburgh’s darkest crimes. Scarred by the mysterious fire that killed his parents, he faces his toughest case yet when a young man is found strangled in Holyrood Park.\n\nWith little evidence aside from a strange playing card found on the body, Hamilton engages the help of a gifted photographer and a librarian with a shared interest in the criminal mind. But the body count is rising and, as newspapers spin tales of the “Holyrood Strangler,” panic sets in across the city.",
           image: "books/edinburghTwilight.jpg",
         ),
         Book(
           title: "The Fair Botanists",
           author: "Sara Sheridan",
-          description: "It's the summer of 1822 and Edinburgh is abuzz with rumours of King George IV's impending visit. In botanical circles, however, a different kind of excitement has gripped the city. In the newly-installed Botanic Garden, the Agave Americana plant looks set to flower - an event that only occurs once every few decades.\nWhen newly widowed Elizabeth arrives in Edinburgh, she's determined to put her unhappy past behind her. As she settles into her new home, she becomes fascinated by the beautiful Botanic Garden which borders the grand house and offers her services as an artist to record the rare plant's impending bloom. In this pursuit, she meets Belle, a vivacious young woman with a passion for botany and the lucrative, dark art of perfume creation...",
+          description: "It's the summer of 1822 and Edinburgh is abuzz with rumours of King George IV's impending visit. In botanical circles, however, a different kind of excitement has gripped the city. In the newly-installed Botanic Garden, the Agave Americana plant looks set to flower - an event that only occurs once every few decades.\n\nWhen newly widowed Elizabeth arrives in Edinburgh, she's determined to put her unhappy past behind her. As she settles into her new home, she becomes fascinated by the beautiful Botanic Garden which borders the grand house and offers her services as an artist to record the rare plant's impending bloom. In this pursuit, she meets Belle, a vivacious young woman with a passion for botany and the lucrative, dark art of perfume creation...",
           image: "books/fairBotanists.jpg",
         ),
         Book(
           title: "Rizzio",
           author: "Denise Mina",
-          description: "Denise Mina delivers a radical new take on one of the darkest episodes in Scottish history - the bloody assassination of David Rizzo, private secretary to Mary, Queen of Scots, in the queen’s chambers in Holyrood Palace.\nOn the evening of March 9th, 1566, David Rizzio was brutally murdered. Dragged from the chamber of the heavily pregnant Mary, Rizzio was stabbed fifty six times by a party of assassins. This breathtakingly tense novella dramatises the events that led up to that night, telling the infamous story as it has never been told before.\nA dark tale of sex, secrets and lies, Rizzio looks at a shocking historical murder through a modern lens and explores the lengths that men and women will go to in their search for love and power.",
+          description: "Denise Mina delivers a radical new take on one of the darkest episodes in Scottish history - the bloody assassination of David Rizzo, private secretary to Mary, Queen of Scots, in the queen’s chambers in Holyrood Palace.\n\nOn the evening of March 9th, 1566, David Rizzio was brutally murdered. Dragged from the chamber of the heavily pregnant Mary, Rizzio was stabbed fifty six times by a party of assassins. This breathtakingly tense novella dramatises the events that led up to that night, telling the infamous story as it has never been told before.\n\nA dark tale of sex, secrets and lies, Rizzio looks at a shocking historical murder through a modern lens and explores the lengths that men and women will go to in their search for love and power.",
           image: "books/rizzio.jpg",
         ),
         Book(
           title: "Beneath the Skin",
           author: "Sandra Ireland",
-          description: "Suffering from combat stress and struggling to outrun the demons from his past, Walt takes a job in the studio of an Edinburgh taxidermist. His enigmatic boss, Alys, has her own uneasy relationship with the past and someone who doesn't want to let her go. Deliciously disturbing, this psychological thriller peels back the skin of one modern family to reveal the wounds no one wants to see. It deals with the effects of trauma and how facing up to vulnerability is sometimes the only way to let go of the past.",
+          description: "Suffering from combat stress and struggling to outrun the demons from his past, Walt takes a job in the studio of an Edinburgh taxidermist. His enigmatic boss, Alys, has her own uneasy relationship with the past and someone who doesn't want to let her go.\n\nDeliciously disturbing, this psychological thriller peels back the skin of one modern family to reveal the wounds no one wants to see. It deals with the effects of trauma and how facing up to vulnerability is sometimes the only way to let go of the past.",
           image: "books/beneathTheSkin.jpg",
         ),
         Book(
           title: "Luckenbooth",
           author: "Jenni Fagan",
-          description: "1910, Edinburgh. Jessie, the devil's daughter, arrives on the doorstep of an imposing tenement building, sent by her father to bear a child for a wealthy couple but, when things go wrong, she places a curse on the building and all who live there - and it lasts a century.\nCaught in the crossfire are the residents of 10 Luckenbooth Close. While the world outside is changing, inside, the curse creeps up through the floors. Soon, the building's longest kept secret - the truth of what happened to Jessie - will finally be heard.",
+          description: "1910, Edinburgh. Jessie, the devil's daughter, arrives on the doorstep of an imposing tenement building, sent by her father to bear a child for a wealthy couple but, when things go wrong, she places a curse on the building and all who live there - and it lasts a century.\n\nCaught in the crossfire are the residents of 10 Luckenbooth Close. While the world outside is changing, inside, the curse creeps up through the floors. Soon, the building's longest kept secret - the truth of what happened to Jessie - will finally be heard.",
           image: "books/luckenbooth.jpg",
         ),
       ];

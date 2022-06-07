@@ -8,8 +8,12 @@ import 'package:provider/provider.dart';
 import 'package:edin_lit_companion/providers/locations_provider.dart';
 import 'package:edin_lit_companion/providers/books_provider.dart';
 import 'package:edin_lit_companion/pages/books.dart';
+import 'package:flutter_config/flutter_config.dart';
 
-void main(){
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await FlutterConfig.loadEnvVariables();
+
   runApp(
       MultiProvider(
         providers: [
