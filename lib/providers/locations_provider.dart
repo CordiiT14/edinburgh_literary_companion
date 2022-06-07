@@ -16,17 +16,17 @@ class Locations with ChangeNotifier {
   List<Location> get savedLocations => _savedLocations;
   Map<int, bool> get filters => _filters;
 
-  List<Location> displayLocations(){
+  List<Location> displayLocations() {
     //returning all locations that are common to both _filteredlocations and _searchlocations
     final List<Location> output = [];
-    for(var filteredLocation in _filteredLocations){
-      for(var searchLocation in _searchLocations){
-        if(filteredLocation.name == searchLocation.name){
+    for (var filteredLocation in _filteredLocations) {
+      for (var searchLocation in _searchLocations) {
+        if (filteredLocation.name == searchLocation.name) {
           output.add(filteredLocation);
         }
       }
     }
-    String getName (Location location) => location.name;
+    String getName(Location location) => location.name;
     output.sort((a, b) => getName(a).compareTo(getName(b)));
     return output;
     //the following line would be more efficient, but isn't working, presumably due to difficulty of recognising equivalent objects
@@ -43,7 +43,7 @@ class Locations with ChangeNotifier {
   bool locationIsSaved(Location location) {
     var output = false;
     for (var savedLocation in _savedLocations) {
-      if(savedLocation.name == location.name){
+      if (savedLocation.name == location.name) {
         output = true;
       }
     }
@@ -51,16 +51,16 @@ class Locations with ChangeNotifier {
   }
 
   //called when the user taps a filter checkbox
-  void toggleFilter(int index){
+  void toggleFilter(int index) {
     _filters[index] = _filters[index] == true ? false : true;
     updateFilters();
   }
 
   //called when the user taps "see all" on the homepage
-  void setFilters(int index){
+  void setFilters(int index) {
     //setting all filters to false
     final List<int> keys = [0, 1, 2];
-    for(var key in keys){
+    for (var key in keys) {
       _filters[key] = false;
     }
     //then setting the desired filter to true
@@ -70,8 +70,10 @@ class Locations with ChangeNotifier {
     updateFilters();
   }
 
-  void updateFilters(){
-    _filteredLocations = _locations.where((location) => _filters[location.category.index] == true).toList();
+  void updateFilters() {
+    _filteredLocations = _locations
+        .where((location) => _filters[location.category.index] == true)
+        .toList();
     notifyListeners();
   }
 
@@ -82,17 +84,18 @@ class Locations with ChangeNotifier {
       // change the list .where was filtering through to _locations from _searchResults
       _searchLocations = _locations
           .where((location) =>
-              location.name.toLowerCase().contains(query.toLowerCase()))
+              location.name.toLowerCase().contains(query.toLowerCase()) ||
+              location.address.toLowerCase().contains(query.toLowerCase()))
           .toList();
     }
     notifyListeners();
   }
 
   //resetting both search and filters for when user navigates to discover via navbar
-  void resetParameters(){
+  void resetParameters() {
     _searchLocations = _locations;
     final List<int> keys = [0, 1, 2];
-    for(var key in keys){
+    for (var key in keys) {
       _filters[key] = true;
     }
     updateFilters();
