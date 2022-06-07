@@ -14,8 +14,8 @@ class Saved extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final List<Location> savedLocations =
-        context.watch<Locations>().savedLocations;
-    final List<Book> savedBooks = context.watch<Books>().savedBooks;
+        context.watch<Locations>().displaySaved();
+    final List<Book> savedBooks = context.watch<Books>().displaySaved();
     return DefaultTabController(
       length: 2,
       child: Scaffold(
