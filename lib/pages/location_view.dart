@@ -7,38 +7,6 @@ import 'package:google_maps_flutter/google_maps_flutter.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'package:url_launcher/url_launcher_string.dart';
 
-// class IndividualGoogleMap extends StatefulWidget {
-//   final Location location;
-//   const IndividualGoogleMap({Key? key, required this.location}) : super(key: key);
-//
-//   @override
-//   State<IndividualGoogleMap> createState() => _IndividualGoogleMapState();
-// }
-//
-// class _IndividualGoogleMapState extends State<IndividualGoogleMap> {
-//   late GoogleMapController mapController;
-//
-//   final LatLng _center = const LatLng(45.521563, -122.677433);
-//
-//   void _onMapCreated(GoogleMapController controller) {
-//     mapController = controller;
-//   }
-//
-//   @override
-//   Widget build(BuildContext context) {
-//     return SizedBox(
-//       width:500,
-//       child: GoogleMap(
-//         onMapCreated: _onMapCreated,
-//         initialCameraPosition: CameraPosition(
-//           target: _center,
-//           zoom: 11.0,
-//         ),
-//       ),
-//     );
-//   }
-// }
-
 // This class takes in a location object from pages such as browser.dart(discover) and saved.dart.
 class LocationView extends StatelessWidget {
   final Location location;
@@ -91,46 +59,58 @@ class LocationView extends StatelessWidget {
                 fontSize: 40,
               ),
             ),
-          ),
-          ListTile(
-            title: Text(
-              'An Edinburgh ${location.category.name}', // Is it a landmark? Attraction? Bookshop?
-              style: const TextStyle(
-                fontSize: 20,
-                fontFamily: 'MavenPro-ExtraBold',
-                color: Color.fromRGBO(87, 88, 187, 9.0),
+            subtitle: Padding(
+              padding:
+                  const EdgeInsets.symmetric(vertical: 4.0, horizontal: 2.0),
+              child: Text(
+                '${location.category.name}', // Is it a landmark? Attraction? Bookshop?
+                style: const TextStyle(
+                  fontSize: 18,
+                  fontFamily: 'MavenPro-ExtraBold',
+                  // color: Color.fromRGBO(87, 88, 187, 9.0),
+                  color: Colors.black,
+                ),
               ),
             ),
           ),
+          // ListTile(
+          //   title:
+          // ),
           ListTile(
-              onTap: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                      builder: (context) => ViewMap(latitude: location.latitude, longitude: location.longitude, zoom: 19.0)
-                  ),
-                );
-              },
-              leading: Image.asset(
-                'assets/google-maps-pin.png', // image path
-                height: 45, // define height of image
-              
+            horizontalTitleGap: 5.0,
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                    builder: (context) => ViewMap(
+                        latitude: location.latitude,
+                        longitude: location.longitude,
+                        zoom: 19.0)),
+              );
+            },
+            leading: Image.asset(
+              'assets/google-maps-pin.png', // image path
+              height: 45, // define height of image
             ),
             title: Text(
               location.address, // location address
               style: const TextStyle(
                 fontSize: 18,
+                // color: Color.fromRGBO(87, 88, 187, 9.0),
+                // color: Color.fromRGBO(241, 135, 1, 1),
+                fontWeight: FontWeight.w500,
+                decoration: TextDecoration.underline,
               ),
             ),
           ),
-          const Divider(
-            height: 25.0,
-            // color: Colors.lightBlue[800],
-            color: Color.fromRGBO(87, 88, 187, 9.0),
-            thickness: 1,
-            indent: 25,
-            endIndent: 25,
-          ),
+          // const Divider(
+          //   height: 25.0,
+          //   color: Color.fromRGBO(87, 88, 187, 9.0),
+          //   thickness: 0.75,
+          //   indent: 35,
+          //   endIndent: 35,
+          // ),
+          const SizedBox(height: 5.0),
           ListTile(
             title: Text(
               // location description
@@ -160,7 +140,7 @@ class LocationView extends StatelessWidget {
                               padding: EdgeInsets.fromLTRB(0, 0, 10, 0),
                               child: Icon(
                                 Icons.public,
-                                color: Color.fromRGBO(241, 135, 1, 1),
+                                color: Color.fromRGBO(87, 88, 187, 9.0),
                               ),
                             ),
                           ),
@@ -169,7 +149,7 @@ class LocationView extends StatelessWidget {
                             style: TextStyle(
                               fontSize: 18,
                               fontWeight: FontWeight.w500,
-                              color: Color.fromRGBO(241, 135, 1, 1),
+                              color: Color.fromRGBO(87, 88, 187, 9.0),
                             ),
                           ),
                         ],
