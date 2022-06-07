@@ -34,7 +34,7 @@ class _BooksListState extends State<BooksList> {
                 onChanged: (value) =>
                     context.read<Books>().runBookSearch(value),
                 decoration: const InputDecoration(
-                  hintText: 'Search',
+                  hintText: 'Search Books',
                   prefixIcon: Icon(
                     Icons.search,
                     color: Color.fromRGBO(241, 135, 1, 1),
