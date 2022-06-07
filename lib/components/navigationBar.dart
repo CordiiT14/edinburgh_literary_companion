@@ -1,6 +1,9 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:provider/provider.dart';
+import 'package:edin_lit_companion/providers/locations_provider.dart';
+import 'package:edin_lit_companion/providers/books_provider.dart';
 
 class Navigation extends StatefulWidget {
   final int selectedIndex;
@@ -16,8 +19,18 @@ class _Navigation extends State<Navigation> {
   // changes the current active/selected item in navbar
   void _onItemTapped(int index){
     if (index == 0){
+      // resetting the locations filters here so that the homepage search bar searches everything
+      context.read<Locations>().resetParameters();
       Navigator.of(context).pushReplacementNamed(_pages[index]);
     } else {
+
+      // resetting the search and filter parameters for discover and browse
+      if(index == 1){
+        context.read<Locations>().resetParameters();
+      } else if(index == 3){
+        context.read<Books>().resetSearch();
+      }
+
       Navigator.of(context).pushNamed(_pages[index]);
     }
   }
@@ -37,10 +50,10 @@ class _Navigation extends State<Navigation> {
     return BottomNavigationBar(
         type: BottomNavigationBarType.fixed,
         backgroundColor: const Color.fromRGBO(87, 88, 187, 1),
-        // selectedLabelStyle: TextStyle(
-        //   decoration: TextDecoration.underline,
-        // ),
-        selectedItemColor: Color.fromRGBO(241, 135, 1, 1),
+        selectedLabelStyle: const TextStyle(
+          fontWeight: FontWeight.bold,
+        ),
+        selectedItemColor: Colors.white,
         unselectedItemColor: Colors.white,
         items: const <BottomNavigationBarItem>[
           BottomNavigationBarItem(

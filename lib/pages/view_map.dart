@@ -5,83 +5,171 @@ import 'package:edin_lit_companion/data/location_data.dart';
 import 'package:edin_lit_companion/models/Location.dart';
 import 'package:edin_lit_companion/pages/location_view.dart';
 
+import 'info.dart';
+
 class ViewMap extends StatefulWidget {
-  const ViewMap({Key? key}) : super(key: key);
+  final double latitude;
+  final double longitude;
+  final double zoom;
+
+  ViewMap({Key? key, this.latitude = 55.94959278, this.longitude = -3.19338131, this.zoom = 11 }) : super(key: key);
 
   @override
   State<ViewMap> createState() => _ViewMapState();
+
 }
 
 class _ViewMapState extends State<ViewMap> {
+  final Map<String, Marker> _markers = {};
 
   // late GoogleMapController mapController;
   //  mapController = controller;
   // final LatLng _center = const LatLng(55.94936682425343, -3.1999283672172485);
 
-  final Map<String, Marker> _markers = {};
 
   void _onMapCreated(GoogleMapController controller) {
-
     //creating the pin locations
-    final List<Location> locations = LocationData().locations;
+    List<Location> locations = LocationData().locations;
+    // final List<Location> locations = context.watch<Locations>().allLocations;
+    
 
     setState(() {
-    _markers.clear();
-    for (var location in locations){
-
-      // Determine colour of icon based on location type
-      BitmapDescriptor iconColour () {
-        if (location.category.index == 0) { // Is location an attraction?
+      _markers.clear();
+      for (var location in locations) {
+        // Determine colour of icon based on location type
+        BitmapDescriptor iconColour() {
+          if (location.category.index == 0) {
+            // Is location an attraction?
+            return BitmapDescriptor.defaultMarkerWithHue(
+                BitmapDescriptor.hueBlue);
+          }
+          if (location.category.index == 1) {
+            // Is location a landmark?
+            return BitmapDescriptor.defaultMarkerWithHue(
+                BitmapDescriptor.hueViolet);
+          }
           return BitmapDescriptor.defaultMarkerWithHue(
-              BitmapDescriptor.hueBlue);
-        }
-        if (location.category.index == 1) { // Is location a landmark?
-          return BitmapDescriptor.defaultMarkerWithHue(
-              BitmapDescriptor.hueViolet);
-        }
-        return BitmapDescriptor.defaultMarkerWithHue(
-            BitmapDescriptor.hueRose); // Is location a bookshop?
-      } // end of iconColour
+              BitmapDescriptor.hueRose); // Is location a bookshop?
+        } // end of iconColour
 
-
-    final marker = Marker(
-    markerId: MarkerId(location.name),
-    position: LatLng(location.latitude, location.longitude),
-    icon: iconColour(),
-    infoWindow: InfoWindow(
-    title: location.name,
-    snippet: location.address,
-      onTap: (){
-        Navigator.push(
-          context,
-          MaterialPageRoute(
-              builder: (context) => LocationView(location: location)
+        final marker = Marker(
+          markerId: MarkerId(location.name),
+          position: LatLng(location.latitude, location.longitude),
+          icon: iconColour(),
+          infoWindow: InfoWindow(
+            title: location.name,
+            snippet: location.address, // Breakdown of snippet is above
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                    builder: (context) => LocationView(location: location)),
+              );
+            },
           ),
         );
-      },
-    ),
-    );
-    _markers[location.name] = marker;
-
-    } // end for loop
+        _markers[location.name] = marker;
+      } // end for loop
     });
   }
+
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Color.fromRGBO(87, 88, 187, 9.0),
+        title: const Text('Location Map'),
+        centerTitle: true,
+        backgroundColor: const Color.fromRGBO(87, 88, 187, 9.0),
       ),
-      body: GoogleMap(
-        onMapCreated: _onMapCreated,
-        initialCameraPosition: CameraPosition(
-          target: LatLng(55.94936682425343, -3.1999283672172485),
-          zoom: 11.0,
-        ),
-          markers: _markers.values.toSet()
+      body: Stack(
+        children: [
+          GoogleMap(
+              onMapCreated: _onMapCreated,
+              initialCameraPosition: CameraPosition(
+                target: LatLng(widget.latitude , widget.longitude),
+                zoom: widget.zoom,
+              ),
+              markers: _markers.values.toSet()
+          ),
+          Container(
+            color: Colors.white.withOpacity(0.7),
+            child: Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Icon(
+                    Icons.place,
+                    color: Colors.indigo[600],
+                  ),
+                  Text('Attraction'),
+                  const Icon(
+                    Icons.place,
+                    color: Colors.deepPurpleAccent,
+                  ),
+                  const Text('Landmark'),
+                  const Icon(
+                    Icons.place,
+                    color: Colors.pink,
+                  ),
+                  Text('Bookshop'),
+                ],
+              ),
+            ),
+          ),
+        ],
+
       ),
-      bottomNavigationBar: Navigation(selectedIndex: 2,),
+      bottomNavigationBar: const Navigation(selectedIndex: 2,),
     );
   }
 }
+
+// Tabbed map setup
+//   @override
+//   Widget build(BuildContext context) {
+//     int tabIndex=0 ;
+//         // DefaultTabController.of(context)?.index;
+//     return DefaultTabController(
+//       length: 5,
+//       child: Scaffold(
+//         appBar: AppBar(
+//           title: const Text('Location Map'),
+//           centerTitle: true,
+//           backgroundColor: const Color.fromRGBO(87, 88, 187, 9.0),
+//           bottom: const TabBar(
+//             indicatorColor: Color.fromRGBO(241, 135, 1, 1),
+//             tabs: [
+//               Tab(icon: Icon(Icons.tab)),
+//               Tab(icon: Icon(Icons.attractions)),
+//               Tab(icon: Icon(Icons.location_city)),
+//               Tab(icon: Icon(Icons.library_books)),
+//               Tab(icon: Icon(Icons.favorite)),
+//             ],
+//           ),
+//         ),
+//         body: TabBarView(
+//           children: [
+//             GoogleMap(
+//                 onMapCreated: _onMapCreated,
+//                 initialCameraPosition: CameraPosition(
+//                   target: LatLng(initialLatitude, initialLongitude),
+//                   zoom: 11.0,
+//                 ),
+//                 markers: _markers.values.toSet()
+//             ),
+//             Text('${DefaultTabController.of(context)?.index}'),
+//             Text('$tabIndex'),
+//             Text('$tabIndex'),
+//             Text('$tabIndex'),
+//           ],
+//         ),
+//         bottomNavigationBar: const Navigation(
+//           selectedIndex: 2,
+//         ),
+//       ),
+//     );
+//   }
+// }
+
