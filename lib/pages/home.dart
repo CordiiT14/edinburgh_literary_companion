@@ -114,7 +114,7 @@ class _HomeState extends State<Home> {
                         );
                       },
                       decoration: const InputDecoration(
-                        hintText: 'Search locations',
+                        hintText: 'Search Locations',
                         prefixIcon: Icon(
                           Icons.search,
                           color: Color.fromRGBO(241, 135, 1, 1),

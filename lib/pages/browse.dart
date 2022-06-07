@@ -32,7 +32,7 @@ class Browse extends StatelessWidget {
                 onChanged: (value) =>
                     context.read<Locations>().runSearch(value),
                 decoration: const InputDecoration(
-                  hintText: 'Search',
+                  hintText: 'Search Locations',
                   prefixIcon: Icon(
                     Icons.search,
                     color: Color.fromRGBO(241, 135, 1, 1),
