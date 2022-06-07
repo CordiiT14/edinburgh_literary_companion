@@ -10,14 +10,16 @@ class Books with ChangeNotifier {
   final List<Book> _savedBooks = [];
 
   List<Book> get allBooks => _books;
-  List<Book> get savedBooks => _savedBooks;
-  List<Book> get searchBooks => _searchBooks;
 
   // SAVED BOOKS LIST FUNCTIONALITY
+  List<Book> displaySaved() {
+    sortList(_savedBooks);
+    return _savedBooks;
+  }
+
   void toggleSavedBook(Book book) {
     bookIsSaved(book) ? _savedBooks.remove(book) : _savedBooks.add(book);
     notifyListeners();
-
   }
 
   bool bookIsSaved(Book book) {
@@ -28,6 +30,11 @@ class Books with ChangeNotifier {
       }
     }
     return output;
+  }
+
+  void sortList(List<Book> books) {
+    String getTitle (Book book) => book.title;
+    books.sort((a, b) => getTitle(a).compareTo(getTitle(b)));
   }
 
   // BOOKS SEARCH FUNCTION
@@ -48,5 +55,11 @@ class Books with ChangeNotifier {
   void resetSearch(){
     _searchBooks = _books;
     notifyListeners();
+  }
+
+//    displaying books in alphabetical order
+  List<Book> displayBooks () {
+    sortList(_searchBooks);
+    return _searchBooks;
   }
 }

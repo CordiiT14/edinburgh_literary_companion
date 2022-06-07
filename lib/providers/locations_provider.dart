@@ -13,7 +13,6 @@ class Locations with ChangeNotifier {
   List<Location> _filteredLocations = LocationData().locations;
 
   List<Location> get allLocations => _locations;
-  List<Location> get savedLocations => _savedLocations;
   Map<int, bool> get filters => _filters;
 
   List<Location> displayLocations(){
@@ -26,11 +25,20 @@ class Locations with ChangeNotifier {
         }
       }
     }
-    String getName (Location location) => location.name;
-    output.sort((a, b) => getName(a).compareTo(getName(b)));
+    sortList(output);
     return output;
     //the following line would be more efficient, but isn't working, presumably due to difficulty of recognising equivalent objects
     //return _filteredLocations.where((location) => _searchLocations.contains(location)).toList();
+  }
+
+  List<Location> displaySaved(){
+    sortList(_savedLocations);
+    return _savedLocations;
+  }
+
+  void sortList (List<Location> locations) {
+    String getName (Location location) => location.name;
+    locations.sort((a, b) => getName(a).compareTo(getName(b)));
   }
 
   void toggleSavedLocation(Location location) {
