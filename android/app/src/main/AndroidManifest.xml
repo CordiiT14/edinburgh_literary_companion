@@ -3,7 +3,7 @@
    <application
         android:label="edin_lit_companion"
         android:name="${applicationName}"
-        android:icon="@mipmap/ic_launcher">
+        android:icon="@mipmap/launcher_icon">
 
 <!--       added these two lines -->
        <meta-data android:name="com.google.android.geo.API_KEY"

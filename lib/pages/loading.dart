@@ -25,7 +25,7 @@ class _LoadingState extends State<Loading> {
     return Scaffold(
         body: Center(
             child: Image.asset(
-                'assets/logo.png',
+                'assets/recolourLogo.png',
               width: 300.0,
             ),
           ),
