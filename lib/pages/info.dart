@@ -69,7 +69,7 @@ class Info extends StatelessWidget {
                         child: Column(
                           children: const [
                             Text(
-                              "Our home page lists Edinburgh's top attractions, landmarks and bookshops.",
+                              "The home page lists Edinburgh's top attractions, landmarks and bookshops.",
                               style: TextStyle(
                                 fontSize: 17,
                               ),
@@ -182,35 +182,38 @@ class Info extends StatelessWidget {
 
                 // Saved summary
                 const SizedBox(height:20),
-                Row(
-                  children: [
-                    const SizedBox(width:20),
-                    Column(
-                      mainAxisAlignment: MainAxisAlignment.spaceAround,
-                      children: const [
-                        Icon(
-                          Icons.favorite_border_outlined,
-                          color: Color.fromRGBO(241, 135, 1, 1),
-                          size: 50,
-                        ),
-                        Text('Saved'),
-                      ],
-                    ),
-                    const SizedBox(width:20),
-                    Flexible(
-                      child: Column(
+                Padding(
+                  padding: const EdgeInsets.fromLTRB(0, 0, 0, 20.0),
+                  child: Row(
+                    children: [
+                      const SizedBox(width:20),
+                      Column(
+                        mainAxisAlignment: MainAxisAlignment.spaceAround,
                         children: const [
-                          Text(
-                            "A list of all locations and books you have saved.",
-                            style: TextStyle(
-                              fontSize: 17,
-                            ),
+                          Icon(
+                            Icons.favorite_border_outlined,
+                            color: Color.fromRGBO(241, 135, 1, 1),
+                            size: 50,
                           ),
+                          Text('Saved'),
                         ],
                       ),
-                    ),
-                    const SizedBox(width:20),
-                  ],
+                      const SizedBox(width:20),
+                      Flexible(
+                        child: Column(
+                          children: const [
+                            Text(
+                              "A list of all locations and books you have saved.",
+                              style: TextStyle(
+                                fontSize: 17,
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                      const SizedBox(width:20),
+                    ],
+                  ),
                 ),
               // End of navigation menu summaries
               ],
