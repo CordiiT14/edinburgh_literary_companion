@@ -58,6 +58,25 @@ We are all proud of what we achieved in this project.
 - Our experience in Python, Javascript and Java, gave us a great foundation for tackling this project.
 
 
+### App in Action
+
+Home and Location View: \
+![screen-gif](./assets/project_gifs/homepage_locationView.gif)
+
+Filtered Discover & Search: \
+![screen-gif](./assets/project_gifs/listView_filter_search.gif)
+
+Map View and Location View: \
+![screen-gif](./assets/project_gifs/map_locationview.gif)
+
+Books: \
+![screen-gif](./assets/project_gifs/books.gif)
+
+Saved Books and Locations: \
+![screen-gif](./assets/project_gifs/saved_locationview.gif)
+
+
+
 
 
 
